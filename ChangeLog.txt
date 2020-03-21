@@ -1,0 +1,498 @@
+
+#define MAJOR_VERSION 0
+#define MINOR_VERSION 1
+#define DEBUG_VERSION 8
+#define DEBUG_SUB_VERSION 0
+
+//#define BUILDNUMBER 2				
+#include "buildnumber.h"
+
+
+/*
+Alpha 1.8.7
+		Flat Toolbars
+		Remember Toolbars float or not
+		Tip of the Day
+		Splash screen
+		URL links in help
+		new icon in help
+		new commands (for completeness)
+		0x8C,0x8D.0x93.0x9C,0x9D.0xB1,0xB3,0xE1,0xE2,0xE3,0xE4,0xE5
+		added A,Z Left Right Up Down keys for tracks as for Iso Editor
+		better dragging support for track/pit/ccline/object/wall tools
+		fixed some more of the object errors
+		Selecting cc line n tree highlights in track view
+		S key to straighten section
+		new on file new message to help novices
+		camera selection from tree hightlights in track view
+		camera key commands up/down/left/right in camera tool
+		Horizontal and vertical texture mapping commands
+		IE4.0 or above comctl32.dll now
+		Command Name changes to aligh with Addies' Commandlib
+		Swivel Arms on scenery (switchable)
+		Swivel Arms for 0xc1 and 0xc2 working better
+		better Internal object viewing
+		fixed perspective problems with opengl
+		fixed ability to turn off and on object toolbar
+		
+
+Alpha 1.8.6a
+		0xCC added
+		0xB7 added
+
+Alpha 1.8.6
+		0xB6 added
+
+Alpha 1.8.5
+		Jam Sizes in Sanity Check
+		More MRU than 4 now 8
+		Height uses heightDelta in track config!
+		0xB2
+		IsoHeights in Table and Sanity Check
+		Black Horizon test in SanityCheck
+		Venitian Blind Test in Sanity Check
+		
+
+Alpha 1.8.4
+		Removed saving on zoom button click
+		polygon speed improvements!
+early release
+		Printing! at last (not sure how it will handle international paper sizes!)
+		Better default fill drawing
+		Better 0xBC drawing
+		Fixed a zooming bug!
+		Location Type D added to help
+		Location Type E added to help
+		Height back as before
+		Change track tool(2) and pittool(2) to show track
+
+Alpha 1.8.3
+		removed need for version check
+		vrml export option
+
+Alpha 1.8.2
+		Some minor changes to object editing
+
+Alpha 1.8.1
+		Vector Speed functions
+		Banking in the pitlane bug
+
+Alpha 1.8.0
+		Simple Undo feature
+
+Alpha 1.7.9
+		Split positions for gp2lap
+
+Alpha 1.7.8
+		Upgrade check
+		Sprial Code
+		some cc line improvements
+		Jam files sizes
+		SHIFT and CONTROL movements on LineTool and PitLineTool
+		
+Alpha 1.7.7
+		Some bug fixes
+
+Alpha 1.7.6
+		// problems
+Alpha 1.7.5
+		// problems
+
+Alpha 1.7.4		
+		1) BMP pack bug really bad
+		2) removal of trackside objects
+		3) fixed monaco bug perhaps because of BMP bug!
+		== rel
+		4) added back in the object name code this time with an application level disable
+		5) Added lap record to GP2INFO
+		6) fixed a third bug about the objects shorts in the class, caused some really bug crashes
+		7) Not reading in jam files unless they have a .jam extension fixes silverstone and monaco problem
+		8) adjustment to max commands from 800 to 1048 -> as spa failed the test
+		9) Updated the sanity check to let silverstone,spa and hockenheim pass
+		10) Greater field of view for the track section view.
+		===rel	
+		11) Added Qualify Lap Record	
+
+Alpha 1.7.3     28/9/98
+		Random Zoom Factor on Camera Settings
+		Moveing Commands down and up crash
+		Moveto Sections crashes!
+		Added drawTextures
+		show object offsets with text box
+		new gpo export with jams
+		reimporting from OE seems to work
+		new object parsing (some errors need fixing!)
+		Command list to Jam List
+		allow non drawing of Jams in preview boxes
+		more object syntax stuff
+		0x80 objects in internal objects now drawn using Tree Option (correct positioning)
+		show 0x70 cc line cmds with blue icons to identify them clearly
+		replace object
+
+Alpha 1.7.2.661
+		HelpFile Path
+		Helicopter button from TrackEditorDoc
+		Started ObjectEditor Project
+		
+Alpha 1.7.2     28/9/98	  Final released version 1.7.2.644
+		Various Data Block remove numbers when know item
+		Drive backwards	it (arrow keys)
+		Install track crash
+		Added context sensitive help
+		fixing memory leaks in Object View
+		more 3D texture formats
+		massive speed improvement in in car drawing speed.
+		get use of new desc after adding it
+		updating preview on adding in object desc
+		trees correct size
+		object desc updates after adding new object	
+		Locate in the object edit box
+		Preview in the object edit box
+		updating of the 3D view correctly
+		show extenral object positions and rotations
+		a Whats is this on the tree started
+		showing some textures now as objects (multiple object type!)
+		Pitlane a bit better in 3D view
+		removal of illegal camera
+		auto placement of cameras
+		fixed track exporter
+		cc line selection highlights tree
+		recent file list bug
+		added unknown object data to tree
+		cc line selection color
+
+
+Alpha 1.7.1     21/9/98
+        Fully name build logging now used
+		Integration into MS Version numbering system
+		Started Camera views in Track Section View
+		Fixed a bug with 0xdd not loading properly (Reported by Martijn)
+		Memory leaks (some of the many!)
+		Some more polygon info getting it right for 3 4 5 and 7 point polygons
+		storing of showlines etc to registry
+		more hits and flyby tips
+		fixed oxdd in pitlane loading bug (Reported by babbel!)
+		Fixed gap in bank in track section view
+		allow showing of small sections in Track Section View
+		show object outlines
+		speed improvements in 2d and 3d object drawing
+		added pitlane to tracksection view
+		draw unknown objects in 2D and 3D view
+		starting to draw externally defined object orientations
+		able to use object editor after adding 0x80 object
+		texture speed ups?
+
+
+Alpha 1.7.0.0   15/9/98
+		removed need for multiple file types on open box
+		added kerb editor
+		Most recent file also added
+		register file types
+		drag and drop onto trackeditor
+		integration of icon into windows explorer
+		printing much closer now.
+		
+Alpha 1.6.9.2   14/9/98
+		counting bug fixed
+		CC Line editor bug
+		staring  a colour editor
+		now you can easily edit the rear view kerb colors
+		change definition of kerb definitions command (SNQQPY's idea!)
+		
+
+
+Alpha 1.6.9.1	14/9/98
+		Loading big fix
+		counting total commands (still buggy!)
+		0xc8 copy and paste bug
+		Insert 112 cc line command
+		Palette chooser now shows number and rgb value
+
+Alpha 1.6.9	    11/9/98
+		More triangle fixing
+		Internal Object Properties
+		Internal Object naming
+		Coloured Kerb stones
+
+Alpha 1.6.8		07/9/98
+		Fix some spin boxes
+		Changes to tree building
+		changes to sanity check
+		Textures on internal objects
+		object overlay test
+		object removal checks started!
+
+Alpha 1.6.7
+		Spin Boxes on PSS
+		Export Various Data Blocks
+		Export CC Setup Data
+		Type List
+		Jam Unsable list
+		Tree Opening after move
+		Tree Opening after delete
+		Spin time position estimates only!
+		Spin Boxes on CC Setup
+		new Remove all XX commands
+		Multiple Scenery commands per section
+		Pitlane Scenery and On/Off states and Profile
+
+Alpha 1.6.6
+		Scenery Ribbon On/Off Editor
+		Scenery Ribbon Indicator
+		Pit Stop Stratergy Editor
+		
+
+Alpha 1.6.5
+		Message box on button press
+		Started looking at scenery editor problems - Not fixed yet
+		Icons fixed
+		Move Command Box
+		Move Commands
+		Pole and Pit in track config
+		9b 9e command name change
+		Vertex editing
+
+
+Alpha 1.6.4
+		Ponk stuff
+		Some object editing stuff
+
+Alpha 1.6.3
+		Remove Wall height changes
+		Remove Track Width Changes
+		Remove All Scenery Commands
+		Remove Wall Bridges
+		Move Up Bug
+		Texture Chooser Rotation bug
+		Palette Colors fix
+
+Alpha 1.6.2
+		Added some stuff in for reading car logging data
+		and track segment data
+		more object editing stuff
+		3D text working
+		256 color code
+		3D center position now fixed
+
+Alpha 1.6.1
+		Fixed bug table bug
+		Added cockpit view
+		import cc line from franks tool
+		more correct 3D view
+		started adding 3D scenery
+
+
+Alpha 1.6.0
+		Registration code
+		Added object updates
+		Added Detial combo on object descriptions!
+		Hand tool added!
+		Camera remove bug
+		CC tyre type combo
+		new cc line tool!
+		new view toolbar!
+		automatic buildnumbering to keep track of build instances! - Broken!
+		new scenery editor!
+		Camera Tool
+		World View update
+		Adding internal object 
+		Jam Zooming
+		Copy cut and Pate
+		Jam File Index List
+		// early access 1
+		Length / Type Consumption in gpinfo
+		height info in pit table
+		pit width work!
+		brake balance
+		road around corners as dognut pies
+		group delete
+		// update 1
+		proper drawing of sides as dognuts not chords/polygons
+		fix jams
+		fixed gravel pits (maybe slight problem here!)
+		red camera
+		gl code for object viewer
+		inner black line fix
+
+
+		
+
+
+Alpha 1.5.7
+		Correctly drawn Camera Positions
+		Correctly drawn Flag Positions
+		Added beginning of Object Viewer
+		More Object Definition stuff
+		Wall more corrects.
+		CC line changing sides
+		Next and Pevious in CC line editor
+		Correct bridged walls
+		Track distances
+		Saving object desc
+		More correct commands
+		Pit commands shown
+		Auto start gp2
+		Fixed texture location
+		saving tree position
+		Cameras update
+		CC line start dialog box with pole position
+		Underlay bitmap position and scale on zoom!
+		Camera and object position bug
+		more digital signatures for objects
+
+Alpha 1.5.6
+		Updating track
+		Adding Black Flags
+		Jam Info Extraction
+		Starting drawing gp2world extent
+		Drawing Scenery
+		Add and remove Jam files
+		Add Internal Object (under development!)
+		Saving the File Open Directory
+		JAM File Viewing
+		JAM File Decoding
+		Texture Brushes on track view (Not with jam files yet!)
+		More scenery coding.
+
+
+Alpha 1.5.5
+        CreateNew 1.5.4 bug fix
+
+Alpha 1.5.4
+		Camera Table View
+		Insert and Delete Cameras
+		Pitlane commands (by adrian walti)
+		Kerb controls
+		Pit speed commands
+		Adding New Track Command (under development)
+		Table don't update so much
+		Auto create Gravel traps
+		Auto Add road signs
+		Auto Add Kerbs
+		High/Low Kerb Indicator	(On track view)
+		Adding Gravel/Tarmac/Type Walls
+		Registration box
+		Texture chooser
+		Grip View
+		Blag Flag viewer
+
+Alpha 1.5.3
+		More road sign codes
+		Putting some code in for true altitude. 
+		Saving the position of the editor
+		CListView for All Tables	(big job possible bugs!)
+		Road Sign Indicator
+		Command indicators (use zoom to find commands in sections)
+		Zoom in on point
+		Data Editing in table
+		TrackWidth changes draw (almost correct)
+		Acceleration & Track Grip swtich
+
+
+
+Alpha 1.5.2a
+		OnSave Bug!
+
+Alpha 1.5.2
+		Zoom Home toolbutton
+		MRU files saved out again
+		Export Tables
+		Saving saving position
+		saving selected parts of track
+		Insert remove track commands
+		Started table editor.
+		Added some Command insertion parts
+		Some sign descriptions
+
+Alpha 1.5.1	16/2/98
+		Removed all Memory leaks I could find
+		Blue Gradient Background For 3D view
+		Track Sets
+		Corrected tree curve images	(wrong way round)
+		Removal of track from tree on closure
+		Make removal of cc setion updates line
+		Command stat table
+		table supports moveable column widths
+		some more understanding of kerb definitions. (showing in track section 1)
+		Added removal of background bitmap
+		Added underlay bitmap to worldview
+		Removal of Scenery - Started
+		Removal of gravel/sand - Started
+		Auto locate in Listtree upon selection
+		Changes to Linked List destructors
+		Icons in table
+		Prevent large track sections being built greater than 255
+
+Alpha 1.5.0	 9/2/98
+		Beginning of Track Installer - Done
+		Total length error
+		Splitter now works.
+		Started 3D viewer.
+
+Alpha 1.4.3
+		Small changes to drawing gravel traps...
+		Object code viewer..
+		Mouse Button 2 becomes Button 1 + shift for 2 button mousers
+
+ALpha 1.4.2
+		Added more track component writing of file
+		Added Track Length Stats
+		Added Clearing of CC line
+		Added Create CC line as track line (buggy still on large radi)
+		Added random object placement.
+		Fixed Tool tips on tool toolbar
+		Put draw sides code in. (gravel traps etc.., not 100% right)
+		Right Button Menus / Middle button now has Button3 funcationality
+
+Alpha 1.4.1
+		Fixed CC not being written out
+		Adding Help Project
+		Object insertion (Must regenerate track after wards) - nearly working
+		Pitlane edit bug
+		Camera draw (still buggy)
+
+Alpha 1.4
+=========
+		Fixed CC setup added air resistance
+		started on recreating data from definitions
+		(Should allow track object/sections to be inserted soon)
+		Some minor internal corrections.
+		Added CC setup editor;
+		Better installation images (Windows Palette)
+		Added Object Table
+		Added Object Tool
+		Added Tree Hider
+		Pitlane wall bug
+		Track Cmd Editor
+
+Alpha 1.3.1 19/1/98    
+===========
+		Fixed installation bug
+
+Alpha 1.3   19/1/98
+========
+		Bitmaps for objects and slightly corrected object placement.
+		Fixed table sizes.
+		Added Track and Object Tools & Pitlane Tools
+		Correct UI Updates
+		Prompts and Tooltips
+		Added Zoom Tools
+
+Alpha 1.2
+========
+		Fixed Pit lane editing problems fixed
+		Updated manual (slightly!)
+		GP2INFO fixed saving it out.
+		Added file chooser to jamfiles (currently doesn't update tree);
+
+
+Alpha1.1
+========
+		Pit lane table
+
+Alpha1.0
+========
+
+		Initial Release
+
+  */

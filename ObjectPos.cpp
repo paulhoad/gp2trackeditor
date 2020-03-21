@@ -12,176 +12,162 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-
-
 /////////////////////////////////////////////////////////////////////////////
 // CObjectPos dialog
 
-
-CObjectPos::CObjectPos(GPTrack *track,CWnd* pParent /*=NULL*/)
-	: CDialog(CObjectPos::IDD, pParent),track(track)
+CObjectPos::CObjectPos(GPTrack *track, CWnd *pParent /*=NULL*/)
+  : CDialog(CObjectPos::IDD, pParent), track(track)
 {
-	//{{AFX_DATA_INIT(CObjectPos)
-	m_Distance = 0;
-	m_Desc = _T("");
-	//}}AFX_DATA_INIT
+  //{{AFX_DATA_INIT(CObjectPos)
+  m_Distance = 0;
+  m_Desc = _T("");
+  //}}AFX_DATA_INIT
 }
 
-
-void CObjectPos::DoDataExchange(CDataExchange* pDX)
+void CObjectPos::DoDataExchange(CDataExchange *pDX)
 {
-	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CObjectPos)
-	DDX_Control(pDX, IDC_SPIN1, m_PositionSpin);
-	DDX_Control(pDX, IDC_LOCATOR, m_ObjectCombo);
-	DDX_Text(pDX, IDC_DISTANCE, m_Distance);
-	DDX_Text(pDX, IDC_DESC, m_Desc);
-	//}}AFX_DATA_MAP
+  CDialog::DoDataExchange(pDX);
+  //{{AFX_DATA_MAP(CObjectPos)
+  DDX_Control(pDX, IDC_SPIN1, m_PositionSpin);
+  DDX_Control(pDX, IDC_LOCATOR, m_ObjectCombo);
+  DDX_Text(pDX, IDC_DISTANCE, m_Distance);
+  DDX_Text(pDX, IDC_DESC, m_Desc);
+  //}}AFX_DATA_MAP
 }
-
 
 BEGIN_MESSAGE_MAP(CObjectPos, CDialog)
-	//{{AFX_MSG_MAP(CObjectPos)
-	ON_BN_CLICKED(IDC_EDIT, OnEdit)
-	ON_BN_CLICKED(IDC_NEWDESC, OnNewdesc)
-	ON_CBN_SELCHANGE(IDC_LOCATOR, OnSelchangeLocator)
-	ON_BN_CLICKED(IDC_OBJHELP, OnObjhelp)
-	ON_CBN_EDITUPDATE(IDC_LOCATOR, OnEditupdateLocator)
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CObjectPos)
+ON_BN_CLICKED(IDC_EDIT, OnEdit)
+ON_BN_CLICKED(IDC_NEWDESC, OnNewdesc)
+ON_CBN_SELCHANGE(IDC_LOCATOR, OnSelchangeLocator)
+ON_BN_CLICKED(IDC_OBJHELP, OnObjhelp)
+ON_CBN_EDITUPDATE(IDC_LOCATOR, OnEditupdateLocator)
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CObjectPos message handlers
 
-void CObjectPos::OnEdit() 
+void CObjectPos::OnEdit()
 {
-	// TODO: Add your control notification handler code here
-	CObjectEdit *trkdlg = new CObjectEdit(track,this);
-	int idx = m_ObjectCombo.GetCurSel();
-	TrackObjectDefinition *tobj = (TrackObjectDefinition*)track->TrackObjectDefintions->elementAt(idx);
-		   
+  // TODO: Add your control notification handler code here
+  CObjectEdit *trkdlg = new CObjectEdit(track, this);
+  int idx = m_ObjectCombo.GetCurSel();
+  TrackObjectDefinition *tobj =
+    (TrackObjectDefinition *)track->TrackObjectDefintions->elementAt(idx);
 
+  TrackObjectDefinition *t = track->getObjectDefinition(tobj->getLocator());
 
-	TrackObjectDefinition *t = track->getObjectDefinition(tobj->getLocator());
+  if (trkdlg && t) trkdlg->setSection(t);
 
-	if (trkdlg && t)
-	  trkdlg->setSection(t);
+  int result = trkdlg->DoModal();
 
-	int result = trkdlg->DoModal();
-
-    if (result!=IDCANCEL && trkdlg && t)
-	{	  
-	  trkdlg->getSection(t);
-	  //t->write(track,t->originaloffset,track->ListObjectOffset);
-	  //t->write(track,t->originaloffset);
-	  track->regenerate=TRUE;
-	}
-
+  if (result != IDCANCEL && trkdlg && t) {
+    trkdlg->getSection(t);
+    // t->write(track,t->originaloffset,track->ListObjectOffset);
+    // t->write(track,t->originaloffset);
+    track->regenerate = TRUE;
+  }
 }
 
-BOOL CObjectPos::OnInitDialog() 
+BOOL CObjectPos::OnInitDialog()
 {
-	CDialog::OnInitDialog();
-	char buffer[7];
-	
-	// TODO: Add extra initialization here
-	for(int i=0;i<track->TrackObjectDefintions->size();i++)
-	{
-	  TrackObjectDefinition *tobj = (TrackObjectDefinition*)track->TrackObjectDefintions->elementAt(i);
-		   
-	  wsprintf(buffer,"%d",tobj->getLocator());
-	  m_ObjectCombo.AddString(buffer);
-	}
-	wsprintf(buffer,"%d",locatorStart);
-	m_ObjectCombo.SelectString(-1,buffer);
+  CDialog::OnInitDialog();
+  char buffer[7];
 
-	m_PositionSpin.SetRange(-5000,5000);
+  // TODO: Add extra initialization here
+  for (int i = 0; i < track->TrackObjectDefintions->size(); i++) {
+    TrackObjectDefinition *tobj =
+      (TrackObjectDefinition *)track->TrackObjectDefintions->elementAt(i);
 
-	OnSelchangeLocator();
+    wsprintf(buffer, "%d", tobj->getLocator());
+    m_ObjectCombo.AddString(buffer);
+  }
+  wsprintf(buffer, "%d", locatorStart);
+  m_ObjectCombo.SelectString(-1, buffer);
 
-	//m_BalloonToolTip.AddTool(GetDlgItem(IDC_LOCATOR),"Choose the object you require!");
-	//m_BalloonToolTip.AddTool(GetDlgItem(IDC_DISTANCE),"This is the distance into the track sector");
+  m_PositionSpin.SetRange(-5000, 5000);
 
-	
-	return TRUE;  // return TRUE unless you set the focus to a control
-	              // EXCEPTION: OCX Property Pages should return FALSE
+  OnSelchangeLocator();
+
+  // m_BalloonToolTip.AddTool(GetDlgItem(IDC_LOCATOR),"Choose the object you
+  // require!"); m_BalloonToolTip.AddTool(GetDlgItem(IDC_DISTANCE),"This is the
+  // distance into the track sector");
+
+  return TRUE;// return TRUE unless you set the focus to a control
+    // EXCEPTION: OCX Property Pages should return FALSE
 }
 
-void CObjectPos::OnOK() 
+void CObjectPos::OnOK()
 {
-	// TODO: Add extra validation here
-	int idx = m_ObjectCombo.GetCurSel();
-	TrackObjectDefinition *tobj = (TrackObjectDefinition*)track->TrackObjectDefintions->elementAt(idx);
-		   
-	locatorStart = tobj->getLocator();	
+  // TODO: Add extra validation here
+  int idx = m_ObjectCombo.GetCurSel();
+  TrackObjectDefinition *tobj =
+    (TrackObjectDefinition *)track->TrackObjectDefintions->elementAt(idx);
 
-	
-	
-	CDialog::OnOK();
+  locatorStart = tobj->getLocator();
+
+  CDialog::OnOK();
 }
 
-void CObjectPos::OnNewdesc() 
+void CObjectPos::OnNewdesc()
 {
-	// TODO: Add your control notification handler code here
-	TrackObjectDefinition *t = track->AddNewTrackObjectDefinition();
+  // TODO: Add your control notification handler code here
+  TrackObjectDefinition *t = track->AddNewTrackObjectDefinition();
 
-	CObjectEdit *trkdlg = new CObjectEdit(track,this);
-	
-	if (trkdlg && t)
-	  trkdlg->setSection(t);
+  CObjectEdit *trkdlg = new CObjectEdit(track, this);
 
-	int res = trkdlg->DoModal();
+  if (trkdlg && t) trkdlg->setSection(t);
 
-	if (trkdlg && t && res!=IDCANCEL)
-	{	  
-	  trkdlg->getSection(t);
-	  track->regenerate=TRUE;
-	  CString buffer;
+  int res = trkdlg->DoModal();
 
-	  m_ObjectCombo.ResetContent();
-	  for(int i=0;i<track->TrackObjectDefintions->size();i++)
-	  {
-	    TrackObjectDefinition *tobj = (TrackObjectDefinition*)track->TrackObjectDefintions->elementAt(i);
-	    buffer.Format("%d",tobj->getLocator());
-	    m_ObjectCombo.AddString(buffer);
-	  }
-	  buffer.Format("%d",t->getLocator());
-	  m_ObjectCombo.SelectString(-1,buffer);
-	  OnSelchangeLocator();
-	}
+  if (trkdlg && t && res != IDCANCEL) {
+    trkdlg->getSection(t);
+    track->regenerate = TRUE;
+    CString buffer;
 
-	if (trkdlg) delete trkdlg;
+    m_ObjectCombo.ResetContent();
+    for (int i = 0; i < track->TrackObjectDefintions->size(); i++) {
+      TrackObjectDefinition *tobj =
+        (TrackObjectDefinition *)track->TrackObjectDefintions->elementAt(i);
+      buffer.Format("%d", tobj->getLocator());
+      m_ObjectCombo.AddString(buffer);
+    }
+    buffer.Format("%d", t->getLocator());
+    m_ObjectCombo.SelectString(-1, buffer);
+    OnSelchangeLocator();
+  }
 
+  if (trkdlg) delete trkdlg;
 }
 
-void CObjectPos::OnSelchangeLocator() 
+void CObjectPos::OnSelchangeLocator()
 {
-	int idx = m_ObjectCombo.GetCurSel();
-	TrackObjectDefinition *tobj = (TrackObjectDefinition*)track->TrackObjectDefintions->elementAt(idx);
-	if (tobj)
-	{
-		 m_Desc.Format("Internal Object %d = %s",tobj->id, tobj->getName());
-		 SetDlgItemText(IDC_DESC,m_Desc);
-	}
-	//UpdateData(FALSE);
+  int idx = m_ObjectCombo.GetCurSel();
+  TrackObjectDefinition *tobj =
+    (TrackObjectDefinition *)track->TrackObjectDefintions->elementAt(idx);
+  if (tobj) {
+    m_Desc.Format("Internal Object %d = %s", tobj->id, tobj->getName());
+    SetDlgItemText(IDC_DESC, m_Desc);
+  }
+  // UpdateData(FALSE);
 }
 
-BOOL CObjectPos::PreTranslateMessage(MSG* pMsg) 
+BOOL CObjectPos::PreTranslateMessage(MSG *pMsg)
 {
-	// TODO: Add your specialized code here and/or call the base class
-	return CDialog::PreTranslateMessage(pMsg);
+  // TODO: Add your specialized code here and/or call the base class
+  return CDialog::PreTranslateMessage(pMsg);
 }
 
-void CObjectPos::OnObjhelp() 
+void CObjectPos::OnObjhelp()
 {
-	CString url = "object.htm";
-	
-	url+="#Input_objects";
-	theApp.OnHelpContentString(url);
+  CString url = "object.htm";
+
+  url += "#Input_objects";
+  theApp.OnHelpContentString(url);
 }
 
-void CObjectPos::OnEditupdateLocator() 
+void CObjectPos::OnEditupdateLocator()
 {
-	// TODO: Add your control notification handler code here
-	
+  // TODO: Add your control notification handler code here
 }

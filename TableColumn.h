@@ -10,39 +10,35 @@
 #define new DEBUG_NEW
 #endif
 
-class CTableColumn: public CObject
+class CTableColumn : public CObject
 {
-// Construction
+  // Construction
 public:
-	CTableColumn(LPCSTR title,int width);
+  CTableColumn(LPCSTR title, int width);
 
+  ~CTableColumn();
 
-	~CTableColumn();
-	
-
-// Attributes
+  // Attributes
 public:
+  int width;
+  LPSTR title;
+  int icon;
 
-	int width;
-	LPSTR title;
-	int icon;
+  int getWidth()
+  {
+    return width;
+  }
 
-	int getWidth()
-	{
-		return width;
-	}
+  LPCSTR
+  getTitle()
+  {
+    return title;
+  }
 
-	LPCSTR getTitle()
-	{
-		return title;
-	}
-
-// Operations
+  // Operations
 public:
-
-// Implementation
+  // Implementation
 public:
-
 };
 
 /////////////////////////////////////////////////////////////////////////////

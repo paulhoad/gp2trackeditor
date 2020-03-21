@@ -7,8 +7,6 @@
 #include "TrackEditorDoc.h"
 #include "TrackEditorView.h"
 
-
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -21,23 +19,23 @@ static char THIS_FILE[] = __FILE__;
 IMPLEMENT_DYNCREATE(CTrackEditorView, CView)
 
 BEGIN_MESSAGE_MAP(CTrackEditorView, CView)
-	//{{AFX_MSG_MAP(CTrackEditorView)
-	ON_COMMAND(ZOOM_IN, OnIn)
-	ON_COMMAND(ZOOM_OUT, OnOut)
-	ON_COMMAND(VIEW_TRACK, OnTrack)
-	ON_COMMAND(VIEW_PITLANE, OnPitlane)
-	ON_COMMAND(VIEW_OBJECTS, OnObjects)
-	ON_COMMAND(VIEW_LINE, OnLine)
-	ON_COMMAND(VIEW_TRACKINFO, OnTrackinfo)
-	ON_COMMAND(ID_EDIT_REMOVEALLCCARG1, OnEditRemoveallccarg1)
-	ON_COMMAND(ID_EDIT_REMOVEALLARG2, OnEditRemoveallarg2)
-	ON_COMMAND(ID_VIEW_SHOWWALLS, OnViewShowwalls)
-	ON_UPDATE_COMMAND_UI(VIEW_TRACK, OnUpdateTrack)
-	//}}AFX_MSG_MAP
-	// Standard printing commands
-	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_DIRECT, CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_PREVIEW, CView::OnFilePrintPreview)
+//{{AFX_MSG_MAP(CTrackEditorView)
+ON_COMMAND(ZOOM_IN, OnIn)
+ON_COMMAND(ZOOM_OUT, OnOut)
+ON_COMMAND(VIEW_TRACK, OnTrack)
+ON_COMMAND(VIEW_PITLANE, OnPitlane)
+ON_COMMAND(VIEW_OBJECTS, OnObjects)
+ON_COMMAND(VIEW_LINE, OnLine)
+ON_COMMAND(VIEW_TRACKINFO, OnTrackinfo)
+ON_COMMAND(ID_EDIT_REMOVEALLCCARG1, OnEditRemoveallccarg1)
+ON_COMMAND(ID_EDIT_REMOVEALLARG2, OnEditRemoveallarg2)
+ON_COMMAND(ID_VIEW_SHOWWALLS, OnViewShowwalls)
+ON_UPDATE_COMMAND_UI(VIEW_TRACK, OnUpdateTrack)
+//}}AFX_MSG_MAP
+// Standard printing commands
+ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
+ON_COMMAND(ID_FILE_PRINT_DIRECT, CView::OnFilePrint)
+ON_COMMAND(ID_FILE_PRINT_PREVIEW, CView::OnFilePrintPreview)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -45,20 +43,18 @@ END_MESSAGE_MAP()
 
 CTrackEditorView::CTrackEditorView()
 {
-	// TODO: add construction code here
-	display = new Display();
+  // TODO: add construction code here
+  display = new Display();
 }
 
-CTrackEditorView::~CTrackEditorView()
-{
-}
+CTrackEditorView::~CTrackEditorView() {}
 
 BOOL CTrackEditorView::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: Modify the Window class or styles here by modifying
-	//  the CREATESTRUCT cs
+  // TODO: Modify the Window class or styles here by modifying
+  //  the CREATESTRUCT cs
 
-	return CView::PreCreateWindow(cs);
+  return CView::PreCreateWindow(cs);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -66,23 +62,19 @@ BOOL CTrackEditorView::PreCreateWindow(CREATESTRUCT& cs)
 
 void CTrackEditorView::OnDraw(CDC* pDC)
 {
-	CTrackEditorDoc* pDoc = GetDocument();
-	ASSERT_VALID(pDoc);
+  CTrackEditorDoc* pDoc = GetDocument();
+  ASSERT_VALID(pDoc);
 
-	// TODO: add draw code for native data here
-	GPTrack * track = pDoc->getTrack();
+  // TODO: add draw code for native data here
+  GPTrack* track = pDoc->getTrack();
 
-	
-	if (track)
-	{
-		if (display)
-		{
-		 display->setGraphics(pDC);
-		 track->drawTrack(display);
-		 track->drawPitlane(display);
-		}
-	}
-
+  if (track) {
+    if (display) {
+      display->setGraphics(pDC);
+      track->drawTrack(display);
+      track->drawPitlane(display);
+    }
+  }
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -90,18 +82,18 @@ void CTrackEditorView::OnDraw(CDC* pDC)
 
 BOOL CTrackEditorView::OnPreparePrinting(CPrintInfo* pInfo)
 {
-	// default preparation
-	return DoPreparePrinting(pInfo);
+  // default preparation
+  return DoPreparePrinting(pInfo);
 }
 
 void CTrackEditorView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: add extra initialization before printing
+  // TODO: add extra initialization before printing
 }
 
 void CTrackEditorView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: add cleanup after printing
+  // TODO: add cleanup after printing
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -110,90 +102,82 @@ void CTrackEditorView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 #ifdef _DEBUG
 void CTrackEditorView::AssertValid() const
 {
-	CView::AssertValid();
+  CView::AssertValid();
 }
 
 void CTrackEditorView::Dump(CDumpContext& dc) const
 {
-	CView::Dump(dc);
+  CView::Dump(dc);
 }
 
-CTrackEditorDoc* CTrackEditorView::GetDocument() // non-debug version is inline
+CTrackEditorDoc*
+  CTrackEditorView::GetDocument()// non-debug version is inline
 {
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CTrackEditorDoc)));
-	return (CTrackEditorDoc*)m_pDocument;
+  ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CTrackEditorDoc)));
+  return (CTrackEditorDoc*)m_pDocument;
 }
-#endif //_DEBUG
+#endif//_DEBUG
 
 /////////////////////////////////////////////////////////////////////////////
 // CTrackEditorView message handlers
 
-void CTrackEditorView::OnIn() 
+void CTrackEditorView::OnIn()
 {
-	// TODO: Add your command handler code here
-	display->ZoomIn();
-	RECT rect;
+  // TODO: Add your command handler code here
+  display->ZoomIn();
+  RECT rect;
 
-	GetClientRect(&rect);
-	InvalidateRect(&rect);
+  GetClientRect(&rect);
+  InvalidateRect(&rect);
 }
 
-void CTrackEditorView::OnOut() 
+void CTrackEditorView::OnOut()
 {
-	// TODO: Add your command handler code here
-	display->ZoomOut();
+  // TODO: Add your command handler code here
+  display->ZoomOut();
 }
 
-void CTrackEditorView::OnTrack() 
+void CTrackEditorView::OnTrack()
 {
-	// TODO: Add your command handler code here
-	
+  // TODO: Add your command handler code here
 }
 
-void CTrackEditorView::OnPitlane() 
+void CTrackEditorView::OnPitlane()
 {
-	// TODO: Add your command handler code here
-	
+  // TODO: Add your command handler code here
 }
 
-void CTrackEditorView::OnObjects() 
+void CTrackEditorView::OnObjects()
 {
-	// TODO: Add your command handler code here
-	
+  // TODO: Add your command handler code here
 }
 
-void CTrackEditorView::OnLine() 
+void CTrackEditorView::OnLine()
 {
-	// TODO: Add your command handler code here
-	
+  // TODO: Add your command handler code here
 }
 
-void CTrackEditorView::OnTrackinfo() 
+void CTrackEditorView::OnTrackinfo()
 {
-	// TODO: Add your command handler code here
-	
+  // TODO: Add your command handler code here
 }
 
-void CTrackEditorView::OnEditRemoveallccarg1() 
+void CTrackEditorView::OnEditRemoveallccarg1()
 {
-	// TODO: Add your command handler code here
-	
+  // TODO: Add your command handler code here
 }
 
-void CTrackEditorView::OnEditRemoveallarg2() 
+void CTrackEditorView::OnEditRemoveallarg2()
 {
-	// TODO: Add your command handler code here
-	
+  // TODO: Add your command handler code here
 }
 
-void CTrackEditorView::OnViewShowwalls() 
+void CTrackEditorView::OnViewShowwalls()
 {
-	// TODO: Add your command handler code here
-	
+  // TODO: Add your command handler code here
 }
 
-void CTrackEditorView::OnUpdateTrack(CCmdUI* pCmdUI) 
+void CTrackEditorView::OnUpdateTrack(CCmdUI* pCmdUI)
 {
-	// TODO: Add your command update UI handler code here
-	
+  // TODO: Add your command update UI handler code here
 }

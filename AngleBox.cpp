@@ -14,18 +14,13 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CAngleBox
 
-CAngleBox::CAngleBox()
-{
-}
+CAngleBox::CAngleBox() {}
 
-CAngleBox::~CAngleBox()
-{
-}
-
+CAngleBox::~CAngleBox() {}
 
 BEGIN_MESSAGE_MAP(CAngleBox, CEdit)
-	//{{AFX_MSG_MAP(CAngleBox)
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CAngleBox)
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////

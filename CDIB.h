@@ -8,31 +8,40 @@
 class CTextureMap : public CObject
 {
 protected:
-    LPBITMAPFILEHEADER m_pBmFileHeader;
-    LPBITMAPINFO m_pBmInfo;
-    LPBITMAPINFOHEADER m_pBmInfoHeader;
-    RGBQUAD* m_pRGBTable;
-    BYTE* m_pDibBits;
-    UINT m_numColors;
-    
+  LPBITMAPFILEHEADER m_pBmFileHeader;
+  LPBITMAPINFO m_pBmInfo;
+  LPBITMAPINFOHEADER m_pBmInfoHeader;
+  RGBQUAD* m_pRGBTable;
+  BYTE* m_pDibBits;
+  UINT m_numColors;
+
 public:
-    CTextureMap(char* fileName);
-    ~CTextureMap();
+  CTextureMap(char* fileName);
+  ~CTextureMap();
 
-	void CreateTextureMapBitmap(void *bits);
+  void
+    CreateTextureMapBitmap(void* bits);
 
-    DWORD GetDibSizeImage();
-    UINT GetDibWidth();
-    UINT GetDibHeight();
-    UINT GetDibNumColors();
-    LPBITMAPINFOHEADER GetDibInfoHeaderPtr();
-    LPBITMAPINFO GetDibInfoPtr();
-    LPRGBQUAD GetDibRGBTablePtr();
-    BYTE* GetDibBitsPtr();
+  DWORD
+  GetDibSizeImage();
+  UINT
+    GetDibWidth();
+  UINT
+    GetDibHeight();
+  UINT
+    GetDibNumColors();
+  LPBITMAPINFOHEADER
+  GetDibInfoHeaderPtr();
+  LPBITMAPINFO
+  GetDibInfoPtr();
+  LPRGBQUAD
+  GetDibRGBTablePtr();
+  BYTE*
+    GetDibBitsPtr();
 
 protected:
-    void LoadBitmapFile(const char* fileName);
-
+  void
+    LoadBitmapFile(const char* fileName);
 };
 
 #endif

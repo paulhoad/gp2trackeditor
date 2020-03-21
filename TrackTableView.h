@@ -6,33 +6,31 @@
 
 class CTrackTableView : public CListCtrl
 {
-// Construction
-	DECLARE_DYNCREATE(CTrackTableView)
+  // Construction
+  DECLARE_DYNCREATE(CTrackTableView)
 public:
-	CTrackTableView();
+  CTrackTableView();
 
-// Attributes
+  // Attributes
 public:
-
-// Operations
+  // Operations
 public:
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CTrackTableView)
+  //}}AFX_VIRTUAL
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CTrackTableView)
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Implementation
 public:
-	virtual ~CTrackTableView();
+  virtual ~CTrackTableView();
 
-	// Generated message map functions
+  // Generated message map functions
 protected:
-	//{{AFX_MSG(CTrackTableView)
-		// NOTE - the ClassWizard will add and remove member functions here.
-	//}}AFX_MSG
+  //{{AFX_MSG(CTrackTableView)
+  // NOTE - the ClassWizard will add and remove member functions here.
+  //}}AFX_MSG
 
-	DECLARE_MESSAGE_MAP()
+  DECLARE_MESSAGE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////

@@ -8,43 +8,46 @@
 
 class CMyListCtrl : public CListCtrl
 {
-// Construction
+  // Construction
 public:
-	CMyListCtrl();
+  CMyListCtrl();
 
-// Attributes
+  // Attributes
 public:
-	BOOL currentEdit;
+  BOOL currentEdit;
 
-// Operations
+  // Operations
 public:
+  void
+    DeleteAllItems();
 
-	void DeleteAllItems();
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CMyListCtrl)
+  //}}AFX_VIRTUAL
 
-	
+  int HitTestEx(CPoint& point, int* col) const;
+  CEdit*
+    EditSubLabel(int nItem, int nCol);
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CMyListCtrl)
-	//}}AFX_VIRTUAL
-
-	int    HitTestEx(CPoint &point, int *col) const;
-	CEdit* EditSubLabel( int nItem, int nCol );
-
-// Implementation
+  // Implementation
 public:
-	virtual ~CMyListCtrl();
+  virtual ~CMyListCtrl();
 
-	// Generated message map functions
+  // Generated message map functions
 protected:
-	//{{AFX_MSG(CMyListCtrl)
-	afx_msg void OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
-	afx_msg void OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
-	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
-	afx_msg void OnEndLabelEdit(NMHDR* pNMHDR, LRESULT* pResult);
-	//}}AFX_MSG
+  //{{AFX_MSG(CMyListCtrl)
+  afx_msg void
+    OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
+  afx_msg void
+    OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
+  afx_msg void
+    OnLButtonDown(UINT nFlags, CPoint point);
+  afx_msg void
+    OnEndLabelEdit(NMHDR* pNMHDR, LRESULT* pResult);
+  //}}AFX_MSG
 
-	DECLARE_MESSAGE_MAP()
+  DECLARE_MESSAGE_MAP()
 };
 
 #endif

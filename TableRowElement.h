@@ -10,51 +10,52 @@
 
 class CTableRowElement : public CWnd
 {
-// Construction
+  // Construction
 public:
-	CTableRowElement(CString *name,int icon=-1,WORD extraData=NULL);
+  CTableRowElement(CString *name, int icon = -1, WORD extraData = NULL);
 
-// Attributes
+  // Attributes
 public:
+  CString *name;
+  int icon;
 
-	CString *name;
-	int icon;
+  CString *
+    getValue()
+  {
+    return name;
+  }
 
-	CString *getValue()
-	{
-		return name;
-	}
+  WORD extraData;
 
-	WORD extraData;
+  void
+    SetItemData(WORD data)
+  {
+    extraData = data;
+  }
 
-	void SetItemData(WORD data)
-	{
-		extraData = data;
-	}
+  WORD
+    GetItemData()
+  {
+    return extraData;
+  }
 
-	WORD GetItemData()
-	{
-		return extraData;
-	}
-
-// Operations
+  // Operations
 public:
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CTableRowElement)
+  //}}AFX_VIRTUAL
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CTableRowElement)
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Implementation
 public:
-	virtual ~CTableRowElement();
+  virtual ~CTableRowElement();
 
-	// Generated message map functions
+  // Generated message map functions
 protected:
-	//{{AFX_MSG(CTableRowElement)
-		// NOTE - the ClassWizard will add and remove member functions here.
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+  //{{AFX_MSG(CTableRowElement)
+  // NOTE - the ClassWizard will add and remove member functions here.
+  //}}AFX_MSG
+  DECLARE_MESSAGE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////

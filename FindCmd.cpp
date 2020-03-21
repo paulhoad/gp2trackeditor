@@ -14,60 +14,51 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CFindCmd dialog
 
-
-CFindCmd::CFindCmd(CWnd* pParent /*=NULL*/)
-	: CDialog(CFindCmd::IDD, pParent)
+CFindCmd::CFindCmd(CWnd* pParent /*=NULL*/) : CDialog(CFindCmd::IDD, pParent)
 {
-	//{{AFX_DATA_INIT(CFindCmd)
-	m_FindCmd = _T("");
-	//}}AFX_DATA_INIT
+  //{{AFX_DATA_INIT(CFindCmd)
+  m_FindCmd = _T("");
+  //}}AFX_DATA_INIT
 }
-
 
 void CFindCmd::DoDataExchange(CDataExchange* pDX)
 {
-	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CFindCmd)
-	DDX_Text(pDX, IDC_LOOKFORCOMMAND, m_FindCmd);
-	DDV_MaxChars(pDX, m_FindCmd, 4);
-	//}}AFX_DATA_MAP
+  CDialog::DoDataExchange(pDX);
+  //{{AFX_DATA_MAP(CFindCmd)
+  DDX_Text(pDX, IDC_LOOKFORCOMMAND, m_FindCmd);
+  DDV_MaxChars(pDX, m_FindCmd, 4);
+  //}}AFX_DATA_MAP
 }
 
-
-
-
 BEGIN_MESSAGE_MAP(CFindCmd, CDialog)
-	//{{AFX_MSG_MAP(CFindCmd)
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CFindCmd)
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CFindCmd message handlers
 
-void CFindCmd::OnOK() 
+void CFindCmd::OnOK()
 {
-	// TODO: Add extra validation here
-	CString data;
-	char buff[256];
+  // TODO: Add extra validation here
+  CString data;
+  char buff[256];
 
-	BOOL hex=FALSE;
+  BOOL hex = FALSE;
 
-	CmdToFind = 0;
+  CmdToFind = 0;
 
-	GetDlgItemText(IDC_LOOKFORCOMMAND,data);
-	
-	wsprintf(buff,"%s",(LPCTSTR)data);
+  GetDlgItemText(IDC_LOOKFORCOMMAND, data);
 
-	hex = data.Find('x');
+  wsprintf(buff, "%s", (LPCTSTR)data);
 
-	if (hex!=-1)
-	{
-		sscanf(buff,"%x",&CmdToFind);
-	}
-	else
-	{
-		sscanf(buff,"%d",&CmdToFind);
-	}
+  hex = data.Find('x');
 
-	CDialog::OnOK();
+  if (hex != -1) {
+    sscanf(buff, "%x", &CmdToFind);
+  } else {
+    sscanf(buff, "%d", &CmdToFind);
+  }
+
+  CDialog::OnOK();
 }

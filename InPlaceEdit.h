@@ -6,40 +6,43 @@
 
 class CInPlaceEdit : public CEdit
 {
-// Construction
+  // Construction
 public:
-        CInPlaceEdit(int iItem, int iSubItem, CString sInitText);
+  CInPlaceEdit(int iItem, int iSubItem, CString sInitText);
 
-// Attributes
+  // Attributes
 public:
-
-// Operations
+  // Operations
 public:
-
-// Overrides
-        // ClassWizard generated virtual function overrides
-        //{{AFX_VIRTUAL(CInPlaceEdit)
-        public:
-        virtual BOOL PreTranslateMessage(MSG* pMsg);
-        //}}AFX_VIRTUAL
-
-// Implementation
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CInPlaceEdit)
 public:
-        virtual ~CInPlaceEdit();
+  virtual BOOL
+    PreTranslateMessage(MSG* pMsg);
+  //}}AFX_VIRTUAL
 
-        // Generated message map functions
+  // Implementation
+public:
+  virtual ~CInPlaceEdit();
+
+  // Generated message map functions
 protected:
-        //{{AFX_MSG(CInPlaceEdit)
-        afx_msg void OnKillFocus(CWnd* pNewWnd);
-        afx_msg void OnNcDestroy();
-        afx_msg void OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);
-        afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-        //}}AFX_MSG
+  //{{AFX_MSG(CInPlaceEdit)
+  afx_msg void
+    OnKillFocus(CWnd* pNewWnd);
+  afx_msg void
+    OnNcDestroy();
+  afx_msg void
+    OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);
+  afx_msg int
+    OnCreate(LPCREATESTRUCT lpCreateStruct);
+  //}}AFX_MSG
 
-        DECLARE_MESSAGE_MAP()
+  DECLARE_MESSAGE_MAP()
 private:
-        int m_iItem;
-        int m_iSubItem;
-        CString m_sInitText;
-        BOOL    m_bESC;         // To indicate whether ESC key was pressed
+  int m_iItem;
+  int m_iSubItem;
+  CString m_sInitText;
+  BOOL m_bESC;// To indicate whether ESC key was pressed
 };

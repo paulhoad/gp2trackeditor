@@ -5,39 +5,29 @@
 
 class PropertyValue
 {
-    public:
+public:
+  PropertyValue(CString name, int dataval, CString description)
+    : name(name), description(description), dataval(dataval)
+  {}
 
-	PropertyValue(CString name,int dataval,CString description):
-		  name(name),description(description),dataval(dataval)
-	{
-	
-	}
-
-	CString name;
-	int     dataval;
-	CString description;
+  CString name;
+  int dataval;
+  CString description;
 };
 
 class Property
 {
-	Property()
-	{
-		properties = new Vector("Property Value",__LINE__);
-	}
+  Property() { properties = new Vector("Property Value", __LINE__); }
 
-	virtual ~Property()
-	{
-	   delete properties;
-	}
+  virtual ~Property() { delete properties; }
 
+  void
+    add(PropertyValue *val)
+  {
+    properties->addElement(val);
+  }
 
-	void add(PropertyValue *val)
-	{
-	  properties->addElement(val);
-	}
-
-	Vector properties;
+  Vector properties;
 };
-
 
 #endif

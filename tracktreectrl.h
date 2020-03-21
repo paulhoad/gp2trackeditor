@@ -8,35 +8,37 @@
 
 class CTrackTreeCtrl : public CTreeCtrl
 {
-// Construction
+  // Construction
 public:
-	CTrackTreeCtrl();
+  CTrackTreeCtrl();
 
-// Attributes
+  // Attributes
 public:
-
-// Operations
+  // Operations
 public:
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CTrackTreeCtrl)
+  //}}AFX_VIRTUAL
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CTrackTreeCtrl)
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Implementation
 public:
-	virtual ~CTrackTreeCtrl();
+  virtual ~CTrackTreeCtrl();
 
-	// Generated message map functions
+  // Generated message map functions
 protected:
-	//{{AFX_MSG(CTrackTreeCtrl)
-	afx_msg void OnRemoveTrackCmdTree();
-	afx_msg void OnInsertTrackcmdTree();
-	afx_msg void OnUpdateRemoveTrackCmdTree(CCmdUI* pCmdUI);
-	afx_msg void OnUpdateInsertTrackcmdTree(CCmdUI* pCmdUI);
-	//}}AFX_MSG
+  //{{AFX_MSG(CTrackTreeCtrl)
+  afx_msg void
+    OnRemoveTrackCmdTree();
+  afx_msg void
+    OnInsertTrackcmdTree();
+  afx_msg void
+    OnUpdateRemoveTrackCmdTree(CCmdUI* pCmdUI);
+  afx_msg void
+    OnUpdateInsertTrackcmdTree(CCmdUI* pCmdUI);
+  //}}AFX_MSG
 
-	DECLARE_MESSAGE_MAP()
+  DECLARE_MESSAGE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////

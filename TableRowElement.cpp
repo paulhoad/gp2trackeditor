@@ -14,24 +14,20 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CTableRowElement
 
-CTableRowElement::CTableRowElement(CString *name,int icon,WORD extraData):
-name(name),icon(icon),extraData(extraData)
-{
-}
+CTableRowElement::CTableRowElement(CString *name, int icon, WORD extraData)
+  : name(name), icon(icon), extraData(extraData)
+{}
 
 CTableRowElement::~CTableRowElement()
 {
-	if (name!=NULL) 
-		delete name;
+  if (name != NULL) delete name;
 }
 
-
 BEGIN_MESSAGE_MAP(CTableRowElement, CWnd)
-	//{{AFX_MSG_MAP(CTableRowElement)
-		// NOTE - the ClassWizard will add and remove mapping macros here.
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CTableRowElement)
+// NOTE - the ClassWizard will add and remove mapping macros here.
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
-
 
 /////////////////////////////////////////////////////////////////////////////
 // CTableRowElement message handlers

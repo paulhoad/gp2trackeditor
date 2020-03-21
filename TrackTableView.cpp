@@ -16,19 +16,14 @@ static char THIS_FILE[] = __FILE__;
 
 IMPLEMENT_DYNCREATE(CTrackTableView, CView)
 
-CTrackTableView::CTrackTableView()
-{
-}
+CTrackTableView::CTrackTableView() {}
 
-CTrackTableView::~CTrackTableView()
-{
-}
-
+CTrackTableView::~CTrackTableView() {}
 
 BEGIN_MESSAGE_MAP(CTrackTableView, CListCtrl)
-	//{{AFX_MSG_MAP(CTrackTableView)
-		// NOTE - the ClassWizard will add and remove mapping macros here.
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CTrackTableView)
+// NOTE - the ClassWizard will add and remove mapping macros here.
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////

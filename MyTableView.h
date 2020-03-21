@@ -10,111 +10,131 @@
 class CMyTableView : public CListView
 {
 protected:
-	CMyTableView();           // protected constructor used by dynamic creation
-	DECLARE_DYNCREATE(CMyTableView)
+  CMyTableView();// protected constructor used by dynamic creation
+  DECLARE_DYNCREATE(CMyTableView)
 
-// Attributes
+  // Attributes
 public:
+  enum EHighlight {
+    HIGHLIGHT_NORMAL,
+    HIGHLIGHT_ALLCOLUMNS,
+    HIGHLIGHT_ROW
+  };
 
-        enum EHighlight {HIGHLIGHT_NORMAL, HIGHLIGHT_ALLCOLUMNS, HIGHLIGHT_ROW};
 protected:
-        int  m_nHighlight;              // Indicate type of selection highlighting
+  int m_nHighlight;// Indicate type of selection highlighting
 
-// Operations
+  // Operations
 public:
+  void
+    ExportTableData();
+  Vector*
+    ImportTableData();
+  void
+    exportFile(CString filename);
+  Vector*
+    Import(CString filename);
+  void
+    EmptyTable();
 
-	void ExportTableData();
-	Vector * ImportTableData();
-	void Export(CString filename);
-	Vector * Import(CString filename);
-	void EmptyTable();
+  BOOL useImages;
 
-	BOOL useImages;
+  // CImageList* pImageList;
+  int SelectedItemIndex;
 
+  int getTableSectionIndex()
+  {
+    return GetListCtrl().GetNextItem(-1, LVNI_SELECTED);
+  }
 
-	//CImageList* pImageList;
-	int SelectedItemIndex;
+  void
+    addColumn(LPCSTR name, int width, int idx);
+  // void InsertTableString(int row,int index,CString name,int ImageId=-1);
+  // void UpdateTableString(BOOL update,int row,int index,CString name,int
+  // ImageId=-1);
+  void
+    UpdateTableStringPtr(BOOL update, int row, int index, LPCSTR name, int ImageId = -1);
 
-	int getTableSectionIndex()
-	{
-		return GetListCtrl().GetNextItem(-1, LVNI_SELECTED);
-	}
+  void
+    DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
+  void
+    RepaintSelectedItems();
+  int SetHighlightType(EHighlight hilite);
 
-	void addColumn(LPCSTR name,int width,int idx);
-	//void InsertTableString(int row,int index,CString name,int ImageId=-1);
-	//void UpdateTableString(BOOL update,int row,int index,CString name,int ImageId=-1);
-	void UpdateTableStringPtr(BOOL update,int row,int index,LPCSTR name,int ImageId=-1);
+  void
+    SetImageList(CImageList* pImageList, int flags)
+  {
+    if (pImageList != NULL) {
+      GetListCtrl().SetImageList(pImageList, flags);
+    }
+  }
 
-	void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
-	void RepaintSelectedItems();
-	int  SetHighlightType(EHighlight hilite);
+  void
+    setSelected(int row)
+  {
+    int oldrow = getTableSectionIndex();
 
-	void SetImageList(CImageList *pImageList,int flags)
-	{
-		if (pImageList!=NULL)
-		{
-		  GetListCtrl().SetImageList(pImageList,flags);
-		}
-	}
+    if (oldrow >= 0) {
+      GetListCtrl().SetItemState(oldrow, 0, LVIS_SELECTED | LVIS_FOCUSED);
+    }
 
-	void setSelected(int row)
-	{
-	  int oldrow = getTableSectionIndex();
+    GetListCtrl().SetItemState(row, LVIS_SELECTED | LVIS_FOCUSED, LVIS_SELECTED | LVIS_FOCUSED);
+  }
 
-	  if (oldrow >= 0)
-	  {
-	    GetListCtrl().SetItemState( oldrow, 0 , LVIS_SELECTED | LVIS_FOCUSED);
-	  }
+  /*
+  void OnBeginPrint(CDC *pDC, CPrintInfo *pInfo);
+  void PrintHeader(CDC *pDC, CPrintInfo *pInfo);
+  void PrintFooter(CDC *pDC, CPrintInfo *pInfo);
+  int DrawRow(CDC *pDC, int nItem);
 
-	  GetListCtrl().SetItemState( row,LVIS_SELECTED | LVIS_FOCUSED , LVIS_SELECTED | LVIS_FOCUSED);
-	}
+  int m_nCharWidth;
+int m_nRowHeight;
+  int m_nRowsPerPage;
+  CHeaderCtrl* m_HeaderCtrl;
+  //m_HeaderList;
+  */
 
-
-	/*
-	void OnBeginPrint(CDC *pDC, CPrintInfo *pInfo);
-	void PrintHeader(CDC *pDC, CPrintInfo *pInfo);
-	void PrintFooter(CDC *pDC, CPrintInfo *pInfo);
-	int DrawRow(CDC *pDC, int nItem);
-
-	int m_nCharWidth;
-    int m_nRowHeight;
-	int m_nRowsPerPage;
-	CHeaderCtrl* m_HeaderCtrl;
-	//m_HeaderList;
-	*/
-
-
-
-
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CMyTableView)
-	protected:
-	virtual void OnDraw(CDC* pDC);      // overridden to draw this view
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-	virtual void OnPrint(CDC* pDC, CPrintInfo* pInfo);
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CMyTableView)
 protected:
-	virtual ~CMyTableView();
+  virtual void
+    OnDraw(CDC* pDC);// overridden to draw this view
+  virtual BOOL
+    PreCreateWindow(CREATESTRUCT& cs);
+  virtual void
+    OnPrint(CDC* pDC, CPrintInfo* pInfo);
+  //}}AFX_VIRTUAL
+
+  // Implementation
+protected:
+  virtual ~CMyTableView();
 #ifdef _DEBUG
-	virtual void AssertValid() const;
-	virtual void Dump(CDumpContext& dc) const;
+  virtual void
+    AssertValid() const;
+  virtual void
+    Dump(CDumpContext& dc) const;
 #endif
 
-	// Generated message map functions
+  // Generated message map functions
 protected:
-	//{{AFX_MSG(CMyTableView)
-	afx_msg void OnSetFocus(CWnd* pOldWnd);
-	afx_msg void OnPaint();
-	afx_msg void OnKillFocus(CWnd* pNewWnd);
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-	afx_msg void OnClick(NMHDR* pNMHDR, LRESULT* pResult);
-	afx_msg void OnDblclk(NMHDR* pNMHDR, LRESULT* pResult);
-	afx_msg void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+  //{{AFX_MSG(CMyTableView)
+  afx_msg void
+    OnSetFocus(CWnd* pOldWnd);
+  afx_msg void
+    OnPaint();
+  afx_msg void
+    OnKillFocus(CWnd* pNewWnd);
+  afx_msg int
+    OnCreate(LPCREATESTRUCT lpCreateStruct);
+  afx_msg void
+    OnClick(NMHDR* pNMHDR, LRESULT* pResult);
+  afx_msg void
+    OnDblclk(NMHDR* pNMHDR, LRESULT* pResult);
+  afx_msg void
+    OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
+  //}}AFX_MSG
+  DECLARE_MESSAGE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////

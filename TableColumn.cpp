@@ -14,19 +14,14 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CTableColumn
 
-CTableColumn::CTableColumn(LPCSTR ctitle,int width):
-title(title),width(width)
+CTableColumn::CTableColumn(LPCSTR ctitle, int width)
+  : title(title), width(width)
 {
-	title = (LPSTR)malloc((strlen(ctitle)+1));
-	strcpy(title,ctitle);
+  title = (LPSTR)malloc((strlen(ctitle) + 1));
+  strcpy(title, ctitle);
 }
 
-CTableColumn::~CTableColumn()
-{
-	free(title);
-}
-
-
+CTableColumn::~CTableColumn() { free(title); }
 
 /////////////////////////////////////////////////////////////////////////////
 // CTableColumn message handlers

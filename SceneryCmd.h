@@ -6,30 +6,31 @@
 
 class CSceneryCmd : public CDialog
 {
-// Construction
+  // Construction
 public:
-	CSceneryCmd(CWnd* pParent = NULL);   // standard constructor
+  CSceneryCmd(CWnd* pParent = NULL);// standard constructor
 
-// Dialog Data
-	//{{AFX_DATA(CSceneryCmd)
-	enum { IDD = IDD_CMD_SCENERYEDITOR };
-		// NOTE: the ClassWizard will add data members here
-	//}}AFX_DATA
+  // Dialog Data
+  //{{AFX_DATA(CSceneryCmd)
+  enum {
+    IDD = IDD_CMD_SCENERYEDITOR
+  };
+  // NOTE: the ClassWizard will add data members here
+  //}}AFX_DATA
 
-
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CSceneryCmd)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CSceneryCmd)
 protected:
+  virtual void
+    DoDataExchange(CDataExchange* pDX);// DDX/DDV support
+    //}}AFX_VIRTUAL
 
-	// Generated message map functions
-	//{{AFX_MSG(CSceneryCmd)
-		// NOTE: the ClassWizard will add member functions here
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+  // Implementation
+protected:
+  // Generated message map functions
+  //{{AFX_MSG(CSceneryCmd)
+  // NOTE: the ClassWizard will add member functions here
+  //}}AFX_MSG
+  DECLARE_MESSAGE_MAP()
 };

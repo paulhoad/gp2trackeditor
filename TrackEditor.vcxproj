@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="OpenGL Release|Win32">
+      <Configuration>OpenGL Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OpenGL|Win32">
+      <Configuration>OpenGL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{B06F0E0A-1580-4E27-94B9-5F66E6C87486}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OpenGL Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OpenGL|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OpenGL Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OpenGL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OpenGL|Win32'">
+    <OutDir>.\TrackEdi\</OutDir>
+    <IntDir>.\TrackEdi\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OpenGL Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OpenGL|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;USE_OPEN_GL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\TrackEdi\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\TrackEdi\TrackEditor.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\TrackEdi\</ObjectFileName>
+      <ProgramDataBaseFileName>.\TrackEdi\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\TrackEdi\TrackEditor.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0809</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <OutputFile>.\TrackEdi\TrackEditor.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\TrackEdi\TrackEditor.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OpenGL Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;USE_OPEN_GL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\TrackEditor.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\TrackEditor.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0809</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <OutputFile>.\Release\TrackEditor.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\TrackEditor.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BankDlg.cpp" />
+    <ClCompile Include="BMP.CPP" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraEdit.cpp" />
+    <ClCompile Include="CameraTool.cpp" />
+    <ClCompile Include="CameraView.cpp" />
+    <ClCompile Include="CCCarSetup.cpp" />
+    <ClCompile Include="CCDataLog.cxx" />
+    <ClCompile Include="CCLineSection.cpp" />
+    <ClCompile Include="CCSetupEdit.cpp" />
+    <ClCompile Include="CDIB.CPP" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="CLineEditor.cpp" />
+    <ClCompile Include="CmdEditor.cpp" />
+    <ClCompile Include="CmdList.cpp" />
+    <ClCompile Include="CmdRemoval.cpp" />
+    <ClCompile Include="CommandStats.cpp" />
+    <ClCompile Include="Credit.cpp" />
+    <ClCompile Include="CScale.cpp" />
+    <ClCompile Include="DataEditor.cpp" />
+    <ClCompile Include="DataEntry.cpp" />
+    <ClCompile Include="dibkernel.cpp" />
+    <ClCompile Include="DirivingLine.cpp" />
+    <ClCompile Include="Display.cpp" />
+    <ClCompile Include="FileVersion.cpp" />
+    <ClCompile Include="FindCmd.cpp" />
+    <ClCompile Include="GeneralDataEnry.cpp" />
+    <ClCompile Include="gp2exe.cpp" />
+    <ClCompile Include="GPPitDraw.cpp" />
+    <ClCompile Include="GPTrack.cpp" />
+    <ClCompile Include="GPTrackDraw.cpp" />
+    <ClCompile Include="HyperLinkButton.cpp" />
+    <ClCompile Include="Info.cpp" />
+    <ClCompile Include="InPlaceEdit.cpp" />
+    <ClCompile Include="InternalObject.cpp" />
+    <ClCompile Include="InternalView.cpp" />
+    <ClCompile Include="Jam.cpp" />
+    <ClCompile Include="JamFileEditor.cpp" />
+    <ClCompile Include="JamList.cpp" />
+    <ClCompile Include="JamView.cpp" />
+    <ClCompile Include="KerbEditor.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MoveTo.cpp" />
+    <ClCompile Include="MyListCtrl.cpp" />
+    <ClCompile Include="MyMdiChildWnd.cpp" />
+    <ClCompile Include="MyTableView.cpp" />
+    <ClCompile Include="ObjectEdit.cpp" />
+    <ClCompile Include="ObjectInfo.cpp" />
+    <ClCompile Include="ObjectName.cpp" />
+    <ClCompile Include="ObjectPos.cpp" />
+    <ClCompile Include="ObjectProperties.cpp" />
+    <ClCompile Include="ObjectView.cpp" />
+    <ClCompile Include="OpenGLView.cpp" />
+    <ClCompile Include="PaletteChooser.cpp" />
+    <ClCompile Include="PaletteCtrl.cpp" />
+    <ClCompile Include="PitEntrance.cpp" />
+    <ClCompile Include="PitInfo.cpp" />
+    <ClCompile Include="PitStopStratergy.cpp" />
+    <ClCompile Include="Point3D.cpp" />
+    <ClCompile Include="RandomObject.cpp" />
+    <ClCompile Include="Register.cpp" />
+    <ClCompile Include="Ruler.cpp" />
+    <ClCompile Include="Sanity.cpp" />
+    <ClCompile Include="ScaleData.cpp" />
+    <ClCompile Include="SceneryCmd.cpp" />
+    <ClCompile Include="SceneryEditor.cpp" />
+    <ClCompile Include="SceneryOnOff.cpp" />
+    <ClCompile Include="SIZECBAR.CPP" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='OpenGL|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='OpenGL|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='OpenGL Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='OpenGL Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="TextureChooser.cpp" />
+    <ClCompile Include="TipDlg.cpp" />
+    <ClCompile Include="Tool.cpp" />
+    <ClCompile Include="ToolBarUtils.cpp" />
+    <ClCompile Include="ToolTipWnd.cpp" />
+    <ClCompile Include="TrackCmd.cpp" />
+    <ClCompile Include="TrackEditor.cpp" />
+    <ClCompile Include="TrackEditorDoc.cpp" />
+    <ClCompile Include="TrackEditorScrollView.cpp" />
+    <ClCompile Include="TrackInfo.cpp" />
+    <ClCompile Include="TrackNameInfo.cpp" />
+    <ClCompile Include="TrackObject.cpp" />
+    <ClCompile Include="TrackObjectDefinition.cpp" />
+    <ClCompile Include="TrackOpenGLSides.cpp" />
+    <ClCompile Include="TrackOpenGLView.cpp" />
+    <ClCompile Include="TrackPropertySheet.cpp" />
+    <ClCompile Include="TrackSection.cpp" />
+    <ClCompile Include="TrackSectionSides.cpp" />
+    <ClCompile Include="TrackSelection.cpp" />
+    <ClCompile Include="TrackStats.cpp" />
+    <ClCompile Include="TrackTree.cpp" />
+    <ClCompile Include="TrackTreeCtrl.cpp" />
+    <ClCompile Include="TrackWidth.cpp" />
+    <ClCompile Include="TrChangeDlg.cpp" />
+    <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="VertexEditor.cpp" />
+    <ClCompile Include="ViewSections.cpp" />
+    <ClCompile Include="WorldView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BankDlg.h" />
+    <ClInclude Include="BMP.H" />
+    <ClInclude Include="buildnumber.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraEdit.h" />
+    <ClInclude Include="CameraView.h" />
+    <ClInclude Include="CCCarSetup.h" />
+    <ClInclude Include="CCLineSection.h" />
+    <ClInclude Include="CCSetupEdit.h" />
+    <ClInclude Include="CDIB.H" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CLineEditor.h" />
+    <ClInclude Include="CmdEditor.h" />
+    <ClInclude Include="CmdList.h" />
+    <ClInclude Include="CmdRemoval.h" />
+    <ClInclude Include="CMemDC.h" />
+    <ClInclude Include="CommandStats.h" />
+    <ClInclude Include="Credit.h" />
+    <ClInclude Include="CScale.h" />
+    <ClInclude Include="DataChangeObserver.h" />
+    <ClInclude Include="DataEditor.h" />
+    <ClInclude Include="DataEntry.h" />
+    <ClInclude Include="DataValue.h" />
+    <ClInclude Include="dibkernel.h" />
+    <ClInclude Include="DirivingLine.h" />
+    <ClInclude Include="Display.h" />
+    <ClInclude Include="FileVersion.h" />
+    <ClInclude Include="FindCmd.h" />
+    <ClInclude Include="GeneralDataEnry.h" />
+    <ClInclude Include="GPTrack.h" />
+    <ClInclude Include="htmlhelp.h" />
+    <ClInclude Include="ImportDataElement.h" />
+    <ClInclude Include="Info.h" />
+    <ClInclude Include="InPlaceEdit.h" />
+    <ClInclude Include="InternalObject.h" />
+    <ClInclude Include="InternalObjectCmd.h" />
+    <ClInclude Include="InternalView.h" />
+    <ClInclude Include="IO_Name.h" />
+    <ClInclude Include="Jam.h" />
+    <ClInclude Include="JamFileEditor.h" />
+    <ClInclude Include="JamList.h" />
+    <ClInclude Include="JamPlus.h" />
+    <ClInclude Include="JamView.h" />
+    <ClInclude Include="KerbEditor.h" />
+    <ClInclude Include="MagicNumber.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MainToolbar.h" />
+    <ClInclude Include="MoveTo.h" />
+    <ClInclude Include="MyListCtrl.h" />
+    <ClInclude Include="MyMdiChildWnd.h" />
+    <ClInclude Include="MyTableView.h" />
+    <ClInclude Include="ObjectEdit.h" />
+    <ClInclude Include="ObjectInfo.h" />
+    <ClInclude Include="ObjectLookup.h" />
+    <ClInclude Include="ObjectName.h" />
+    <ClInclude Include="ObjectPos.h" />
+    <ClInclude Include="ObjectProperties.h" />
+    <ClInclude Include="ObjectView.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="OpenGLView.h" />
+    <ClInclude Include="PaletteChooser.h" />
+    <ClInclude Include="PaletteCtrl.h" />
+    <ClInclude Include="Pallette.h" />
+    <ClInclude Include="PitEntrance.h" />
+    <ClInclude Include="PitInfo.h" />
+    <ClInclude Include="PitStopStratergy.h" />
+    <ClInclude Include="Point3D.h" />
+    <ClInclude Include="Polygon.h" />
+    <ClInclude Include="Property.h" />
+    <ClInclude Include="RandomObject.h" />
+    <ClInclude Include="Register.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="RgbPal.h" />
+    <ClInclude Include="Ruler.h" />
+    <ClInclude Include="Sanity.h" />
+    <ClInclude Include="ScaleData.h" />
+    <ClInclude Include="SceneryCmd.h" />
+    <ClInclude Include="SceneryEditor.h" />
+    <ClInclude Include="SceneryOnOff.h" />
+    <ClInclude Include="SingleVarObserver.h" />
+    <ClInclude Include="SIZECBAR.H" />
+    <ClInclude Include="Splash.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SubObject.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureChooser.h" />
+    <ClInclude Include="TipDlg.h" />
+    <ClInclude Include="Tool.h" />
+    <ClInclude Include="ToolTipWnd.h" />
+    <ClInclude Include="TrackCmd.h" />
+    <ClInclude Include="TrackEditor.h" />
+    <ClInclude Include="TrackEditorDoc.h" />
+    <ClInclude Include="TrackEditorScrollView.h" />
+    <ClInclude Include="TrackInfo.h" />
+    <ClInclude Include="TrackNameInfo.h" />
+    <ClInclude Include="TrackObject.h" />
+    <ClInclude Include="TrackObjectDefinition.h" />
+    <ClInclude Include="TrackOpenGLView.h" />
+    <ClInclude Include="TrackPropertySheet.h" />
+    <ClInclude Include="TrackSection.h" />
+    <ClInclude Include="TrackSelection.h" />
+    <ClInclude Include="TrackStats.h" />
+    <ClInclude Include="TrackTableView.h" />
+    <ClInclude Include="TrackTree.h" />
+    <ClInclude Include="tracktreectrl.h" />
+    <ClInclude Include="TrackWidth.h" />
+    <ClInclude Include="TrChangeDlg.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="VertexEditor.h" />
+    <ClInclude Include="ViewSections.h" />
+    <ClInclude Include="vml.h" />
+    <ClInclude Include="WorldView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ponk.math" />
+    <CustomBuild Include="res\cursor1.cur" />
+    <CustomBuild Include="res\TrackEditor.rc2" />
+    <CustomBuild Include="res\vbar.cur" />
+    <CustomBuild Include="stampver.inf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ChangeLog.txt" />
+    <Text Include="Gp2form.txt" />
+    <Text Include="License.txt" />
+    <Text Include="Manual.txt" />
+    <Text Include="ReadMe.txt" />
+    <Text Include="tips.txt" />
+    <Text Include="TODO.txt" />
+    <Text Include="ZipFiles.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TrackEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bank_lef.bmp" />
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\bitmap3.bmp" />
+    <Image Include="res\bitmap4.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\bmp00005.bmp" />
+    <Image Include="res\bmp00006.bmp" />
+    <Image Include="res\bmp00007.bmp" />
+    <Image Include="res\bmp00008.bmp" />
+    <Image Include="res\bmp00009.bmp" />
+    <Image Include="res\bmp00010.bmp" />
+    <Image Include="res\bmp00011.bmp" />
+    <Image Include="res\bmp00012.bmp" />
+    <Image Include="res\bmp00013.bmp" />
+    <Image Include="res\bmp00014.bmp" />
+    <Image Include="res\bmp00015.bmp" />
+    <Image Include="res\bmp00016.bmp" />
+    <Image Include="res\bmp00017.bmp" />
+    <Image Include="res\bmp00018.bmp" />
+    <Image Include="res\bmp00019.bmp" />
+    <Image Include="res\bmp00020.bmp" />
+    <Image Include="res\bmp00021.bmp" />
+    <Image Include="res\bmp00022.bmp" />
+    <Image Include="res\bmp00023.bmp" />
+    <Image Include="res\bmp00024.bmp" />
+    <Image Include="res\bmp00025.bmp" />
+    <Image Include="res\bmp00026.bmp" />
+    <Image Include="res\bmp00027.bmp" />
+    <Image Include="res\bmp00028.bmp" />
+    <Image Include="res\bmp00029.bmp" />
+    <Image Include="res\bmp00030.bmp" />
+    <Image Include="res\bmp00031.bmp" />
+    <Image Include="res\bmp00032.bmp" />
+    <Image Include="res\bmp00033.bmp" />
+    <Image Include="res\bmp00034.bmp" />
+    <Image Include="res\bmp00035.bmp" />
+    <Image Include="res\bmp00036.bmp" />
+    <Image Include="res\bmp00037.bmp" />
+    <Image Include="res\bmp00038.bmp" />
+    <Image Include="res\bmp00039.bmp" />
+    <Image Include="res\bmp00040.bmp" />
+    <Image Include="res\bmp00041.bmp" />
+    <Image Include="res\bmp00042.bmp" />
+    <Image Include="res\bmp00043.bmp" />
+    <Image Include="res\bmp00044.bmp" />
+    <Image Include="res\bmp00045.bmp" />
+    <Image Include="res\bmp00046.bmp" />
+    <Image Include="res\bmp00047.bmp" />
+    <Image Include="res\bmp00048.bmp" />
+    <Image Include="res\bmp00049.bmp" />
+    <Image Include="res\bmp00050.bmp" />
+    <Image Include="res\bmp00051.bmp" />
+    <Image Include="res\bmp00052.bmp" />
+    <Image Include="res\bmp00053.bmp" />
+    <Image Include="res\bmp00054.bmp" />
+    <Image Include="res\bmp00055.bmp" />
+    <Image Include="res\bmp00056.bmp" />
+    <Image Include="res\bmp00057.bmp" />
+    <Image Include="res\bmp00058.bmp" />
+    <Image Include="res\bmp00059.bmp" />
+    <Image Include="res\bmp00060.bmp" />
+    <Image Include="res\bmp00061.bmp" />
+    <Image Include="res\bmp00062.bmp" />
+    <Image Include="res\bmp00063.bmp" />
+    <Image Include="res\bmp00064.bmp" />
+    <Image Include="res\bmp00065.bmp" />
+    <Image Include="res\bmp00066.bmp" />
+    <Image Include="res\bmp00067.bmp" />
+    <Image Include="res\bmp00068.bmp" />
+    <Image Include="res\bmp00069.bmp" />
+    <Image Include="res\bmp00070.bmp" />
+    <Image Include="res\bmp00071.bmp" />
+    <Image Include="res\bmp00072.bmp" />
+    <Image Include="res\bmp00073.bmp" />
+    <Image Include="res\bmp00074.bmp" />
+    <Image Include="res\bmp00075.bmp" />
+    <Image Include="res\bmp00076.bmp" />
+    <Image Include="res\bmp00077.bmp" />
+    <Image Include="res\bmp00078.bmp" />
+    <Image Include="res\bmp00079.bmp" />
+    <Image Include="res\bmp00080.bmp" />
+    <Image Include="res\bmp00081.bmp" />
+    <Image Include="res\bmp00082.bmp" />
+    <Image Include="res\bmp00083.bmp" />
+    <Image Include="res\bmp00084.bmp" />
+    <Image Include="res\bmp00085.bmp" />
+    <Image Include="res\bmp00086.bmp" />
+    <Image Include="res\bmp00087.bmp" />
+    <Image Include="res\bridge.bmp" />
+    <Image Include="res\building.bmp" />
+    <Image Include="res\camera1.bmp" />
+    <Image Include="res\Car.bmp" />
+    <Image Include="res\cc_left1.bmp" />
+    <Image Include="res\cc_line1.bmp" />
+    <Image Include="res\cc_right.bmp" />
+    <Image Include="res\Crowd.bmp" />
+    <Image Include="res\DrkGravel.bmp" />
+    <Image Include="res\Grass.bmp" />
+    <Image Include="res\Gravel.bmp" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\ico00002.ico" />
+    <Image Include="res\ico00003.ico" />
+    <Image Include="res\ico00004.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\litebulb.bmp" />
+    <Image Include="res\object1.bmp" />
+    <Image Include="res\object_i.ico" />
+    <Image Include="res\observation.bmp" />
+    <Image Include="res\point1.bmp" />
+    <Image Include="res\point2.bmp" />
+    <Image Include="res\polygons.bmp" />
+    <Image Include="res\Sand.bmp" />
+    <Image Include="res\side_blu.bmp" />
+    <Image Include="res\side_gra.bmp" />
+    <Image Include="res\side_unk.bmp" />
+    <Image Include="res\Splsh16.bmp" />
+    <Image Include="res\stand1.bmp" />
+    <Image Include="res\testtext.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+    <Image Include="res\track1.bmp" />
+    <Image Include="res\TrackEditor.ico" />
+    <Image Include="res\TrackEditorDoc.ico" />
+    <Image Include="res\track_ch.bmp" />
+    <Image Include="res\unk1.bmp" />
+    <Image Include="res\world.ico" />
+    <Image Include="Splsh16.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

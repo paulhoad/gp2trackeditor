@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrackEditor", "TrackEditor.vcxproj", "{B06F0E0A-1580-4E27-94B9-5F66E6C87486}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		OpenGL Release|x86 = OpenGL Release|x86
+		OpenGL|x86 = OpenGL|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B06F0E0A-1580-4E27-94B9-5F66E6C87486}.OpenGL Release|x86.ActiveCfg = OpenGL Release|Win32
+		{B06F0E0A-1580-4E27-94B9-5F66E6C87486}.OpenGL Release|x86.Build.0 = OpenGL Release|Win32
+		{B06F0E0A-1580-4E27-94B9-5F66E6C87486}.OpenGL|x86.ActiveCfg = OpenGL|Win32
+		{B06F0E0A-1580-4E27-94B9-5F66E6C87486}.OpenGL|x86.Build.0 = OpenGL|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93569EBC-E2AD-4EC4-A89D-9D9C7E2A49FC}
+	EndGlobalSection
+EndGlobal

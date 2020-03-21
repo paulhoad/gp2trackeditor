@@ -16,122 +16,139 @@
 
 class CTable : public CWnd
 {
-// Construction
+  // Construction
 public:
-	CTable(CWnd *parentView);
+  CTable(CWnd *parentView);
 
-// Attributes
+  // Attributes
 public:
-	CBrush *brush;
-	CBrush *hibrush;
-	CPen   *ltpen;
-	CPen   *dkpen;
-	CPen   *pen;
-	CWnd   *parent;
+  CBrush *brush;
+  CBrush *hibrush;
+  CPen *ltpen;
+  CPen *dkpen;
+  CPen *pen;
+  CWnd *parent;
 
-	BOOL draggingColumn;
-	int  ColumnBeingDragged;
-	int  PreviousColumnWidth;
+  BOOL draggingColumn;
+  int ColumnBeingDragged;
+  int PreviousColumnWidth;
 
-// Operations
+  // Operations
 public:
+  void
+    Draw(CDC *pDC, RECT *rect);
+  void
+    OnMyDraw(CDC *pDC, RECT *rect);
 
-	void Draw(CDC *pDC,RECT *rect);
-	void OnMyDraw(CDC *pDC,RECT *rect);
+  void
+    addColumn(LPCSTR title, int width);
 
-	void addColumn(LPCSTR title,int width);
+  // void addRow(CString **array,int cols);
+  void
+    addRow(CString **array, int cols, int icon = -1, WORD extraData = NULL);
 
-	//void addRow(CString **array,int cols);
-	void addRow(CString **array,int cols,int icon=-1,WORD extraData=NULL);
+  void
+    empty();
 
-	void empty();
+  BOOL
+    isSelected(int i);
 
-	BOOL isSelected(int i);
+  void
+    Export(CString filename);
+  void
+    ExportTableData();
 
-	void Export(CString filename);
-	void ExportTableData();
+  void
+    setSelected(int i)
+  {
+    selectedColumn = i;
+    repaint();
+  }
 
-	void setSelected(int i)
-	{
-	   selectedColumn = i;
-	   repaint();
-	}
+  void
+    repaint()
+  {
+    RECT rect;
+    parent->GetClientRect(&rect);
+    parent->InvalidateRect(&rect);
+  }
 
-	void repaint()
-	{
-		RECT rect;
-	    parent->GetClientRect(&rect);
-	    parent->InvalidateRect(&rect);
-	}
+  int getSelectionIndex()
+  {
+    return selectedColumn;
+  }
 
-	int getSelectionIndex()
-	{
-		return selectedColumn;
-	}
+  void
+    setTopRow(int idx)
+  {
+    int xpos = 0;
+    int ypos = idx * 14;
+    setOffset(CPoint(xpos, ypos));
+  }
 
-	void setTopRow(int idx)
-	{
-		int xpos = 0;
-		int ypos = idx*14;
-	    setOffset(CPoint(xpos,ypos));
-	}
+  void
+    setOffset(CPoint offset)
+  {
+    begin = offset;
+  }
 
-	void setOffset(CPoint offset)
-	{
-		begin = offset;
-	}
+  CPoint
+    getOffset()
+  {
+    return begin;
+  }
 
-	CPoint getOffset()
-	{
-		return begin;
-	}
+  CSize
+    getSize()
+  {
+    CSize s;
+    int width = 0;
 
-	CSize getSize()
-	{
-		CSize s;
-		int width=0;
+    for (int i = 0; i < TableColumns->size(); i++) {
+      CTableColumn *col = (CTableColumn *)TableColumns->elementAt(i);
+      width += col->getWidth();
+    }
 
-		for(int i=0;i<TableColumns->size();i++)
-		{
-			CTableColumn *col = (CTableColumn*)TableColumns->elementAt(i);
-			width += col->getWidth();
-		}
+    width += 100;
 
-		width+=100;
+    s.cx = width;
+    s.cy = ((TableRows->size() + 2) * 15);
 
-		s.cx = width;
-		s.cy = ((TableRows->size()+2)*15);
+    return s;
+  }
 
-		return s;
-	}
+  int selectedColumn;
+  CPoint begin;
 
-	int  selectedColumn;
-	CPoint begin;
+  Vector *TableRows;
+  Vector *TableColumns;
 
-	Vector *TableRows;
-	Vector *TableColumns;
+  CDialog *dlg;
 
-	CDialog *dlg;
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CTable)
+  //}}AFX_VIRTUAL
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CTable)
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Implementation
 public:
-	virtual ~CTable();
+  virtual ~CTable();
 
-	// Generated message map functions
+  // Generated message map functions
 public:
-	//{{AFX_MSG(CTable)
-	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
-	afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);
-	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
-	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
-	afx_msg BOOL OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message);
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+  //{{AFX_MSG(CTable)
+  afx_msg void
+    OnLButtonDown(UINT nFlags, CPoint point);
+  afx_msg void
+    OnLButtonDblClk(UINT nFlags, CPoint point);
+  afx_msg void
+    OnLButtonUp(UINT nFlags, CPoint point);
+  afx_msg void
+    OnMouseMove(UINT nFlags, CPoint point);
+  afx_msg BOOL
+    OnSetCursor(CWnd *pWnd, UINT nHitTest, UINT message);
+  //}}AFX_MSG
+  DECLARE_MESSAGE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////

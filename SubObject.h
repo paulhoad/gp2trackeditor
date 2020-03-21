@@ -1,16 +1,14 @@
 
 
-class SubObject: public CObject
+class SubObject : public CObject
 {
 public:
-	SubObject()
-	{}
+  SubObject() {}
 
-
-	int unk1;
-	int unk2;
-	int unk3;
-	int x;
-	int y;
-	int z;
+  int unk1;
+  int unk2;
+  int unk3;
+  int x;
+  int y;
+  int z;
 };

@@ -6,30 +6,31 @@
 
 class CMoveTo : public CDialog
 {
-// Construction
+  // Construction
 public:
-	CMoveTo(CWnd* pParent = NULL);   // standard constructor
+  CMoveTo(CWnd* pParent = NULL);// standard constructor
 
-// Dialog Data
-	//{{AFX_DATA(CMoveTo)
-	enum { IDD = IDD_MoveTo };
-	int		m_MoveTo;
-	//}}AFX_DATA
+  // Dialog Data
+  //{{AFX_DATA(CMoveTo)
+  enum {
+    IDD = IDD_MoveTo
+  };
+  int m_MoveTo;
+  //}}AFX_DATA
 
-
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CMoveTo)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CMoveTo)
 protected:
+  virtual void
+    DoDataExchange(CDataExchange* pDX);// DDX/DDV support
+    //}}AFX_VIRTUAL
 
-	// Generated message map functions
-	//{{AFX_MSG(CMoveTo)
-		// NOTE: the ClassWizard will add member functions here
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+  // Implementation
+protected:
+  // Generated message map functions
+  //{{AFX_MSG(CMoveTo)
+  // NOTE: the ClassWizard will add member functions here
+  //}}AFX_MSG
+  DECLARE_MESSAGE_MAP()
 };

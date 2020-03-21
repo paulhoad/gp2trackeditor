@@ -23,232 +23,252 @@
 #define BLUE_PEN 23
 #define RED_PEN 24
 
-
 class Display
 {
-   CDC *gr;
-   CBrush *roadBrush;
-   CBrush *drkroadBrush;
-   CBrush *grassBrush;
-   CBrush *tarmacBrush;
-   CBrush *sandBrush;
+  CDC *gr;
+  CBrush *roadBrush;
+  CBrush *drkroadBrush;
+  CBrush *grassBrush;
+  CBrush *tarmacBrush;
+  CBrush *sandBrush;
 
-   CBrush *grassBitmapBrush;
-   CBrush *tarmacBitmapBrush;
-   CBrush *sandBitmapBrush;
-   CBrush *drkroadBitmapBrush;
-   CBrush *crowdBitmapBrush;
+  CBrush *grassBitmapBrush;
+  CBrush *tarmacBitmapBrush;
+  CBrush *sandBitmapBrush;
+  CBrush *drkroadBitmapBrush;
+  CBrush *crowdBitmapBrush;
 
-   CBrush *redBrush;
-   CBrush *cyanBrush;
-   CPen   *ccpen;
-   CPen   *grassPen;
-   CPen   *ccselpen;
-   CPen   *roadselpen;
-   CPen   *redpen;
-   CPen   *kerbpen;
-   CPen   *kerblowerpen;
-   CPen   *rulerpen;
-   //CPen   *gripPen;
-   CPen   *gridpen;
-   CPen   *bluePen;
-   CPen   *redPen;
+  CBrush *redBrush;
+  CBrush *cyanBrush;
+  CPen *ccpen;
+  CPen *grassPen;
+  CPen *ccselpen;
+  CPen *roadselpen;
+  CPen *redpen;
+  CPen *kerbpen;
+  CPen *kerblowerpen;
+  CPen *rulerpen;
+  // CPen   *gripPen;
+  CPen *gridpen;
+  CPen *bluePen;
+  CPen *redPen;
 
-   public:
+public:
+  Display();
 
-	   Display();
+  ~Display()
+  {
+    delete roadBrush;
+    delete tarmacBrush;
+    delete grassBrush;
+    delete sandBrush;
+    delete ccselpen;
+    delete ccpen;
+    delete roadselpen;
+    delete redpen;
+    delete kerbpen;
+    delete kerblowerpen;
+    delete redBrush;
+    delete grassPen;
+    delete rulerpen;
+    // delete gripPen;
+    delete gridpen;
+    delete drkroadBrush;
+    delete grassBitmapBrush;
+    delete sandBitmapBrush;
+    delete tarmacBitmapBrush;
+    delete drkroadBitmapBrush;
+    delete crowdBitmapBrush;
+    delete cyanBrush;
+    delete bluePen;
+    delete redPen;
+  }
 
-	   ~Display()
-	   {
-		   delete roadBrush;
-		   delete tarmacBrush;
-		   delete grassBrush;
-		   delete sandBrush;
-		   delete ccselpen;
-		   delete ccpen;
-		   delete roadselpen;
-		   delete redpen;
-		   delete kerbpen;
-		   delete kerblowerpen;
-		   delete redBrush;
-		   delete grassPen;
-		   delete rulerpen;
-		   //delete gripPen;
-		   delete gridpen;
-		   delete drkroadBrush;
-		   delete grassBitmapBrush;
-		   delete sandBitmapBrush;
-		   delete tarmacBitmapBrush;
-		   delete drkroadBitmapBrush;
-		   delete crowdBitmapBrush;
-		   delete cyanBrush;
-		   delete bluePen;
-		   delete redPen;
-	   }
+  CDC *
+    getGraphics()
+  {
+    return gr;
+  }
 
-	   CDC * getGraphics()
-	   {
-		   return gr;
-	   }
+  double
+    getScale()
+  {
+    return scale;
+  }
 
-	   double getScale()
-	   {
-		   return scale;
-	   }
+  void
+    setGraphics(CDC *pDC)
+  {
+    gr = pDC;
+    // gr->SetMapMode(MM_LOENGLISH);
+  }
 
-	   void setGraphics(CDC* pDC)
-	   {
-		   gr = pDC;
-		   //gr->SetMapMode(MM_LOENGLISH);
-	   }
+  void
+    setColor(int col);
 
-	   void setColor(int col);
-	   
+  void
+    SelectObject(CPen *pen)
+  {
+    gr->SelectObject(pen);
+  }
 
-	   void SelectObject(CPen *pen)
-	   {
-		 gr->SelectObject(pen);
-	   }
+  void
+    ZoomIn()
+  {
+    scale = scale * 1.1;
+  }
 
-	   void ZoomIn()
-	   {
-		   scale = scale*1.1;
-	   }
+  void
+    ZoomOut()
+  {
+    scale = scale * 0.9;
+  }
 
-	   void ZoomOut()
-	   {
-		   scale = scale*0.9;
-	   }
+  void
+    ZoomHome()
+  {
+    scale = 1.0;
+  }
 
-	   void ZoomHome()
-	   {
-		   scale = 1.0;
-	   }
+  double
+    DeviceToLogicalX(double x)
+  {
+    POINT point;
 
-	   double DeviceToLogicalX(double x)
-	   {
-		   POINT point;
+    point.x = (long)x;
+    point.y = (long)x;
 
-		   point.x = (long)x;
-		   point.y = (long)x;
+    gr->LPtoDP(&point);
 
-		   gr->LPtoDP(&point);
+    return (double)point.x;
+  }
 
-		   return (double)point.x;
-	   }
+  double
+    DeviceToLogicalY(double x)
+  {
+    POINT point;
 
-	   double DeviceToLogicalY(double x)
-	   {
-		   POINT point;
+    point.x = (long)x;
+    point.y = (long)x;
 
-		   point.x = (long)x;
-		   point.y = (long)x;
+    gr->LPtoDP(&point);
 
-		   gr->LPtoDP(&point);
+    return (double)point.y;
+  }
 
-		   return (double)point.y;
-	   }
+  long
+    getScreenX(double x)
+  {
+    return (long)((xoffset + (x * scale)));
+    // return (int)(DeviceToLogicalY(xoffset+(x*scale)));
+  }
 
+  long
+    getScreenY(double y)
+  {
+    return (long)((yoffset + (y * scale)));
+    // return (int)(DeviceToLogicalY(yoffset+(y*scale)));
+  }
 
-	   long getScreenX(double x)
-	   {
-		   return (long)((xoffset+(x*scale)));
-		   //return (int)(DeviceToLogicalY(xoffset+(x*scale)));
-	   }
+  double
+    getObjectX(int sx)
+  {
+    return ((sx - xoffset) / scale);
+  }
 
-	   long getScreenY(double y)
-	   {
-		   return (long)((yoffset+(y*scale)));
-		   //return (int)(DeviceToLogicalY(yoffset+(y*scale)));
-	   }
+  double
+    getObjectY(int sx)
+  {
+    return ((sx - yoffset) / scale);
+  }
 
-	   double getObjectX(int sx)
-	   {
-		   return ((sx-xoffset)/scale);
-	   }
+  void
+    drawLine(double x, double y, double x1, double y1)
+  {
+    gr->MoveTo((int)(xoffset + (x * scale)), (int)(yoffset + (y * scale)));
+    gr->LineTo((int)(xoffset + (x1 * scale)), (int)(yoffset + (y1 * scale)));
+  }
 
-	   double getObjectY(int sx)
-	   {
-		   return ((sx-yoffset)/scale);
-	   }
+  void
+    drawEllipse(double x, double y, double x1, double y1);
+  void
+    drawRect(double x, double y, double x1, double y1);
+  void
+    drawBitmap(int id, double x, double y);
 
-	   void drawLine(double x,double y,double x1,double y1)
-	   {
-		   gr->MoveTo((int)(xoffset+(x*scale)),(int)(yoffset+(y*scale)));
-		   gr->LineTo((int)(xoffset+(x1*scale)),(int)(yoffset+(y1*scale)));
-	   }
+  void
+    drawArc(double x, double y, double x1, double y1, double cx, double cy, double angle1, double angle2, double radius);
+  void
+    drawChord(double x, double y, double x1, double y1, double cx, double cy, double angle1, double angle2, double radius);
+  void
+    drawArcSpecial(double x, double y, double x1, double y1, double cx, double cy, double angle1, double angle2, double radius1, double radius, BOOL square = FALSE);
+  void
+    drawPie(double x, double y, double x1, double y1, double cx, double cy, double angle1, double angle2, double radius);
 
-	   void drawEllipse(double x,double y,double x1,double y1);
-	   void drawRect(double x,double y,double x1,double y1);
-	   void drawBitmap(int id,double x,double y);
+  void
+    drawSpiral(double cx, double cy, double angle1, double angle2, double radiusStart, double radiusEnd);
 
-	   void drawArc(double x,double y,double x1,double y1,double cx,double cy,double angle1,double angle2,double radius);
-	   void drawChord(double x,double y,double x1,double y1,double cx,double cy,double angle1,double angle2,double radius);
-	   void drawArcSpecial(double x,double y,double x1,double y1,double cx,double cy,double angle1,double angle2,double radius1,double radius,BOOL square=FALSE);
-	   void drawPie(double x,double y,double x1,double y1,double cx,double cy,double angle1,double angle2,double radius);
+  void
+    fillRect(double x, double y, double w, double h)
+  {
+    CGdiObject *obj = gr->SelectStockObject(BLACK_BRUSH);
+    gr->Rectangle((int)x, (int)y, (int)(x + w), (int)(y + h));
+    gr->SelectObject(obj);
+  }
 
+  void
+    drawPolygon(LPPOINT pts, int size)
+  {
+    // int dc = gr->SaveDC();
+    gr->SelectStockObject(NULL_BRUSH);
+    gr->SelectStockObject(BLACK_PEN);
+    // gr->SelectObject(roadBrush);
+    gr->Polygon(pts, size);
+    // gr->RestoreDC(dc);
+  }
 
-	   void drawSpiral(double cx,double cy,double angle1,double angle2,double radiusStart,double radiusEnd);
+  void
+    fillPolygon(LPPOINT pts, int size)
+  {
+    // gr->SelectObject(roadBrush);
+    gr->Polygon(pts, size);
+  }
 
-	   void fillRect(double x,double y,double w,double h)
-	   {
-		   CGdiObject *obj = gr->SelectStockObject(BLACK_BRUSH);
-		   gr->Rectangle((int)x,(int)y,(int)(x+w),(int)(y+h));
-		   gr->SelectObject(obj);
-	   }
-	   
+  void
+    drawText(double x1, double y1, LPCSTR text)
+  {
+    int sx = getScreenX(x1);
+    int sy = getScreenY(y1);
 
-	   
-	   void drawPolygon(LPPOINT pts,int size)
-	   {
-		//int dc = gr->SaveDC();
-		gr->SelectStockObject(NULL_BRUSH);
-		gr->SelectStockObject(BLACK_PEN);
-		//gr->SelectObject(roadBrush);
-		gr->Polygon(pts,size);
-		//gr->RestoreDC(dc);
-	   }
+    // gr->SelectObject(GetStockObject(ANSI_VAR_FONT));
+    gr->SelectStockObject(ANSI_VAR_FONT);
+    gr->SetBkMode(TRANSPARENT);
+    gr->TextOut(sx, sy, text);
+  }
 
-	   void fillPolygon(LPPOINT pts,int size)
-	   {
-		
-		//gr->SelectObject(roadBrush);
-		gr->Polygon(pts,size);
-	   }
+  BOOL
+    isPrinting()
+  {
+    return printing;
+  }
 
-	   void drawText(double x1,double y1,LPCSTR text)
-	   {
-		   int sx = getScreenX(x1);
-	       int sy = getScreenY(y1);
+  void
+    beginPrinting()
+  {
+    printing = TRUE;
+  }
 
-		   //gr->SelectObject(GetStockObject(ANSI_VAR_FONT));
-		   gr->SelectStockObject(ANSI_VAR_FONT);
-		   gr->SetBkMode(TRANSPARENT);
-		   gr->TextOut(sx,sy,text);
-	   }
+  void
+    endPrinting()
+  {
+    printing = FALSE;
+  }
 
+  int xoffset;
+  int yoffset;
+  double scale;
 
-	   BOOL isPrinting()
-	   {
-		   return printing;
-	   }
-
-	   void beginPrinting()
-	   {
-		   printing = TRUE;
-	   }
-
-	   void endPrinting()
-	   {
-		   printing = FALSE;
-	   }
-
-
-	   int xoffset;
-	   int yoffset;
-	   double scale;
-
-	   BOOL printing;
+  BOOL printing;
 };
 
 #endif

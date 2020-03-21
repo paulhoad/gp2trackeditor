@@ -8,13 +8,11 @@
 
 class CMainToolbar : public CToolBar
 {
-// Construction
+  // Construction
 public:
-
-// Attributes
+  // Attributes
 public:
-	
-    CComboBox m_wndZoom;
+  CComboBox m_wndZoom;
 };
 
 #endif

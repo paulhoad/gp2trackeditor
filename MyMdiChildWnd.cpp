@@ -16,27 +16,22 @@ static char THIS_FILE[] = __FILE__;
 
 IMPLEMENT_DYNCREATE(CMyMdiChildWnd, CMDIChildWnd)
 
-CMyMdiChildWnd::CMyMdiChildWnd()
-{
-}
+CMyMdiChildWnd::CMyMdiChildWnd() {}
 
-CMyMdiChildWnd::~CMyMdiChildWnd()
-{
-}
-
+CMyMdiChildWnd::~CMyMdiChildWnd() {}
 
 BEGIN_MESSAGE_MAP(CMyMdiChildWnd, CMDIChildWnd)
-	//{{AFX_MSG_MAP(CMyMdiChildWnd)
-		// NOTE - the ClassWizard will add and remove mapping macros here.
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CMyMdiChildWnd)
+// NOTE - the ClassWizard will add and remove mapping macros here.
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CMyMdiChildWnd message handlers
 
-BOOL CMyMdiChildWnd::PreCreateWindow(CREATESTRUCT& cs) 
+BOOL CMyMdiChildWnd::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: Add your specialized code here and/or call the base class
-	
-	return CMDIChildWnd::PreCreateWindow(cs);
+  // TODO: Add your specialized code here and/or call the base class
+
+  return CMDIChildWnd::PreCreateWindow(cs);
 }

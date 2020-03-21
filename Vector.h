@@ -6,104 +6,118 @@
 #define new DEBUG_NEW
 #endif
 
-//class Vector;
+// class Vector;
 
-class VectorIter: public CObject
+class VectorIter : public CObject
 {
-    public:
-	VectorIter(CObject *obj,BOOL deleteContents):
-    ptr(obj),next(NULL),deleteContents(deleteContents)
-	{}
+public:
+  VectorIter(CObject *obj, BOOL deleteContents)
+    : ptr(obj), next(NULL), deleteContents(deleteContents)
+  {}
 
-	virtual ~VectorIter()
-	{
-		if (deleteContents) delete ptr;
-	}
+  virtual ~VectorIter()
+  {
+    if (deleteContents) delete ptr;
+  }
 
-	CObject *ptr;
-	VectorIter *next;
-	VectorIter *prev;
-	BOOL   deleteContents;
+  CObject *ptr;
+  VectorIter *next;
+  VectorIter *prev;
+  BOOL deleteContents;
 };
 
-
-
-class Vector: public CObject
+class Vector : public CObject
 {
-    public:
+public:
+  Vector(LPCSTR name, int line, BOOL add = TRUE);
+  Vector(Vector *vec);
 
-	Vector(LPCSTR name,int line,BOOL add=TRUE);
-	Vector(Vector *vec);
+  virtual ~Vector();
 
-	
-	virtual ~Vector();
+  void
+    removeAllElements();
 
-	void removeAllElements();
+  void
+    removeAllData();
 
-	void removeAllData();
+  void
+    addElement(CObject *obj);
+  void
+    addElementReference(CObject *obj);
 
-    void addElement(CObject *obj);
-	void addElementReference(CObject *obj);
+  BOOL
+    removeElement(CObject *obj);
+  BOOL
+    removeElementRef(CObject *obj);
 
-	BOOL removeElement(CObject *obj);
-	BOOL removeElementRef(CObject *obj);
-	
-	int size();
+  int size();
 
-	CObject * elementAt(int idx);
+  CObject *
+    elementAt(int idx);
 
-	void insertAfterElement(CObject *t,CObject *elm);
-	void insertBeforeElement(CObject *t,CObject *elm);
+  void
+    insertAfterElement(CObject *t, CObject *elm);
+  void
+    insertBeforeElement(CObject *t, CObject *elm);
 
-	int findElementIndex(CObject *obj);
+  int findElementIndex(CObject *obj);
 
-	CObject *firstElement();
-    CObject *lastElement();
-	CObject *previous(CObject *item);
-	CObject *next(CObject *item);
+  CObject *
+    firstElement();
+  CObject *
+    lastElement();
+  CObject *
+    previous(CObject *item);
+  CObject *
+    next(CObject *item);
 
-	BOOL isFirstElement(CObject *item)
-	{
-		return (firstElement() == item) ? TRUE : FALSE;
-	}
+  BOOL
+    isFirstElement(CObject *item)
+  {
+    return (firstElement() == item) ? TRUE : FALSE;
+  }
 
-	BOOL isLastElement(CObject *item)
-	{
-		return (elementAt(size()-1) == item) ? TRUE : FALSE;
-	}
+  BOOL
+    isLastElement(CObject *item)
+  {
+    return (elementAt(size() - 1) == item) ? TRUE : FALSE;
+  }
 
-	inline VectorIter *Vector::nextIter(VectorIter *selected)
-	{
-	    return selected->next;
-	}
+  inline VectorIter *
+    Vector::nextIter(VectorIter *selected)
+  {
+    return selected->next;
+  }
 
-	inline VectorIter * Vector::firstIter()
-	{
-	return dataPtr;	
-	}
+  inline VectorIter *
+    Vector::firstIter()
+  {
+    return dataPtr;
+  }
 
+  Vector *
+    Copy();
 
-	Vector *Copy();
+  VectorIter *dataPtr;
+  char name[256];
+  int line;
 
-	VectorIter *dataPtr;
-	char name[256];
-	int line;
+#ifdef _DEBUG
+  void
+    AssertValid() const
+  {
+    AssertValid();
+  }
 
-	#ifdef _DEBUG
-    void  AssertValid() const
-    {
-	AssertValid();
-    }
+  void
+    Dump(CDumpContext &dc) const
+  {
+    TRACE("Dumping %s %d\n", name, line);
+    CObject::Dump(dc);
+  }
+#endif//_DEBUG
 
-    void Dump(CDumpContext& dc) const
-    {
-	TRACE("Dumping %s %d\n",name,line);
-	CObject::Dump(dc);
-    }
-    #endif //_DEBUG
-
-	int ncount;
-
+  int ncount;
 };
 
 #endif

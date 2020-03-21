@@ -6,32 +6,31 @@
 
 class CMyMdiChildWnd : public CMDIChildWnd
 {
-	DECLARE_DYNCREATE(CMyMdiChildWnd)
+  DECLARE_DYNCREATE(CMyMdiChildWnd)
 protected:
-	CMyMdiChildWnd();           // protected constructor used by dynamic creation
+  CMyMdiChildWnd();// protected constructor used by dynamic creation
 
-// Attributes
+  // Attributes
 public:
-
-// Operations
+  // Operations
 public:
-
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CMyMdiChildWnd)
-	protected:
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CMyMdiChildWnd)
 protected:
-	virtual ~CMyMdiChildWnd();
+  virtual BOOL
+    PreCreateWindow(CREATESTRUCT& cs);
+  //}}AFX_VIRTUAL
 
-	// Generated message map functions
-	//{{AFX_MSG(CMyMdiChildWnd)
-		// NOTE - the ClassWizard will add and remove member functions here.
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+  // Implementation
+protected:
+  virtual ~CMyMdiChildWnd();
+
+  // Generated message map functions
+  //{{AFX_MSG(CMyMdiChildWnd)
+  // NOTE - the ClassWizard will add and remove member functions here.
+  //}}AFX_MSG
+  DECLARE_MESSAGE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////

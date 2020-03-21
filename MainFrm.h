@@ -8,81 +8,86 @@
 #include "TrackPropertySheet.h"
 #include "MainToolbar.h"
 
-
-
 class CMainFrame : public CMDIFrameWnd
 {
-	DECLARE_DYNAMIC(CMainFrame)
+  DECLARE_DYNAMIC(CMainFrame)
 public:
-	CMainFrame();
+  CMainFrame();
 
+  void
+    SetMessageText(LPCSTR str)
+  {
+    if (m_wndStatusBar) {
+      m_wndStatusBar.SetPaneText(ID_SEPARATOR, str, TRUE);
+    }
+  }
 
-	void SetMessageText(LPCSTR str)
-	{
-		if (m_wndStatusBar)
-		{
-			m_wndStatusBar.SetPaneText(ID_SEPARATOR,str,TRUE);
-		}
-	}
-
-// Attributes
+  // Attributes
 public:
-	void SaveToolBarPositions();
+  void
+    SaveToolBarPositions();
 
-// Operations
+  // Operations
 public:
-
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CMainFrame)
-	public:
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CMainFrame)
 public:
-	virtual ~CMainFrame();
+  virtual BOOL
+    PreCreateWindow(CREATESTRUCT& cs);
+  //}}AFX_VIRTUAL
+
+  // Implementation
+public:
+  virtual ~CMainFrame();
 #ifdef _DEBUG
-	virtual void AssertValid() const;
-	virtual void Dump(CDumpContext& dc) const;
+  virtual void
+    AssertValid() const;
+  virtual void
+    Dump(CDumpContext& dc) const;
 #endif
 
-	//CTrackTree *getTree()
-	//{
-	//   return &m_wndDlgBar;
-	//}
+  // CTrackTree *getTree()
+  //{
+  //   return &m_wndDlgBar;
+  //}
 
-	void RecalcLayout(BOOL bNotify);
+  void
+    RecalcLayout(BOOL bNotify);
 
+  CStatusBar m_wndStatusBar;
+  CMainToolbar m_wndToolBar;
+  CToolBar m_wndToolsToolBar;
+  CToolBar m_wndShowToolBar;
+  CToolBar m_wndObjectToolBar;
+  CTrackTree m_wndDlgBar;
+  CTrackPropertySheet m_wndProperty;
 
-	CStatusBar  m_wndStatusBar;
-	CMainToolbar    m_wndToolBar;
-    CToolBar    m_wndToolsToolBar;
-	CToolBar    m_wndShowToolBar;
-	CToolBar    m_wndObjectToolBar;
-	CTrackTree  m_wndDlgBar;
-	CTrackPropertySheet m_wndProperty;
+  void
+    SavePositions();
 
-	void SavePositions();
+  BOOL
+    IsIE4Capable();
 
-	BOOL IsIE4Capable();
-
-	//CSplitterWnd m_splitterWnd;
-protected:  // control bar embedded members
-
-	
-
-// Generated message map functions
+  // CSplitterWnd m_splitterWnd;
+protected:// control bar embedded members
+          // Generated message map functions
 protected:
-	afx_msg void OnInitMenu(CMenu* pMenu);
-	//{{AFX_MSG(CMainFrame)
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-	afx_msg void OnSize(UINT nType, int cx, int cy);
-	afx_msg void OnSaveTrackImage();
-	afx_msg void OnZoomcombo();
-	afx_msg void OnClose();
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+  afx_msg void
+    OnInitMenu(CMenu* pMenu);
+  //{{AFX_MSG(CMainFrame)
+  afx_msg int
+    OnCreate(LPCREATESTRUCT lpCreateStruct);
+  afx_msg void
+    OnSize(UINT nType, int cx, int cy);
+  afx_msg void
+    OnSaveTrackImage();
+  afx_msg void
+    OnZoomcombo();
+  afx_msg void
+    OnClose();
+  //}}AFX_MSG
+  DECLARE_MESSAGE_MAP()
 };
 
 #endif

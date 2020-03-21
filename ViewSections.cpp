@@ -14,31 +14,28 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CViewSections dialog
 
-
 CViewSections::CViewSections(CWnd* pParent /*=NULL*/)
-	: CDialog(CViewSections::IDD, pParent)
+  : CDialog(CViewSections::IDD, pParent)
 {
-	//{{AFX_DATA_INIT(CViewSections)
-	m_From = 0;
-	m_To = 0;
-	//}}AFX_DATA_INIT
+  //{{AFX_DATA_INIT(CViewSections)
+  m_From = 0;
+  m_To = 0;
+  //}}AFX_DATA_INIT
 }
-
 
 void CViewSections::DoDataExchange(CDataExchange* pDX)
 {
-	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CViewSections)
-	DDX_Text(pDX, IDC_FROM, m_From);
-	DDX_Text(pDX, IDC_TO, m_To);
-	//}}AFX_DATA_MAP
+  CDialog::DoDataExchange(pDX);
+  //{{AFX_DATA_MAP(CViewSections)
+  DDX_Text(pDX, IDC_FROM, m_From);
+  DDX_Text(pDX, IDC_TO, m_To);
+  //}}AFX_DATA_MAP
 }
 
-
 BEGIN_MESSAGE_MAP(CViewSections, CDialog)
-	//{{AFX_MSG_MAP(CViewSections)
-		// NOTE: the ClassWizard will add message map macros here
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CViewSections)
+// NOTE: the ClassWizard will add message map macros here
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////

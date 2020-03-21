@@ -14,19 +14,14 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CMainToolbar
 
-CMainToolbar::CMainToolbar()
-{
-}
+CMainToolbar::CMainToolbar() {}
 
-CMainToolbar::~CMainToolbar()
-{
-}
-
+CMainToolbar::~CMainToolbar() {}
 
 BEGIN_MESSAGE_MAP(CMainToolbar, CToolBar)
-	//{{AFX_MSG_MAP(CMainToolbar)
-		// NOTE - the ClassWizard will add and remove mapping macros here.
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CMainToolbar)
+// NOTE - the ClassWizard will add and remove mapping macros here.
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////

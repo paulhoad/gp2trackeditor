@@ -6,31 +6,29 @@
 
 class CAngleBox : public CEdit
 {
-// Construction
+  // Construction
 public:
-	CAngleBox();
+  CAngleBox();
 
-// Attributes
+  // Attributes
 public:
-
-// Operations
+  // Operations
 public:
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CAngleBox)
+  //}}AFX_VIRTUAL
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CAngleBox)
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Implementation
 public:
-	virtual ~CAngleBox();
+  virtual ~CAngleBox();
 
-	// Generated message map functions
+  // Generated message map functions
 protected:
-	//{{AFX_MSG(CAngleBox)
-	//}}AFX_MSG
+  //{{AFX_MSG(CAngleBox)
+  //}}AFX_MSG
 
-	DECLARE_MESSAGE_MAP()
+  DECLARE_MESSAGE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////

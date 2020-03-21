@@ -14,89 +14,81 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CDirivingLine dialog
 
-
 CDirivingLine::CDirivingLine(CWnd* pParent /*=NULL*/)
-	: CDialog(CDirivingLine::IDD, pParent)
+  : CDialog(CDirivingLine::IDD, pParent)
 {
-	//{{AFX_DATA_INIT(CDirivingLine)
-	m_Distance = 0;
-	m_DistanceFromSF = 0;
-	//}}AFX_DATA_INIT
+  //{{AFX_DATA_INIT(CDirivingLine)
+  m_Distance = 0;
+  m_DistanceFromSF = 0;
+  //}}AFX_DATA_INIT
 }
-
 
 void CDirivingLine::DoDataExchange(CDataExchange* pDX)
 {
-	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CDirivingLine)
-	DDX_Text(pDX, IDC_EDIT1, m_Distance);
-	DDV_MinMaxInt(pDX, m_Distance, 0, 65535);
-	DDX_Text(pDX, IDC_EDIT2, m_DistanceFromSF);
-	//}}AFX_DATA_MAP
+  CDialog::DoDataExchange(pDX);
+  //{{AFX_DATA_MAP(CDirivingLine)
+  DDX_Text(pDX, IDC_EDIT1, m_Distance);
+  DDV_MinMaxInt(pDX, m_Distance, 0, 65535);
+  DDX_Text(pDX, IDC_EDIT2, m_DistanceFromSF);
+  //}}AFX_DATA_MAP
 }
 
-
 BEGIN_MESSAGE_MAP(CDirivingLine, CDialog)
-	//{{AFX_MSG_MAP(CDirivingLine)
-	ON_BN_CLICKED(IDC_RADIO1, OnCCChange)
-	ON_BN_CLICKED(IDC_RADIO2, OnCCChange)
-	ON_BN_CLICKED(IDC_RADIO3, OnPoleChange)
-	ON_BN_CLICKED(IDC_RADIO4, OnPoleChange)
-	//}}AFX_MSG_MAP
+//{{AFX_MSG_MAP(CDirivingLine)
+ON_BN_CLICKED(IDC_RADIO1, OnCCChange)
+ON_BN_CLICKED(IDC_RADIO2, OnCCChange)
+ON_BN_CLICKED(IDC_RADIO3, OnPoleChange)
+ON_BN_CLICKED(IDC_RADIO4, OnPoleChange)
+//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CDirivingLine message handlers
 
-BOOL CDirivingLine::OnInitDialog() 
+BOOL CDirivingLine::OnInitDialog()
 {
-	CDialog::OnInitDialog();
-	
-	m_Distance = abs(beginYPos);
-	m_DistanceFromSF = abs(beginXPos);
+  CDialog::OnInitDialog();
 
-	int m_Position  = ((beginYPos < 0) ? IDC_RADIO3:IDC_RADIO4);
+  m_Distance = abs(beginYPos);
+  m_DistanceFromSF = abs(beginXPos);
 
-	CheckRadioButton(IDC_RADIO3,IDC_RADIO4,m_Position); 
+  int m_Position = ((beginYPos < 0) ? IDC_RADIO3 : IDC_RADIO4);
 
-	int m_Pole = ((PoleValue == 768) ? IDC_RADIO2:IDC_RADIO1);
-	CheckRadioButton(IDC_RADIO1,IDC_RADIO2,m_Pole); 
-	
-	UpdateData(FALSE);
-	
-	return TRUE;  // return TRUE unless you set the focus to a control
-	              // EXCEPTION: OCX Property Pages should return FALSE
+  CheckRadioButton(IDC_RADIO3, IDC_RADIO4, m_Position);
+
+  int m_Pole = ((PoleValue == 768) ? IDC_RADIO2 : IDC_RADIO1);
+  CheckRadioButton(IDC_RADIO1, IDC_RADIO2, m_Pole);
+
+  UpdateData(FALSE);
+
+  return TRUE;// return TRUE unless you set the focus to a control
+    // EXCEPTION: OCX Property Pages should return FALSE
 }
 
-void CDirivingLine::OnOK() 
+void CDirivingLine::OnOK()
 {
-	// TODO: Add extra validation here
+  // TODO: Add extra validation here
 
-	UpdateData(TRUE);
+  UpdateData(TRUE);
 
-	beginYPos = m_Distance;
-	beginXPos = m_DistanceFromSF;
-	if (IsDlgButtonChecked(IDC_RADIO3)) beginYPos *=-1;
-	if (IsDlgButtonChecked(IDC_RADIO1)) 
-	{
-	   PoleValue=64768;
-	}
-	else
-	{
-		PoleValue=768;
-	}
-	
-	CDialog::OnOK();
+  beginYPos = m_Distance;
+  beginXPos = m_DistanceFromSF;
+  if (IsDlgButtonChecked(IDC_RADIO3)) beginYPos *= -1;
+  if (IsDlgButtonChecked(IDC_RADIO1)) {
+    PoleValue = 64768;
+  } else {
+    PoleValue = 768;
+  }
+
+  CDialog::OnOK();
 }
 
-void CDirivingLine::OnCCChange() 
+void CDirivingLine::OnCCChange()
 {
-	// TODO: Add your control notification handler code here
-	
+  // TODO: Add your control notification handler code here
 }
 
-void CDirivingLine::OnPoleChange() 
+void CDirivingLine::OnPoleChange()
 {
-	// TODO: Add your control notification handler code here
-	
+  // TODO: Add your control notification handler code here
 }

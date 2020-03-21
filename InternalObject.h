@@ -1,6 +1,6 @@
 
 #ifndef _INCLUDED_INTERNAL_OBJECT_H
-#define  _INCLUDED_INTERNAL_OBJECT_H
+#define _INCLUDED_INTERNAL_OBJECT_H
 
 #define GP_OBJECT_BYTE 1
 #define GP_OBJECT_WORD 2
@@ -10,305 +10,326 @@
 #include "Vector.h"
 #include "GPTrack.h"
 #include "Vertex.h"
-#include "fstream.h"
+#include <fstream>
 
-class ObjectData: public CObject, public DataValue, public Observer
+class ObjectData : public CObject
+  , public DataValue
+  , public Observer
 {
-   public:
-	   ObjectData(int type=GP_OBJECT_DWORD,int val=0):
-	   DataValue(val),
-       Observer(NULL,t_ObjectData,NULL),
-	   objtype(type)
-	   {}
+public:
+  ObjectData(int type = GP_OBJECT_DWORD, int val = 0)
+    : DataValue(val), Observer(NULL, t_ObjectData, NULL), objtype(type)
+  {}
 
-	   //virtual int getValue(){return 0;}
-	   //virtual void setValue(int val){}
+  // virtual int getValue(){return 0;}
+  // virtual void setValue(int val){}
 
-	   int getType()
-	   {
-		   return objtype;
-	   }
+  int getType()
+  {
+    return objtype;
+  }
 
-	   int getSize()
-	   {
-		   return objtype;
-	   }
+  int getSize()
+  {
+    return objtype;
+  }
 
-	   void exportHex(FILE *fp,LPCSTR msg);
-	   void export(FILE *fp,LPCSTR msg);
+  void
+    exportHex(FILE *fp, LPCSTR msg);
+  void exportFile(FILE *fp, LPCSTR msg);
 
-	   void Open(CTrackTree *tree);
-	   
+  void
+    Open(CTrackTree *tree);
 
-	   int objtype;
+  int objtype;
 };
 
-class ObjectWord: public ObjectData	
+class ObjectWord : public ObjectData
 {
-   public: 
+public:
+  ObjectWord(int val) : ObjectData(GP_OBJECT_WORD, val)
+  // value(val)
+  {}
 
-	   ObjectWord(int val):
-		 ObjectData(GP_OBJECT_WORD,val)
-		 //value(val)
-		 {}
+  /*
+           int getValue()
+           {
+                   return value;
+           }
 
+           void setValue(int val)
+           {
+                   value = val;
+           }
 
-	/*
-		 int getValue()
-		 {
-			 return value;
-		 }
-
-		 void setValue(int val)
-		 {
-			 value = val;
-		 }
-		 
-   int value;
-   */
+int value;
+*/
 };
 
-class ObjectDWord: public ObjectData 
+class ObjectDWord : public ObjectData
 {
-   public: 
+public:
+  ObjectDWord(int val) : ObjectData(GP_OBJECT_DWORD, val)
+  // value(val)
+  {}
 
-	   ObjectDWord(int val):
-		 ObjectData(GP_OBJECT_DWORD,val)		
-		 //value(val)
-		 {}
+  /*
+  int getValue()
+  {
+          return value;
+  }
 
-		 /*
-		 int getValue()
-		 {
-			 return value;
-		 }
+  void setValue(int val)
+  {
+          value = val;
+  }
 
-		 void setValue(int val)
-		 {
-			 value = val;
-		 }
-		 
-   int value;
-   */
+int value;
+*/
 };
 
-class InternalObject: public Observer , public CObject
+class InternalObject : public Observer
+  , public CObject
 {
-   private:
-   LPSTR  objectName;
-   public:
+private:
+  LPSTR objectName;
 
-   int Verticies;
-   int XYZData;
-   int VertexData;
-   Vector *objectData;
-   Vector *treeItemData;
-   Vector *subObjects;
-   int DataSize;
-   CDocument *pDoc;
-   HTREEITEM SubTree;
+public:
+  int Verticies;
+  int XYZData;
+  int VertexData;
+  Vector *objectData;
+  Vector *treeItemData;
+  Vector *subObjects;
+  int DataSize;
+  CDocument *pDoc;
+  HTREEITEM SubTree;
 
-   CString *objectLowerName;
-   
+  CString *objectLowerName;
 
-   InternalObject(GPTrack *mytrack,CDocument *Doc,int offset,int endoffset):
-   Offset(offset),pDoc(Doc),Observer(mytrack,t_InternalObject,NULL),treeItemData(NULL)
-   {
-	   objectData = new Vector("Internal Objects",__LINE__);
-	   DataSize = endoffset - offset;
-	   MagicNumber = -1;
-	   SubTree = NULL;
-	   polygonPoints = NULL;
-	   objectName = NULL;
-	   objectLowerName = NULL;
-	   created = FALSE;
-	   VerticiesArray = NULL;
-	   ptArray = NULL;
-	   subObjects = NULL;
-   }
+  InternalObject(GPTrack *mytrack, CDocument *Doc, int offset, int endoffset)
+    : Offset(offset),
+      pDoc(Doc),
+      Observer(mytrack, t_InternalObject, NULL),
+      treeItemData(NULL)
+  {
+    objectData = new Vector("Internal Objects", __LINE__);
+    DataSize = endoffset - offset;
+    MagicNumber = -1;
+    SubTree = NULL;
+    polygonPoints = NULL;
+    objectName = NULL;
+    objectLowerName = NULL;
+    created = FALSE;
+    VerticiesArray = NULL;
+    ptArray = NULL;
+    subObjects = NULL;
+  }
 
+  char *
+    getIntObjectName()
+  {
+    return objectName;
+  }
 
-   char * getIntObjectName()
-   {
-	 return objectName;
-   }
+  void
+    setObjectName(char *str)
+  {
+    objectName = str;
+  }
 
-   void setObjectName(char *str)
-   {
-	 objectName = str;
-   }
+  void
+    Expand(CTrackTree *tracktree, HTREEITEM node);
+  void
+    LoadTree(CTrackTree *tree, HTREEITEM node);
+  void
+    LoadTreeTop(CTrackTree *tree, HTREEITEM node);
+  void
+    LoadJamTexture(GPTrack *mytrack, CBitmap &output, int idx, int hres, int vres);
+  void
+    TextureMap(CDC *pDC, CBitmap &cbmp);
 
-   
+  void
+    Parse();
 
-   void Expand(CTrackTree *tracktree,HTREEITEM node);
-   void LoadTree(CTrackTree *tree,HTREEITEM node);
-   void LoadTreeTop(CTrackTree *tree,HTREEITEM node);
-   void LoadJamTexture(GPTrack *mytrack,CBitmap &output,int idx,int hres,int vres);
-   void TextureMap(CDC *pDC ,CBitmap &cbmp);
+  Vector *polygonPoints;
 
-   void Parse();
+  int getXYZOffset();
+  int getVertexOffset();
 
-   Vector *polygonPoints;
+  int getNumVertexConnections();
+  int getScaleOffset();
+  int getScaleEndOffset();
+  int getTextureOffset();
+  int getTextureEndOffset();
+  int getDefaultRotation();
+  int getEndVertexOffset();
+  int getEndOffset();
 
-   int getXYZOffset();
-   int getVertexOffset();
-   
-   int getNumVertexConnections();
-   int getScaleOffset();
-   int getScaleEndOffset();
-   int getTextureOffset();
-   int getTextureEndOffset();
-   int getDefaultRotation();
-   int getEndVertexOffset();
-   int getEndOffset();
+  int getListOffset(int pos);
 
-   int getListOffset(int pos);
+  CDocument *
+    GetDocument()
+  {
+    return pDoc;
+  }
 
-   CDocument *GetDocument()
-   {
-	   return pDoc;
-   }
+  virtual ~InternalObject();
 
-   virtual ~InternalObject();
-  
+  int getOffset()
+  {
+    return Offset;
+  }
 
-   int getOffset()
-   {
-	   return Offset;
-   }
+  void
+    setOffset(int off)
+  {
+    Offset = off;
+  }
 
-   void setOffset(int off)
-   {
-	   Offset = off;
-   }
+  int getSize()
+  {
+    return DataSize;
+  }
 
-   int getSize()
-   {
-	   return DataSize;
-   }
+  int getNumPoints()
+  {
+    return Verticies;
+  }
 
-   int getNumPoints()
-   {
-	   return Verticies;
-   }
+  void
+    Delete();
 
-   void Delete();
+  void
+    ReadObject(GPTrack *track);
+  void
+    WriteObject(int offset);
 
-   
-   void ReadObject(GPTrack *track);
-   void WriteObject(int offset);
+  BOOL
+    ImportFromFile(LPCSTR filename);
 
+  void
+    exportFile();
 
-   BOOL ImportFromFile(LPCSTR filename);
+  int write(GPTrack *track, int offset)
+  {
+    // using original offset until we need more objects
+    offset = Offset;
+    // TRACE("%x %d\n",offset,objectData->size());
+    // int listsize = objectData->size();
 
+    ObjectData *last = (ObjectData *)objectData->lastElement();
+    ObjectData *first = (ObjectData *)objectData->elementAt(0);
+    ObjectData *dat;
 
-   void Export();
+    int size = objectData->size();
+    int count = 0;
 
+    for (dat = first; count < size;
+         dat = (ObjectData *)objectData->next(dat), count++) {
+      switch (dat->getType()) {
+      case GP_OBJECT_WORD:
+        track->WritePCWord(offset, dat->GetValue());
+        offset += 2;
+        break;
+      case GP_OBJECT_DWORD:
+        track->WritePCDWord(offset, dat->GetValue());
+        offset += 4;
+        break;
+      case GP_OBJECT_BYTE:
+        track->WritePCByte(offset, dat->GetValue());
+        offset += 1;
+        break;
+      }
+    }
 
-   int write(GPTrack *track,int offset)
-   {
-	  // using original offset until we need more objects
-	  offset = Offset;
-	  //TRACE("%x %d\n",offset,objectData->size());
-	  //int listsize = objectData->size();
+    /*
+    for(int i=0;i<listsize;i++)
+    {
+            ObjectData *dat = (ObjectData*)objectData->elementAt(i);
 
-	  ObjectData* last = (ObjectData*)objectData->lastElement();
-	  ObjectData* first = (ObjectData*)objectData->elementAt(0);
-	  ObjectData* dat;
+            switch(dat->getType())
+            {
+            case GP_OBJECT_WORD:
+              track->WritePCWord(offset,dat->GetValue());offset+=2;
+                  break;
+            case GP_OBJECT_DWORD:
+                  track->WritePCDWord(offset,dat->GetValue());offset+=4;
+                  break;
+            case GP_OBJECT_BYTE:
+                  track->WritePCByte(offset,dat->GetValue());offset+=1;
+                  break;
+            }
 
-	  int size = objectData->size();
-	  int count = 0;
-	
-	  for(dat = first ; count < size; dat = (ObjectData*)objectData->next(dat),count++)
-	  {
-		  switch(dat->getType())
-		  {
-		  case GP_OBJECT_WORD:
-		    track->WritePCWord(offset,dat->GetValue());offset+=2;
-			break;
-		  case GP_OBJECT_DWORD:
-			track->WritePCDWord(offset,dat->GetValue());offset+=4;
-			break;
-		  case GP_OBJECT_BYTE:
-			track->WritePCByte(offset,dat->GetValue());offset+=1;
-			break;
-		  }  
-	  }
+    }
+    */
+    return offset;
+  }
 
-	  /*
-	  for(int i=0;i<listsize;i++)
-	  {
-		  ObjectData *dat = (ObjectData*)objectData->elementAt(i);
+  int Open();
 
-		  switch(dat->getType())
-		  {
-		  case GP_OBJECT_WORD:
-		    track->WritePCWord(offset,dat->GetValue());offset+=2;
-			break;
-		  case GP_OBJECT_DWORD:
-			track->WritePCDWord(offset,dat->GetValue());offset+=4;
-			break;
-		  case GP_OBJECT_BYTE:
-			track->WritePCByte(offset,dat->GetValue());offset+=1;
-			break;
-		  }
+  int Offset;
+  int itemId;
+  int PossibleId;
+  int MagicNumber;
 
-	  }
-	  */
-	  return offset;
-   }
+  void
+    ExportObject(CString filename);
+  BOOL
+    ImportObject(CString filename);
+  void
+    ReplaceObject(CString filename);
 
-   int Open();
+  void
+    AdjustPointers();
 
-   int Offset;
-   int itemId;
-   int PossibleId;
-   int MagicNumber;
+  LPCSTR
+  getName();
+  CString *
+    getLowerName();
 
-   void ExportObject(CString filename);
-   BOOL ImportObject(CString filename);
-   void ReplaceObject(CString filename);
+  int CalculateDigitalSignature();
 
-   void AdjustPointers();
+  void
+    AddSumValue(int da)
+  {
+    // where unsigned shorts
+    int d1, d2, d3;
+    d2 = secondCheckSum;
+    // was short int
+    d1 = (int)da;
+    firstCheckSum += d1;
+    d1 = d1 & 0x000000FF;
+    d3 = d2 & 0x0000E000;
+    d3 = d3 >> 13;
+    d2 = d2 << 3;
+    d2 = d2 | d3;
+    d2 = d2 + d1;
+    secondCheckSum = d2;
+  }
 
-   LPCSTR getName();
-   CString *getLowerName();
+  short firstCheckSum;
+  short secondCheckSum;
 
-   int CalculateDigitalSignature();
+  void
+    DrawVML(std::ofstream &file, double x, double y, double z, double angle, BOOL drawAxis);
+  void
+    DrawGL(CDC *pDC, double x, double y, double z, double angle, BOOL drawAxis);
+  void
+    Draw2D(Display *g, double x, double y, double z, double angle, BOOL drawAxis);
 
-   void AddSumValue(int da)
-   {  
-       // where unsigned shorts
-	   int d1,d2,d3;
-	   d2 = secondCheckSum; 
-       // was short int 
-	   d1 = (int)da; 
-	   firstCheckSum+=d1;
-	   d1 = d1 & 0x000000FF;  
-	   d3 = d2 & 0x0000E000; 
-	   d3 = d3 >> 13;
-	   d2 = d2 << 3;
-	   d2 = d2 | d3;
-	   d2 = d2 + d1;
-	   secondCheckSum = d2;
-	}  
-	
-	short firstCheckSum;
-	short secondCheckSum;
+  static void
+    Draw2DExternal(Display *g, double x, double y, double z, double angle, BOOL drawAxis);
 
-	void DrawVML(ofstream &file,double x,double y,double z,double angle,BOOL drawAxis);
-	void DrawGL(CDC *pDC,double x,double y,double z,double angle,BOOL drawAxis);
-	void Draw2D(Display *g,double x,double y,double z,double angle,BOOL drawAxis);
+  void
+    CreateObject();
+  BOOL created;
 
-	static void Draw2DExternal(Display *g,double x,double y,double z,double angle,BOOL drawAxis);
+  t_SingleVertex *VerticiesArray;
+  Point3D **ptArray;
 
-	void CreateObject();
-	BOOL created;
-
-	t_SingleVertex *VerticiesArray;
-	Point3D **ptArray;
-
-   	void UpdateStructure();
+  void
+    UpdateStructure();
 };
 
 #endif

@@ -6,32 +6,30 @@
 
 class CMyTableCtrl : public CListCtrl
 {
-// Construction
+  // Construction
 public:
-	CMyTableCtrl();
+  CMyTableCtrl();
 
-// Attributes
+  // Attributes
 public:
-
-// Operations
+  // Operations
 public:
+  // Overrides
+  // ClassWizard generated virtual function overrides
+  //{{AFX_VIRTUAL(CMyTableCtrl)
+  //}}AFX_VIRTUAL
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CMyTableCtrl)
-	//}}AFX_VIRTUAL
-
-// Implementation
+  // Implementation
 public:
-	virtual ~CMyTableCtrl();
+  virtual ~CMyTableCtrl();
 
-	// Generated message map functions
+  // Generated message map functions
 protected:
-	//{{AFX_MSG(CMyTableCtrl)
-		// NOTE - the ClassWizard will add and remove member functions here.
-	//}}AFX_MSG
+  //{{AFX_MSG(CMyTableCtrl)
+  // NOTE - the ClassWizard will add and remove member functions here.
+  //}}AFX_MSG
 
-	DECLARE_MESSAGE_MAP()
+  DECLARE_MESSAGE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////

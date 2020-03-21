@@ -1,4 +1,4 @@
-//Microsoft Developer Studio generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -28,102 +26,185 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_TRACKETYPE          ICON    DISCARDABLE     "res\\TrackEditorDoc.ico"
-IDR_TRACKDATA           ICON    DISCARDABLE     "res\\icon1.ico"
-IDR_CCDATA              ICON    DISCARDABLE     "res\\ico00001.ico"
-IDR_PITDATA             ICON    DISCARDABLE     "res\\ico00002.ico"
+IDR_TRACKETYPE          ICON                    "res\\TrackEditorDoc.ico"
+
+IDR_TRACKDATA           ICON                    "res\\icon1.ico"
+
+IDR_CCDATA              ICON                    "res\\ico00001.ico"
+
+IDR_PITDATA             ICON                    "res\\ico00002.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Bitmap
 //
 
-IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
-IDB_CIRCUIT             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
-IDB_TRACK               BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
-IDB_OBJECT              BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
-IDB_OBJECT_OPEN         BITMAP  DISCARDABLE     "res\\bmp00003.bmp"
-IDB_OFFSET              BITMAP  DISCARDABLE     "res\\bmp00004.bmp"
-IDB_FOLDER              BITMAP  DISCARDABLE     "res\\bmp00005.bmp"
-IDB_FOLDER_OPEN         BITMAP  DISCARDABLE     "res\\bmp00006.bmp"
-IDB_FILE                BITMAP  DISCARDABLE     "res\\bmp00007.bmp"
-IDB_CURVE_RIGHT         BITMAP  DISCARDABLE     "res\\bmp00009.bmp"
-IDB_CURVE_LEFT          BITMAP  DISCARDABLE     "res\\bmp00008.bmp"
-IDB_CC_LEFT             BITMAP  DISCARDABLE     "res\\bmp00010.bmp"
-IDB_CC_LINE             BITMAP  DISCARDABLE     "res\\bitmap2.bmp"
-IDB_CC_RIGHT            BITMAP  DISCARDABLE     "res\\bmp00011.bmp"
-IDB_PITLANE             BITMAP  DISCARDABLE     "res\\bmp00012.bmp"
-IDB_PIT_LEFT            BITMAP  DISCARDABLE     "res\\bmp00013.bmp"
-IDB_PIT_RIGHT           BITMAP  DISCARDABLE     "res\\bmp00014.bmp"
-IDB_CHECKED_FLAG        BITMAP  DISCARDABLE     "res\\bmp00016.bmp"
-IDB_RED_FLAG            BITMAP  DISCARDABLE     "res\\bmp00015.bmp"
-IDB_GREEN_FLAG          BITMAP  DISCARDABLE     "res\\bitmap3.bmp"
-IDB_YELLOW_FLAG         BITMAP  DISCARDABLE     "res\\bmp00017.bmp"
-IDB_BLUE_FLAG           BITMAP  DISCARDABLE     "res\\bmp00018.bmp"
-IDB_BUSH                BITMAP  DISCARDABLE     "res\\bmp00019.bmp"
-IDB_ADVERT              BITMAP  DISCARDABLE     "res\\bmp00020.bmp"
-IDB_STAND               BITMAP  DISCARDABLE     "res\\bmp00022.bmp"
-IDB_OBJECT_INTERNAL     BITMAP  DISCARDABLE     "res\\bmp00024.bmp"
-IDB_SUM                 BITMAP  DISCARDABLE     "res\\bmp00025.bmp"
-IDB_UNK                 BITMAP  DISCARDABLE     "res\\bmp00026.bmp"
-IDB_GEAR                BITMAP  DISCARDABLE     "res\\bmp00028.bmp"
-IDB_FUEL                BITMAP  DISCARDABLE     "res\\bmp00029.bmp"
-IDB_FRONT_WING          BITMAP  DISCARDABLE     "res\\bmp00030.bmp"
-IDB_REAR_WING           BITMAP  DISCARDABLE     "res\\bmp00031.bmp"
-IDB_BUILDING            BITMAP  DISCARDABLE     "res\\building.bmp"
-IDB_CAR                 BITMAP  DISCARDABLE     "res\\Car.bmp"
-IDB_TURN_RIGHT          BITMAP  DISCARDABLE     "res\\bmp00037.bmp"
-IDB_PIT                 BITMAP  DISCARDABLE     "res\\bmp00038.bmp"
-IDB_PIN                 BITMAP  DISCARDABLE     "res\\bmp00044.bmp"
-IDB_PIN_BLUE            BITMAP  DISCARDABLE     "res\\bmp00045.bmp"
-IDB_WALLCHANGE          BITMAP  DISCARDABLE     "res\\bmp00046.bmp"
-IDB_GRIP                BITMAP  DISCARDABLE     "res\\bmp00048.bmp"
-IDB_TRACK_CHANGE        BITMAP  DISCARDABLE     "res\\bmp00047.bmp"
-IDB_TRACK_MARKINGS      BITMAP  DISCARDABLE     "res\\bmp00049.bmp"
-IDB_EYES                BITMAP  DISCARDABLE     "res\\bmp00050.bmp"
-IDB_SPEED               BITMAP  DISCARDABLE     "res\\bmp00055.bmp"
-IDB_LIGHT               BITMAP  DISCARDABLE     "res\\bmp00056.bmp"
-IDB_SIDE_UNK            BITMAP  DISCARDABLE     "res\\bmp00057.bmp"
-IDB_SIDE_BLUE_WHITE_BARRIER BITMAP  DISCARDABLE     "res\\bmp00058.bmp"
-IDB_SIDE_RED_WHITE_BARRIER BITMAP  DISCARDABLE     "res\\bitmap4.bmp"
-IDB_SIDE_GRASS          BITMAP  DISCARDABLE     "res\\side_unk.bmp"
-IDB_SIDE_TARMAC         BITMAP  DISCARDABLE     "res\\side_gra.bmp"
-IDB_SIDE_SAND           BITMAP  DISCARDABLE     "res\\bmp00059.bmp"
-IDB_TRACK_CHANGE_LEFT   BITMAP  DISCARDABLE     "res\\track_ch.bmp"
-IDB_TRACK_CHANGE_RIGHT  BITMAP  DISCARDABLE     "res\\bmp00060.bmp"
-IDB_SAND_BMP            BITMAP  DISCARDABLE     "res\\Sand.bmp"
-IDB_TARMAC_BMP          BITMAP  DISCARDABLE     "res\\Gravel.bmp"
-IDB_GRASS_BMP           BITMAP  DISCARDABLE     "res\\Grass.bmp"
-IDB_DRK_TARMAC_BMP      BITMAP  DISCARDABLE     "res\\DrkGravel.bmp"
-IDB_CROWD_BMP           BITMAP  DISCARDABLE     "res\\Crowd.bmp"
-IDB_LIGHTS              BITMAP  DISCARDABLE     "res\\bmp00063.bmp"
-IDB_SIDE_YELLOW_WHITE_BARRIER BITMAP  DISCARDABLE     "res\\side_blu.bmp"
-IDB_STANDROOT           BITMAP  DISCARDABLE     "res\\stand1.bmp"
-IDB_SHADOW              BITMAP  DISCARDABLE     "res\\bmp00067.bmp"
-IDB_HOUSE               BITMAP  DISCARDABLE     "res\\bmp00069.bmp"
-IDB_TENT                BITMAP  DISCARDABLE     "res\\bmp00068.bmp"
-IDB_JAM_TRANS           BITMAP  DISCARDABLE     "res\\bmp00077.bmp"
-IDB_JAMFILE_INTERNAL    BITMAP  DISCARDABLE     "res\\bmp00078.bmp"
-IDB_TESTTEXTURE_256     BITMAP  DISCARDABLE     "res\\bmp00079.bmp"
-IDB_MISSING_JAM         BITMAP  DISCARDABLE     "res\\bmp00080.bmp"
-IDR_TOOLS               BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
-IDR_SHOW                BITMAP  DISCARDABLE     "res\\bmp00076.bmp"
-IDR_OBJECT              BITMAP  DISCARDABLE     "res\\bmp00081.bmp"
-IDB_TESTTEXTURE_64      BITMAP  DISCARDABLE     "res\\testtext.bmp"
-IDB_TESTTEXTURE_128     BITMAP  DISCARDABLE     "res\\bmp00084.bmp"
-IDB_CC_LEFT1            BITMAP  DISCARDABLE     "res\\cc_left1.bmp"
-IDB_CC_LINE1            BITMAP  DISCARDABLE     "res\\cc_line1.bmp"
-IDB_CC_RIGHT1           BITMAP  DISCARDABLE     "res\\cc_right.bmp"
-IDB_OBJECT_UNK          BITMAP  DISCARDABLE     "res\\object1.bmp"
-IDB_TRACKPITBEGIN       BITMAP  DISCARDABLE     "res\\track1.bmp"
-IDB_TRACKPITEND         BITMAP  DISCARDABLE     "res\\bmp00087.bmp"
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDB_CIRCUIT             BITMAP                  "res\\bitmap1.bmp"
+
+IDB_TRACK               BITMAP                  "res\\bmp00001.bmp"
+
+IDB_OBJECT              BITMAP                  "res\\bmp00002.bmp"
+
+IDB_OBJECT_OPEN         BITMAP                  "res\\bmp00003.bmp"
+
+IDB_OFFSET              BITMAP                  "res\\bmp00004.bmp"
+
+IDB_FOLDER              BITMAP                  "res\\bmp00005.bmp"
+
+IDB_FOLDER_OPEN         BITMAP                  "res\\bmp00006.bmp"
+
+IDB_FILE                BITMAP                  "res\\bmp00007.bmp"
+
+IDB_CURVE_RIGHT         BITMAP                  "res\\bmp00009.bmp"
+
+IDB_CURVE_LEFT          BITMAP                  "res\\bmp00008.bmp"
+
+IDB_CC_LEFT             BITMAP                  "res\\bmp00010.bmp"
+
+IDB_CC_LINE             BITMAP                  "res\\bitmap2.bmp"
+
+IDB_CC_RIGHT            BITMAP                  "res\\bmp00011.bmp"
+
+IDB_PITLANE             BITMAP                  "res\\bmp00012.bmp"
+
+IDB_PIT_LEFT            BITMAP                  "res\\bmp00013.bmp"
+
+IDB_PIT_RIGHT           BITMAP                  "res\\bmp00014.bmp"
+
+IDB_CHECKED_FLAG        BITMAP                  "res\\bmp00016.bmp"
+
+IDB_RED_FLAG            BITMAP                  "res\\bmp00015.bmp"
+
+IDB_GREEN_FLAG          BITMAP                  "res\\bitmap3.bmp"
+
+IDB_YELLOW_FLAG         BITMAP                  "res\\bmp00017.bmp"
+
+IDB_BLUE_FLAG           BITMAP                  "res\\bmp00018.bmp"
+
+IDB_BUSH                BITMAP                  "res\\bmp00019.bmp"
+
+IDB_ADVERT              BITMAP                  "res\\bmp00020.bmp"
+
+IDB_STAND               BITMAP                  "res\\bmp00022.bmp"
+
+IDB_OBJECT_INTERNAL     BITMAP                  "res\\bmp00024.bmp"
+
+IDB_SUM                 BITMAP                  "res\\bmp00025.bmp"
+
+IDB_UNK                 BITMAP                  "res\\bmp00026.bmp"
+
+IDB_GEAR                BITMAP                  "res\\bmp00028.bmp"
+
+IDB_FUEL                BITMAP                  "res\\bmp00029.bmp"
+
+IDB_FRONT_WING          BITMAP                  "res\\bmp00030.bmp"
+
+IDB_REAR_WING           BITMAP                  "res\\bmp00031.bmp"
+
+IDB_BUILDING            BITMAP                  "res\\building.bmp"
+
+IDB_CAR                 BITMAP                  "res\\Car.bmp"
+
+IDB_TURN_RIGHT          BITMAP                  "res\\bmp00037.bmp"
+
+IDB_PIT                 BITMAP                  "res\\bmp00038.bmp"
+
+IDB_PIN                 BITMAP                  "res\\bmp00044.bmp"
+
+IDB_PIN_BLUE            BITMAP                  "res\\bmp00045.bmp"
+
+IDB_WALLCHANGE          BITMAP                  "res\\bmp00046.bmp"
+
+IDB_GRIP                BITMAP                  "res\\bmp00048.bmp"
+
+IDB_TRACK_CHANGE        BITMAP                  "res\\bmp00047.bmp"
+
+IDB_TRACK_MARKINGS      BITMAP                  "res\\bmp00049.bmp"
+
+IDB_EYES                BITMAP                  "res\\bmp00050.bmp"
+
+IDB_SPEED               BITMAP                  "res\\bmp00055.bmp"
+
+IDB_LIGHT               BITMAP                  "res\\bmp00056.bmp"
+
+IDB_SIDE_UNK            BITMAP                  "res\\bmp00057.bmp"
+
+IDB_SIDE_BLUE_WHITE_BARRIER BITMAP                  "res\\bmp00058.bmp"
+
+IDB_SIDE_RED_WHITE_BARRIER BITMAP                  "res\\bitmap4.bmp"
+
+IDB_SIDE_GRASS          BITMAP                  "res\\side_unk.bmp"
+
+IDB_SIDE_TARMAC         BITMAP                  "res\\side_gra.bmp"
+
+IDB_SIDE_SAND           BITMAP                  "res\\bmp00059.bmp"
+
+IDB_TRACK_CHANGE_LEFT   BITMAP                  "res\\track_ch.bmp"
+
+IDB_TRACK_CHANGE_RIGHT  BITMAP                  "res\\bmp00060.bmp"
+
+IDB_SAND_BMP            BITMAP                  "res\\Sand.bmp"
+
+IDB_TARMAC_BMP          BITMAP                  "res\\Gravel.bmp"
+
+IDB_GRASS_BMP           BITMAP                  "res\\Grass.bmp"
+
+IDB_DRK_TARMAC_BMP      BITMAP                  "res\\DrkGravel.bmp"
+
+IDB_CROWD_BMP           BITMAP                  "res\\Crowd.bmp"
+
+IDB_LIGHTS              BITMAP                  "res\\bmp00063.bmp"
+
+IDB_SIDE_YELLOW_WHITE_BARRIER BITMAP                  "res\\side_blu.bmp"
+
+IDB_STANDROOT           BITMAP                  "res\\stand1.bmp"
+
+IDB_SHADOW              BITMAP                  "res\\bmp00067.bmp"
+
+IDB_HOUSE               BITMAP                  "res\\bmp00069.bmp"
+
+IDB_TENT                BITMAP                  "res\\bmp00068.bmp"
+
+IDB_JAM_TRANS           BITMAP                  "res\\bmp00077.bmp"
+
+IDB_JAMFILE_INTERNAL    BITMAP                  "res\\bmp00078.bmp"
+
+IDB_TESTTEXTURE_256     BITMAP                  "res\\bmp00079.bmp"
+
+IDB_MISSING_JAM         BITMAP                  "res\\bmp00080.bmp"
+
+IDR_TOOLS               BITMAP                  "res\\toolbar1.bmp"
+
+IDR_SHOW                BITMAP                  "res\\bmp00076.bmp"
+
+IDR_OBJECT              BITMAP                  "res\\bmp00081.bmp"
+
+IDB_TESTTEXTURE_64      BITMAP                  "res\\testtext.bmp"
+
+IDB_TESTTEXTURE_128     BITMAP                  "res\\bmp00084.bmp"
+
+IDB_CC_LEFT1            BITMAP                  "res\\cc_left1.bmp"
+
+IDB_CC_LINE1            BITMAP                  "res\\cc_line1.bmp"
+
+IDB_CC_RIGHT1           BITMAP                  "res\\cc_right.bmp"
+
+IDB_OBJECT_UNK          BITMAP                  "res\\object1.bmp"
+
+IDB_TRACKPITBEGIN       BITMAP                  "res\\track1.bmp"
+
+IDB_TRACKPITEND         BITMAP                  "res\\bmp00087.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Toolbar
 //
 
-IDR_MAINFRAME TOOLBAR DISCARDABLE  17, 16
+IDR_MAINFRAME TOOLBAR 17, 16
 BEGIN
     BUTTON      ID_FILE_NEW
     BUTTON      ID_FILE_OPEN
@@ -141,7 +222,7 @@ BEGIN
     BUTTON      ID_APP_ABOUT
 END
 
-IDR_TOOLS TOOLBAR DISCARDABLE  16, 15
+IDR_TOOLS TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_ZOOMTOOL
     SEPARATOR
@@ -160,7 +241,7 @@ BEGIN
     BUTTON      ID_CAMERATOOL
 END
 
-IDR_SHOW TOOLBAR DISCARDABLE  17, 16
+IDR_SHOW TOOLBAR 17, 16
 BEGIN
     BUTTON      VIEW_TRACK
     BUTTON      VIEW_CCLINE
@@ -195,7 +276,7 @@ BEGIN
     BUTTON      ID_VIEWCAMERAS
 END
 
-IDR_OBJECT TOOLBAR DISCARDABLE  16, 15
+IDR_OBJECT TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_FILLPOLYGON
     BUTTON      ID_TEXTUREMAPOBJECTS
@@ -219,7 +300,7 @@ END
 // Menu
 //
 
-IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -264,7 +345,7 @@ BEGIN
     END
 END
 
-IDR_TRACKETYPE MENU PRELOAD DISCARDABLE 
+IDR_TRACKETYPE MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -286,7 +367,6 @@ BEGIN
             MENUITEM "Import TRIF File",            ID_IMPORT_TRIF
             MENUITEM "Import CC Record",            ID_FILE_IMPORTCCRECORD
             MENUITEM "Import Track Segment Data",   ID_FILE_IMPORT_IMPORTTRACKSEGMENTDATA
-
         END
         POPUP "Export"
         BEGIN
@@ -299,16 +379,10 @@ BEGIN
             MENUITEM "Export ID name List",         ID_EXPORT_NAMELIST
             MENUITEM "Export Track XY Data",        ID_EXPORT_TRACK_XY
             MENUITEM "Export Various Blocks",       ID_FILE_EXPORT_EXPORTVARIOUSBLOCKS
-
             MENUITEM "Export CC Setup",             ID_FILE_EXPORT_EXPORTCCSETUP
-
             MENUITEM "Export Track Info",           ID_FILE_EXPORT_EXPORTTRACKINFO
-
-            MENUITEM "Export to TXF (Track Exchange Format)", 
-                                                    ID_FILE_EXPORT_EXPORTTOTXFTRACKEXCHANGEFORMAT
-
+            MENUITEM "Export to TXF (Track Exchange Format)", ID_FILE_EXPORT_EXPORTTOTXFTRACKEXCHANGEFORMAT
             MENUITEM "Export to VRML",              ID_FILE_EXPORT_EXPORTTOVRML
-
         END
         MENUITEM SEPARATOR
         MENUITEM "Install Tracks into GP2",     ID_INSTALL_TRACKS
@@ -346,10 +420,8 @@ BEGIN
             MENUITEM "1/2 Mile",                    ID_HALFMILE
             MENUITEM "1 Mile",                      ID_ONEMILE
         END
-        MENUITEM "Set Default Tyre Wall Texture", 
-                                                ID_DEFAULT_TYRE_WALL_TEXTURE
-        MENUITEM "Set Default Tyre Gravel Texture", 
-                                                ID_DEFAULT_GRAVEL_TEXTURE
+        MENUITEM "Set Default Tyre Wall Texture", ID_DEFAULT_TYRE_WALL_TEXTURE
+        MENUITEM "Set Default Tyre Gravel Texture", ID_DEFAULT_GRAVEL_TEXTURE
         MENUITEM "Set Default Tarmac Texture",  ID_DEFAULT_TARMAC_TEXTURE
         MENUITEM "Perform Sanity Check",        ID_EDIT_PERFORMSANITYCHECK
         MENUITEM "Auto Back up",                ID_EDIT_AUTOBACKUP
@@ -420,14 +492,10 @@ BEGIN
         MENUITEM "Show World Extent",           ID_SHOW_WORLD_EXTENT
         MENUITEM "Show Use Textures",           ID_SHOW_TEXTURES
         MENUITEM "Show Curved Walls as Lines",  ID_SHOW_SHOWCURVEDWALLSASLINES
-
         MENUITEM "Show Graph Paper",            ID_SHOW_GRAPH_PAPER
         MENUITEM "Show Underlay Bitmap",        ID_SHOW_SHOWUNDERLAYBITMAP
-        MENUITEM "Show Texture Mapping Commands", 
-                                                ID_SHOW_SHOWTEXTUREMAPPINGCOMMANDS
-
+        MENUITEM "Show Texture Mapping Commands", ID_SHOW_SHOWTEXTUREMAPPINGCOMMANDS
         MENUITEM "Show View Distance Commands", ID_SHOW_SHOWVIEWDISTANCECOMMANDS
-
         MENUITEM "Show View Distances",         ID_SHOW_SHOWVIEWDISTANCES
         MENUITEM "Show Scenery Arms",           ID_SHOW_SHOWSCENERYARMS
         MENUITEM "Use Swivel Angles",           ID_SHOW_USESWIVELANGLES
@@ -492,27 +560,19 @@ BEGIN
         MENUITEM "CC Line Data",                ID_TABLES_CCLINEDATA
         MENUITEM "CC Line Start Postion",       ID_EDIT_DRIVING_LINE
         MENUITEM "Insert CC Section",           ID_INSERT_CCLINESECTION
-        MENUITEM "Insert CC Section (cmd 0x70)", 
-                                                ID_CCLINE_INSERTCCSECTIONCMD0X70
-
+        MENUITEM "Insert CC Section (cmd 0x70)", ID_CCLINE_INSERTCCSECTIONCMD0X70
         MENUITEM SEPARATOR
         MENUITEM "Remove CC Section",           ID_REMOVE_CC_SECTION
         MENUITEM "Remove CC Line",              ID_EDIT_CLEARCCLINE
         MENUITEM "Straighten CC Line",          ID_CCLINE_STRAIGHTENCCLINE
         POPUP "CC Development Cmds"
         BEGIN
-            MENUITEM "Remove All Angles",           ID_EDIT_REMOVEALLANGLES
-            , GRAYED
-            MENUITEM "Remove All CC angles",        ID_EDIT_REMOVEALLCCANGLES
-            , GRAYED
-            MENUITEM "Remove All CC args",          ID_EDIT_REMOVEALLCCARGS
-            , GRAYED
-            MENUITEM "Remove All CC radius",        ID_EDIT_REMOVEALLCCRADIUS
-            , GRAYED
-            MENUITEM "Remove All CC arg1",          ID_EDIT_REMOVEALLCCARG1
-            , GRAYED
-            MENUITEM "Remove All  CC Arg2",         ID_EDIT_REMOVEALLARG2
-            , GRAYED
+            MENUITEM "Remove All Angles",           ID_EDIT_REMOVEALLANGLES, GRAYED
+            MENUITEM "Remove All CC angles",        ID_EDIT_REMOVEALLCCANGLES, GRAYED
+            MENUITEM "Remove All CC args",          ID_EDIT_REMOVEALLCCARGS, GRAYED
+            MENUITEM "Remove All CC radius",        ID_EDIT_REMOVEALLCCRADIUS, GRAYED
+            MENUITEM "Remove All CC arg1",          ID_EDIT_REMOVEALLCCARG1, GRAYED
+            MENUITEM "Remove All  CC Arg2",         ID_EDIT_REMOVEALLARG2, GRAYED
         END
         MENUITEM "Set CC Scalar",               ID_CC_SCALAR
         POPUP "Create"
@@ -569,35 +629,22 @@ BEGIN
         MENUITEM "Remove All Kerbs/Wall Removes", ID_EDIT_REMOVEALLFEATURE2
         MENUITEM "Remove All Trackside Objects", ID_REMOVE_TRACKOBJS
         MENUITEM "Remove All Track Commands",   ID_REMOVE_TRACKCMDS
-        MENUITEM "Remove All Track Commands (Except t0)", 
-                                                ID_REMOVE_TRACKCMDS_NONZERO
+        MENUITEM "Remove All Track Commands (Except t0)", ID_REMOVE_TRACKCMDS_NONZERO
         MENUITEM "Remove All Track Annotations", ID_REMOVE_TRACK_ANNOTATIONS
         MENUITEM "Remove All Scenery",          ID_REMOVE_SCENERY
         MENUITEM "Remove All Gravel/Sand/Tarmac", ID_REMOVE_SAND
         MENUITEM "Zero All Scenery",            ID_ZERO_SCENERY
         MENUITEM "Standard Scenery Start",      ID_STANDARDSCENERY
-        MENUITEM "Remove All Wall Height Changes", 
-                                                ID_REMOVE_REMOVEALLWALLHEIGHTCHANGES
-
+        MENUITEM "Remove All Wall Height Changes", ID_REMOVE_REMOVEALLWALLHEIGHTCHANGES
         MENUITEM "Remove All Wall Bridges",     ID_REMOVE_REMOVEALL
-        MENUITEM "Remove All Track Width Changes", 
-                                                ID_REMOVE_REMOVEALLTRACKWIDTHCHANGES
-
-        MENUITEM "Remove Every Scenery Command", 
-                                                ID_REMOVE_REMOVEEVERYSCENERYCOMMAND
-
-        MENUITEM "Remove Martijn's Suggested Scenery Cmds", 
-                                                ID_REMOVE_REMOVEMARTJINSSUGGESTEDSCENERY
-
+        MENUITEM "Remove All Track Width Changes", ID_REMOVE_REMOVEALLTRACKWIDTHCHANGES
+        MENUITEM "Remove Every Scenery Command", ID_REMOVE_REMOVEEVERYSCENERYCOMMAND
+        MENUITEM "Remove Martijn's Suggested Scenery Cmds", ID_REMOVE_REMOVEMARTJINSSUGGESTEDSCENERY
         MENUITEM "Remove All 0xXX Commands",    ID_REMOVE_XX_TRACKCMDS
         MENUITEM "Remove UnderLay Image",       ID_REMOVE_REMOVEUNDERLAYIMAGE
-
         MENUITEM "Remove All Illegal Cameras",  ID_REMOVE_REMOVEALLILLEGALCAMERAS
-
         MENUITEM "Auto Space Cameras",          ID_REMOVE_AUTOSPACECAMERAS
-        MENUITEM "Remove Internal Object Names", 
-                                                ID_REMOVE_REMOVEINTERNALOBJECTNAMES
-
+        MENUITEM "Remove Internal Object Names", ID_REMOVE_REMOVEINTERNALOBJECTNAMES
     END
     POPUP "&Window"
     BEGIN
@@ -617,7 +664,6 @@ BEGIN
         MENUITEM "Jam Index...",                ID_JAM_INDEX
         MENUITEM "Scenery Location Type B",     ID_HELP_SCENERYLOCATIONTYPEB
         MENUITEM "Scenery Location Type BC",    ID_HELP_SCENERYLOCATIONTYPEBC
-
         MENUITEM "Scenery Location Type A",     ID_HELP_SCENERYLOCATIONTYPEA
         MENUITEM "0xC5 Location Type D",        ID_HELP_0XC5LOCATIONTYPED
         MENUITEM "0xBE/BF Location Type E",     ID_HELP_0XA0LOCATIONTYPEE
@@ -630,7 +676,7 @@ BEGIN
     END
 END
 
-IDR_LAUNCH MENU DISCARDABLE 
+IDR_LAUNCH MENU
 BEGIN
     POPUP "RightPop"
     BEGIN
@@ -689,9 +735,7 @@ BEGIN
         MENUITEM "Move Item Down",              ID_MOVE_COMMAND_DOWN
         MENUITEM SEPARATOR
         MENUITEM "Move To Previous Section",    ID_RIGHTPOP_MOVETOPREVIOUSSECTION
-
         MENUITEM "Move To Next Section",        ID_RIGHTPOP_MOVETONEXTSECTION
-
         MENUITEM "Move To...",                  ID_RIGHTPOP_MOVETO
         MENUITEM SEPARATOR
         MENUITEM "What is this...",             ID_HELP_OBJECT
@@ -746,7 +790,7 @@ END
 // Accelerator
 //
 
-IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+IDR_MAINFRAME ACCELERATORS
 BEGIN
     "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
     "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
@@ -775,117 +819,68 @@ END
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 319, 213
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_ABOUTBOX DIALOGEX 0, 0, 319, 213
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About TrackEditor"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    CONTROL         265,IDC_STATIC,"Static",SS_BITMAP,7,7,133,47
     LTEXT           "TrackEditor Version",IDC_STATIC,147,7,68,8,SS_NOPREFIX
-    LTEXT           "Copyright ©  Paul Hoad 1997-2000",IDC_STATIC,147,19,119,
-                    8
+    LTEXT           "Copyright ©  Paul Hoad 1997-2020",IDC_STATIC,147,19,119,8
     DEFPUSHBUTTON   "I Accept",IDOK,119,192,54,14,WS_GROUP
-    LTEXT           "TrackEditor is a Shareware product. You are free to use TrackEditor on a trial basis only. If you like or intend to continue using the Track Editor in any way then you are required to register your copy with the author: (See README)",
-                    IDC_LEGAL1,7,59,303,27
-    LTEXT           "You must NOT distribute this editor by any means other than via email or internet download without the authors prior agreement. You are not permitted to include this TrackEditor on any Media for distribution without the authors prior written consent.",
-                    IDC_LEGAL2,7,86,303,27
-    LTEXT           "The Author of TrackEditor is by no means responsible for any loss of data incurred by the use of this product or any infringement of copyright or licensing laws that using this product may break.",
-                    IDC_LEGAL3,7,119,305,20
+    LTEXT           "TrackEditor is a Shareware product. You are free to use TrackEditor on a trial basis only. If you like or intend to continue using the Track Editor in any way then you are required to register your copy with the author: (See README)",IDC_LEGAL1,7,59,303,27
+    LTEXT           "You must NOT distribute this editor by any means other than via email or internet download without the authors prior agreement. You are not permitted to include this TrackEditor on any Media for distribution without the authors prior written consent.",IDC_LEGAL2,7,86,303,27
+    LTEXT           "The Author of TrackEditor is by no means responsible for any loss of data incurred by the use of this product or any infringement of copyright or licensing laws that using this product may break.",IDC_LEGAL3,7,119,305,20
     DEFPUSHBUTTON   "I Don't Accept",IDCANCEL,177,192,54,14,WS_GROUP
     LTEXT           "0.0",IDC_VERSION_STR,219,7,60,9
-    LTEXT           "(Check Manual.txt for more info, and License.txt for terms of agreement)",
-                    IDC_LEGAL4,7,144,225,8
-    DEFPUSHBUTTON   "How To Register....",IDREGISTER,41,192,75,14,WS_GROUP
-    CONTROL         "Track Editing Forum",IDC_FORUM_SITE,"Button",
-                    BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,7,156,68,14
-    CONTROL         "http://members.xoom.com/paulhoad/",IDC_BUTTON2,"Button",
-                    BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,147,44,124,14
-    CONTROL         "http://www.grandprix2.com/trackedit/",IDC_BUTTON3,
-                    "Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,147,31,126,
-                    14
-    CONTROL         "GrandPrix2.com",IDC_BUTTON4,"Button",BS_OWNERDRAW | 
-                    BS_FLAT | WS_TABSTOP,7,169,55,14
+    LTEXT           "(Check Manual.txt for more info, and License.txt for terms of agreement)",IDC_LEGAL4,7,144,225,8
+    CONTROL         IDB_SPLASH_SMALL,IDC_STATIC,"Static",SS_BITMAP,7,7,133,47
 END
 
 IDD_VIEW DIALOGEX 0, 0, 221, 305
-STYLE DS_CONTROL | WS_CHILD | WS_THICKFRAME
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_THICKFRAME
 EXSTYLE WS_EX_CONTROLPARENT
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
-    CONTROL         "Tree1",IDC_TRACKTREE,"SysTreeView32",TVS_HASBUTTONS | 
-                    TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | 
-                    WS_TABSTOP,0,0,214,305,WS_EX_CLIENTEDGE
+    CONTROL         "Tree1",IDC_TRACKTREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,0,214,305,WS_EX_CLIENTEDGE
 END
 
-IDD_CAMERA_DLG DIALOG DISCARDABLE  0, 0, 278, 245
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_CAMERA_DLG DIALOG 0, 0, 278, 245
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Camera Editor"
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_X,99,42,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_DFS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,140,43,7,
-                    11
+    CONTROL         "Spin1",IDC_DFS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,140,43,7,11
     EDITTEXT        IDC_Y,99,61,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_DFC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,63,9,
-                    11
+    CONTROL         "Spin1",IDC_DFC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,63,9,11
     EDITTEXT        IDC_Z1,99,80,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_HEIGHT_RACE_SPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,140,82,9,11
+    CONTROL         "Spin1",IDC_HEIGHT_RACE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,140,82,9,11
     EDITTEXT        IDC_Z2,99,98,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_HEIGHT_PRACTICE_SPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,139,99,9,11
+    CONTROL         "Spin1",IDC_HEIGHT_PRACTICE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,99,9,11
     EDITTEXT        IDC_ZF1,99,119,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_ZOOM_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,121,9,
-                    11
+    CONTROL         "Spin1",IDC_ZOOM_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,121,9,11
     EDITTEXT        IDC_ZF2,99,138,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_ZOOM_ADJUST_SPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,137,140,9,11
+    CONTROL         "Spin1",IDC_ZOOM_ADJUST_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,137,140,9,11
     EDITTEXT        IDC_SM,99,157,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SM_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,159,9,
-                    11
+    CONTROL         "Spin1",IDC_SM_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,159,9,11
     EDITTEXT        IDC_VR1,99,176,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_VIEWBEHIND_SPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,139,178,9,11
+    CONTROL         "Spin1",IDC_VIEWBEHIND_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,178,9,11
     EDITTEXT        IDC_VR2,99,194,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_VIEWAHEAD_SPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,138,195,9,11
+    CONTROL         "Spin1",IDC_VIEWAHEAD_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,138,195,9,11
     EDITTEXT        IDC_UK1,212,73,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN28,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,251,74,9,
-                    11
+    CONTROL         "Spin1",IDC_SPIN28,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,251,74,9,11
     EDITTEXT        IDC_UK2,212,94,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN29,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,251,96,9,
-                    11
+    CONTROL         "Spin1",IDC_SPIN29,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,251,96,9,11
     EDITTEXT        IDC_UK3,212,113,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN30,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,252,114,9,
-                    11
+    CONTROL         "Spin1",IDC_SPIN30,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,252,114,9,11
     EDITTEXT        IDC_UK4,212,133,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN31,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,252,135,9,
-                    11
+    CONTROL         "Spin1",IDC_SPIN31,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,252,135,9,11
     EDITTEXT        IDC_UK5,212,153,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN32,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,252,154,9,
-                    11
+    CONTROL         "Spin1",IDC_SPIN32,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,252,154,9,11
     EDITTEXT        IDC_UK6,212,173,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN33,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,251,175,9,
-                    11
+    CONTROL         "Spin1",IDC_SPIN33,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,251,175,9,11
     EDITTEXT        IDC_UK7,212,191,45,15,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN34,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,252,192,9,
-                    11
+    CONTROL         "Spin1",IDC_SPIN34,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,252,192,9,11
     DEFPUSHBUTTON   "OK",IDOK,7,224,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,61,224,50,14
     PUSHBUTTON      "Help",IDC_CAMERAHELP,219,222,52,16
@@ -914,8 +909,8 @@ BEGIN
     GROUPBOX        "Unknowns",IDC_STATIC,152,63,113,147
 END
 
-IDD_WIDTTEDIT DIALOG DISCARDABLE  0, 0, 186, 65
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_WIDTTEDIT DIALOG 0, 0, 186, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Edit Track Width"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -927,63 +922,37 @@ BEGIN
     EDITTEXT        IDC_RIGHT_TRACK_WIDTH,80,25,99,13,ES_AUTOHSCROLL
 END
 
-IDD_CCSETUP DIALOG DISCARDABLE  0, 0, 247, 223
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_CCSETUP DIALOG 0, 0, 247, 223
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "CC Car Setup"
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_FRONTWING,65,20,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_FRONTWINGSPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,107,22,6,8
+    CONTROL         "Spin1",IDC_FRONTWINGSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,107,22,6,8
     EDITTEXT        IDC_READWING,65,38,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_REARWINGSPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,107,40,9,8
+    CONTROL         "Spin1",IDC_REARWINGSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,107,40,9,8
     EDITTEXT        IDC_GEAR1,170,17,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_GEAR1SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,19,9,
-                    8
+    CONTROL         "Spin1",IDC_GEAR1SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,19,9,8
     EDITTEXT        IDC_GEAR2,170,33,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_GEAR2SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,36,9,
-                    8
+    CONTROL         "Spin1",IDC_GEAR2SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,36,9,8
     EDITTEXT        IDC_GEAR3,170,52,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_GEAR3SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,54,9,
-                    8
+    CONTROL         "Spin1",IDC_GEAR3SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,54,9,8
     EDITTEXT        IDC_GEAR4,170,68,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_GEAR4SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,211,70,9,
-                    8
+    CONTROL         "Spin1",IDC_GEAR4SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,211,70,9,8
     EDITTEXT        IDC_GEAR5,170,84,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_GEAR5SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,86,9,
-                    8
+    CONTROL         "Spin1",IDC_GEAR5SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,86,9,8
     EDITTEXT        IDC_GEAR6,170,103,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_GEAR6SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,105,9,
-                    8
+    CONTROL         "Spin1",IDC_GEAR6SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,212,105,9,8
     EDITTEXT        IDC_ACCEL,68,70,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_ACCELERATION_SPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,108,72,9,8
+    CONTROL         "Spin1",IDC_ACCELERATION_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,108,72,9,8
     EDITTEXT        IDC_GRIP,68,86,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_GRIPSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,107,88,9,
-                    8
+    CONTROL         "Spin1",IDC_GRIPSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,107,88,9,8
     EDITTEXT        IDC_AIR,68,104,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_AIRSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,107,106,9,
-                    8
+    CONTROL         "Spin1",IDC_AIRSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,107,106,9,8
     EDITTEXT        IDC_BRAKEBALANCE,67,123,46,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_BRAKEBALSPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,107,125,9,8
+    CONTROL         "Spin1",IDC_BRAKEBALSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,107,125,9,8
     EDITTEXT        IDC_FUEL,135,171,26,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_FUEL_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,163,173,9,
-                    8
+    CONTROL         "Spin1",IDC_FUEL_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,163,173,9,8
     EDITTEXT        IDC_TYRE,50,172,24,12,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "OK",IDOK,7,202,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,68,202,50,14
@@ -1004,47 +973,33 @@ BEGIN
     GROUPBOX        "Fuel Load:",IDC_STATIC,125,158,115,33
     GROUPBOX        "Gears:",IDC_STATIC,125,7,115,140
     GROUPBOX        "Tyres:",IDC_STATIC,7,158,112,33
-    COMBOBOX        IDC_TYRECOMBO,82,172,33,45,CBS_DROPDOWN | CBS_SORT | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TYRECOMBO,82,172,33,45,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     GROUPBOX        "Physics:",IDC_STATIC,7,56,112,91
     GROUPBOX        "Wings:",IDC_STATIC,7,7,112,45
     LTEXT           "Brake Balance:",IDC_STATIC,15,126,50,8
 END
 
 IDD_OBJECT_EDIT DIALOGEX 0, 0, 354, 202
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Track Object Definition Editor"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
-    COMBOBOX        IDC_LOCATOR,57,7,41,63,CBS_DROPDOWN | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_LOCATOR,57,7,41,63,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_OBJECT_Y,229,14,36,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_DFC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_NOTHOUSANDS,261,15,10,14
+    CONTROL         "Spin1",IDC_DFC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,261,15,10,14
     EDITTEXT        IDC_OBJECT_ANGLE_X,305,15,36,12,ES_AUTOHSCROLL
     EDITTEXT        IDC_OBJECT_HEIGHT,229,31,36,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_HEIGHT_SPIN,"msctls_updown32",
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,261,32,9,14
+    CONTROL         "Spin1",IDC_HEIGHT_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,261,32,9,14
     EDITTEXT        IDC_OBJECT_ANGLE_Y,305,31,36,12,ES_AUTOHSCROLL
-    COMBOBOX        IDC_ID_1,31,66,114,58,CBS_DROPDOWN | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_ID_1,31,66,114,58,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_ID_2,171,63,27,16,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_ID2_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_NOTHOUSANDS,197,62,10,14
+    CONTROL         "Spin1",IDC_ID2_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,197,62,10,14
     EDITTEXT        IDC_OBJECT_DETAIL,35,134,23,12,ES_AUTOHSCROLL
-    COMBOBOX        IDC_DETAILCOMBO,60,135,77,59,CBS_DROPDOWNLIST | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_DETAILCOMBO,60,135,77,59,CBS_DROPDOWNLIST | WS_TABSTOP
     EDITTEXT        IDC_OBJECT_UNK1,39,152,37,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_UNK1_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_NOTHOUSANDS,60,153,9,14
+    CONTROL         "Spin1",IDC_UNK1_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,60,153,9,14
     EDITTEXT        IDC_OBJECT_UNK2,115,153,40,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_UNK2_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,123,154,9,
-                    14
+    CONTROL         "Spin1",IDC_UNK2_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,123,154,9,14
     DEFPUSHBUTTON   "OK",IDOK,7,181,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,65,181,50,14
     PUSHBUTTON      "Help",ID_HELP,121,181,52,14
@@ -1061,25 +1016,21 @@ BEGIN
     LTEXT           "Object Name:",IDC_STATIC,13,87,44,8
     EDITTEXT        IDC_NAME,68,84,64,16,ES_AUTOHSCROLL | ES_READONLY
     LTEXT           "Interal Object:",IDC_OBJECTTYPE,14,103,45,8
-    EDITTEXT        IDC_INTERNALOBJECTNUMBER,67,100,64,13,ES_AUTOHSCROLL | 
-                    ES_READONLY
+    EDITTEXT        IDC_INTERNALOBJECTNUMBER,67,100,64,13,ES_AUTOHSCROLL | ES_READONLY
     GROUPBOX        "Unknowns",IDC_STATIC,7,118,199,57
     GROUPBOX        "Object Selection:",IDC_STATIC,7,54,200,63
     GROUPBOX        "Position && Orientation",IDC_STATIC,156,7,191,45
-    LTEXT           "Track Object Definition can be used by a number of object instances (0x80) to define the position and orientation of a set of objects.",
-                    IDC_STATIC,7,24,146,25
-    CONTROL         "",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | 
-                    WS_TABSTOP,217,66,120,93,WS_EX_STATICEDGE
+    LTEXT           "Track Object Definition can be used by a number of object instances (0x80) to define the position and orientation of a set of objects.",IDC_STATIC,7,24,146,25
+    CONTROL         "",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,217,66,120,93,WS_EX_STATICEDGE
     GROUPBOX        "Preview",IDC_STATIC,210,55,137,120
     LTEXT           "Jam Id:",IDC_JAMID,217,163,87,8
     PUSHBUTTON      "Preview",IDC_BUTTON2,136,100,64,14
     PUSHBUTTON      "Locate in Tree",IDC_BUTTON3,136,84,64,14
-    CONTROL         "Use Jam Preview",IDC_JAM_PREVIEW,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,217,179,71,10
+    CONTROL         "Use Jam Preview",IDC_JAM_PREVIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,217,179,71,10
 END
 
-IDD_CMD_EDITOR DIALOG DISCARDABLE  0, 0, 378, 181
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_CMD_EDITOR DIALOG 0, 0, 378, 181
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Command Editor"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -1149,8 +1100,8 @@ BEGIN
     GROUPBOX        "Argument Descriptions",IDC_STATIC,7,62,364,96
 END
 
-IDD_RANDOM_OBJ DIALOG DISCARDABLE  0, 0, 186, 47
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_RANDOM_OBJ DIALOG 0, 0, 186, 47
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Objects Per Section"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -1160,20 +1111,19 @@ BEGIN
     EDITTEXT        IDC_OBJECT_SEC,99,7,45,14,ES_AUTOHSCROLL
 END
 
-IDD_CMDLIST DIALOG DISCARDABLE  0, 0, 233, 191
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_CMDLIST DIALOG 0, 0, 233, 191
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Command List"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,7,170,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,64,170,50,14
-    CONTROL         "List2",IDC_LIST1,"SysListView32",LVS_REPORT | 
-                    LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,7,219,138
+    CONTROL         "List2",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,7,219,138
     PUSHBUTTON      "Help",ID_HELP,176,170,50,14
 END
 
-IDD_FINDCOMMAND DIALOG DISCARDABLE  0, 0, 152, 47
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_FINDCOMMAND DIALOG 0, 0, 152, 47
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Find Command..."
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -1184,23 +1134,20 @@ BEGIN
 END
 
 IDD_TEXTURE_CHOOSER DIALOGEX 0, 0, 338, 218
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Texture Chooser"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
-    COMBOBOX        IDC_COMBO1,256,17,75,73,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO1,256,17,75,73,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_EDIT1,256,35,75,13,ES_AUTOHSCROLL
     EDITTEXT        IDC_EDIT3,256,54,75,13,ES_AUTOHSCROLL
     EDITTEXT        IDC_EDIT5,256,73,75,13,ES_AUTOHSCROLL
-    COMBOBOX        IDC_COMBO2,256,92,75,77,CBS_DROPDOWN | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,256,92,75,77,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_EDIT2,256,110,75,12,ES_AUTOHSCROLL
     EDITTEXT        IDC_EDIT4,256,128,75,13,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "OK",IDOK,219,196,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,281,196,50,14
-    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
-                    WS_TABSTOP,7,7,200,83
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,7,200,83
     LTEXT           "Location:",IDC_STATIC,212,20,30,8
     LTEXT           "Rotation:",IDC_STATIC,211,94,30,8
     LTEXT           "Begin Offset:",IDC_STATIC,211,37,44,11
@@ -1210,14 +1157,12 @@ BEGIN
     LTEXT           "YOffset:",IDC_STATIC,211,76,40,9
     EDITTEXT        IDC_EDIT6,256,147,75,13,ES_AUTOHSCROLL | ES_READONLY
     LTEXT           "Texture:",IDC_STATIC,211,147,36,12
-    CONTROL         "Button1",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_BITMAP | 
-                    BS_FLAT | WS_TABSTOP,7,97,200,113,WS_EX_STATICEDGE
-    CONTROL         "Use Jam Preview",IDC_JAM_PREVIEW,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,255,170,71,10
+    CONTROL         "Button1",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_BITMAP | BS_FLAT | WS_TABSTOP,7,97,200,113,WS_EX_STATICEDGE
+    CONTROL         "Use Jam Preview",IDC_JAM_PREVIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,255,170,71,10
 END
 
-IDD_DATAENTRY DIALOG DISCARDABLE  0, 0, 223, 101
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_DATAENTRY DIALOG 0, 0, 223, 101
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "DataEntry"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -1232,8 +1177,8 @@ BEGIN
     GROUPBOX        "Data",IDC_STATIC,7,7,209,68
 END
 
-IDD_SCALEDATA DIALOG DISCARDABLE  0, 0, 186, 60
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_SCALEDATA DIALOG 0, 0, 186, 60
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Scale Track"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -1243,8 +1188,8 @@ BEGIN
     LTEXT           "Scale:",IDC_STATIC,7,7,52,14
 END
 
-IDD_CCSCALE DIALOG DISCARDABLE  0, 0, 186, 47
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_CCSCALE DIALOG 0, 0, 186, 47
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "CC Scaler"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -1254,8 +1199,8 @@ BEGIN
     LTEXT           "Scale:",IDC_STATIC,7,7,46,14
 END
 
-IDD_CMD_SCENERYEDITOR DIALOG DISCARDABLE  0, 0, 244, 172
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_CMD_SCENERYEDITOR DIALOG 0, 0, 244, 172
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Scenery Command Editor"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -1285,21 +1230,17 @@ BEGIN
     GROUPBOX        "Saturation",IDC_STATIC,14,93,128,52
     GROUPBOX        "Unknown",IDC_STATIC,149,110,88,36
     GROUPBOX        "Position && Type",IDC_STATIC,50,7,87,53
-    COMBOBOX        IDC_COMBO1,50,65,93,12,CBS_DROPDOWN | CBS_SORT | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO1,50,65,93,12,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Scheme:",IDC_STATIC,14,68,29,8
 END
 
 IDD_SCENERYEDITOR DIALOGEX 0, 0, 442, 340
-STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
-    WS_THICKFRAME
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
 CAPTION "Scenery Editor"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     PUSHBUTTON      "OK",IDOK,7,319,50,14
-    CONTROL         "Button1",IDC_DRAW,"Button",BS_OWNERDRAW | BS_BITMAP | 
-                    BS_NOTIFY | BS_FLAT | WS_TABSTOP,7,67,428,108,
-                    WS_EX_NOPARENTNOTIFY | WS_EX_STATICEDGE
+    CONTROL         "Button1",IDC_DRAW,"Button",BS_OWNERDRAW | BS_BITMAP | BS_NOTIFY | BS_FLAT | WS_TABSTOP,7,67,428,108,WS_EX_NOPARENTNOTIFY | WS_EX_STATICEDGE
     PUSHBUTTON      "&Next",IDC_NEXT,385,319,50,14
     PUSHBUTTON      "&Prev",IDC_PREV,295,319,50,14
     LTEXT           "Sector:",IDC_STATIC,7,7,24,8
@@ -1328,20 +1269,15 @@ BEGIN
     LTEXT           "z5",IDC_STATIC,209,43,8,8
     LTEXT           "x6",IDC_STATIC,259,26,8,8
     LTEXT           "z6",IDC_STATIC,259,43,8,8
-    CONTROL         "Button2",IDC_HEIGHTDRAW,"Button",BS_OWNERDRAW | 
-                    BS_BITMAP | BS_FLAT | WS_TABSTOP,21,188,414,66,
-                    WS_EX_STATICEDGE
+    CONTROL         "Button2",IDC_HEIGHTDRAW,"Button",BS_OWNERDRAW | BS_BITMAP | BS_FLAT | WS_TABSTOP,21,188,414,66,WS_EX_STATICEDGE
     LTEXT           "Track Profile:",IDC_PROFILE,21,178,43,8
     LTEXT           "Track Cross-Section:",IDC_STATIC,7,57,67,8
     EDITTEXT        IDC_RIBBONS_RIGHT,181,7,34,13,ES_AUTOHSCROLL
     LTEXT           "Ribbons To the Right:",IDC_STATIC,103,7,72,8
     LTEXT           "00",IDC_NUM_SCENERY_CMDS,321,7,9,8
     LTEXT           "Scenery Cmds in this section:",IDC_STATIC,223,7,93,8
-    CONTROL         "Button2",IDC_RIBBONSTATE,"Button",BS_OWNERDRAW | 
-                    BS_BITMAP | BS_FLAT | WS_TABSTOP,20,263,415,52,
-                    WS_EX_STATICEDGE
-    CONTROL         "Show Hidden Ribons",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
-                    WS_DISABLED | WS_TABSTOP,351,26,84,11
+    CONTROL         "Button2",IDC_RIBBONSTATE,"Button",BS_OWNERDRAW | BS_BITMAP | BS_FLAT | WS_TABSTOP,20,263,415,52,WS_EX_STATICEDGE
+    CONTROL         "Show Hidden Ribons",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,351,26,84,11
     LTEXT           "Scenery Ribbon On/Off State",IDC_STATIC,21,254,94,8
     LTEXT           "BR",IDC_STATIC,7,264,11,8
     LTEXT           "R1",IDC_STATIC,7,272,10,8
@@ -1354,47 +1290,36 @@ BEGIN
 END
 
 IDD_JAMLIST DIALOGEX 0, 0, 358, 215
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Jam List"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,7,194,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,64,194,50,14
-    CONTROL         "List2",IDC_LIST1,"SysListView32",LVS_REPORT | 
-                    LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,7,164,182
-    CONTROL         "Button1",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_BITMAP | 
-                    BS_FLAT | WS_TABSTOP,181,75,170,115,WS_EX_STATICEDGE
+    CONTROL         "List2",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,7,164,182
+    CONTROL         "Button1",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_BITMAP | BS_FLAT | WS_TABSTOP,181,75,170,115,WS_EX_STATICEDGE
     LTEXT           "Preview:",IDC_STATIC,181,65,28,8
     LTEXT           "0",IDC_INDEX,181,28,49,10
     LTEXT           "Selected Jam Index:",IDC_STATIC,180,17,65,8
     LTEXT           "Jam File Name:",IDC_STATIC,249,17,49,8
     LTEXT           "-",IDC_FILENAME,250,27,101,10
-    COMBOBOX        IDC_USUSED,221,47,89,73,CBS_DROPDOWN | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_USUSED,221,47,89,73,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Unsed ID's",IDC_STATIC,181,50,36,8
 END
 
-IDD_SCENERYONOFF DIALOG DISCARDABLE  0, 0, 121, 153
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_SCENERYONOFF DIALOG 0, 0, 121, 153
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Scenery  On/Off"
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_OFFSET,67,20,40,14,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,105,21,9,
-                    14
-    CONTROL         "Left Bank",IDC_LEFTBANK,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,44,46,56,12
-    CONTROL         "Ribbon 4",IDC_RIBBON4,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,44,60,66,10
-    CONTROL         "Ribbon 3",IDC_RIBBON3,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,44,73,66,10
-    CONTROL         "Ribbon 2",IDC_RIBBON2,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,44,85,66,10
-    CONTROL         "Ribbon 1",IDC_RIBBON1,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,44,97,66,10
-    CONTROL         "Right Bank",IDC_RIGHTBANK,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,44,107,56,12
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,105,21,9,14
+    CONTROL         "Left Bank",IDC_LEFTBANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,44,46,56,12
+    CONTROL         "Ribbon 4",IDC_RIBBON4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,44,60,66,10
+    CONTROL         "Ribbon 3",IDC_RIBBON3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,44,73,66,10
+    CONTROL         "Ribbon 2",IDC_RIBBON2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,44,85,66,10
+    CONTROL         "Ribbon 1",IDC_RIBBON1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,44,97,66,10
+    CONTROL         "Right Bank",IDC_RIGHTBANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,44,107,56,12
     DEFPUSHBUTTON   "OK",IDOK,7,132,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,59,132,50,14
     LTEXT           "Command Turns Scenery:",IDC_STATIC,7,7,82,8
@@ -1403,18 +1328,17 @@ BEGIN
     LTEXT           "Offset Into Sector:",IDC_STATIC,7,23,58,8
 END
 
-IDD_SANITY DIALOG DISCARDABLE  0, 0, 366, 210
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_SANITY DIALOG 0, 0, 366, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Sanity Check Output"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,146,189,50,14
-    LISTBOX         IDC_LIST2,7,7,352,174,LBS_USETABSTOPS | WS_VSCROLL | 
-                    WS_HSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,7,7,352,174,LBS_USETABSTOPS | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 END
 
 IDD_VARDATAEDITOR DIALOGEX 0, 0, 186, 95
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Data Editor"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
@@ -1426,8 +1350,8 @@ BEGIN
     LTEXT           "Data",IDC_NAME,7,7,80,12,0,WS_EX_RIGHT
 END
 
-IDD_VIEWSECTONS DIALOG DISCARDABLE  0, 0, 119, 79
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_VIEWSECTONS DIALOG 0, 0, 119, 79
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "View Sections..."
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -1439,7 +1363,6 @@ BEGIN
 END
 
 
-#ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -1462,15 +1385,15 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "Comments", "A Track Editor for F1GP2\0"
-            VALUE "CompanyName", "Paul Hoad\0"
-            VALUE "FileDescription", "TRACKEDITOR MFC Application\0"
-            VALUE "FileVersion", "0, 0, 0, 0\0"
-            VALUE "InternalName", "TRACKEDITOR\0"
-            VALUE "LegalCopyright", "Copyright © Paul Hoad 1997-1998\0"
-            VALUE "OriginalFilename", "TRACKEDITOR.EXE\0"
-            VALUE "ProductName", "TRACKEDITOR Application\0"
-            VALUE "ProductVersion", "000.000.000.000\0"
+            VALUE "Comments", "A Track Editor for F1GP2"
+            VALUE "CompanyName", "Paul Hoad"
+            VALUE "FileDescription", "TRACKEDITOR MFC Application"
+            VALUE "FileVersion", "0, 0, 0, 0"
+            VALUE "InternalName", "TRACKEDITOR"
+            VALUE "LegalCopyright", "Copyright © Paul Hoad 1997-1998"
+            VALUE "OriginalFilename", "TRACKEDITOR.EXE"
+            VALUE "ProductName", "TRACKEDITOR Application"
+            VALUE "ProductVersion", "000.000.000.000"
         END
     END
     BLOCK "VarFileInfo"
@@ -1479,8 +1402,6 @@ BEGIN
     END
 END
 
-#endif    // !_MAC
-
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -1488,7 +1409,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO DISCARDABLE 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -1663,22 +1584,33 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 
-STRINGTABLE PRELOAD DISCARDABLE 
+STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "TrackEditor"
     IDR_TRACKETYPE          "F1GP2 Track Files\ntracks\n\nF1GP2 Track Files (*.dat)\n.dat\nTrackFileType\nF1GP2 Track Files"
 END
 
-STRINGTABLE PRELOAD DISCARDABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "TrackEditor"
     AFX_IDS_IDLEMESSAGE     "Ready"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "EXT"
     ID_INDICATOR_CAPS       "CAP"
@@ -1689,7 +1621,7 @@ BEGIN
     ID_INDICATOR_MODEL      "No Model Selected"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_NEW             "Create a new document\nNew"
     ID_FILE_OPEN            "Open an existing document\nOpen"
@@ -1702,13 +1634,13 @@ BEGIN
     ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
     ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_MRU_FILE1       "Open this document"
     ID_FILE_MRU_FILE2       "Open this document"
@@ -1728,13 +1660,13 @@ BEGIN
     ID_FILE_MRU_FILE16      "Open this document"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
     ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
     ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
@@ -1744,7 +1676,7 @@ BEGIN
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_CLEAR           "Erase the selection\nErase"
     ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
@@ -1759,13 +1691,13 @@ BEGIN
     ID_EDIT_REDO            "Redo the previously undone action\nRedo"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
     ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCSIZE          "Change the window size"
     AFX_IDS_SCMOVE          "Change the window position"
@@ -1776,19 +1708,19 @@ BEGIN
     AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCRESTORE       "Restore the window to normal size"
     AFX_IDS_SCTASKLIST      "Activate Task List"
     AFX_IDS_MDICHILD        "Activate this window"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     SHOW_DRIVING_LINE       "Show CC Dirving line"
     SHOW_PITLANE            "Show Pitlane"
@@ -1805,7 +1737,7 @@ BEGIN
     ID_MENUITEM32815        "Recreate complete track (Under develop)"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ZOOM_IN                 "Zoom in on track\nZoom In"
     ZOOM_OUT                "Zoom out from track\nZoom Out"
@@ -1817,14 +1749,14 @@ BEGIN
     VIEW_OBJECTS            "Show trackside objects\nShow Objects"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     IDR_TRACKDATA           "F1GP2 Track Files\ntracks\n\nF1GP2 Track Files (*.dat)\n.dat\nTrackFileType\nF1GP2 Track Files"
     IDR_CCDATA              "F1GP2 Track Files\ntracks\n\nF1GP2 Track Files (*.dat)\n.dat\nTrackFileType\nF1GP2 Track Files"
     IDR_PITDATA             "F1GP2 Track Files\ntracks\n\nF1GP2 Track Files (*.dat)\n.dat\nTrackFileType\nF1GP2 Track Files"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_WALLTOOL             "Wall  Tool\nWall Tool"
     ID_TABLES_TRACKDATA     "View Track Data in Table\nTrack Table"
@@ -1838,14 +1770,14 @@ BEGIN
     ID_MENUITEM32831        "Export Camera Set"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_CREATE_CCLINE        "Create a CC line down middle of road\nCC Line Creation"
     ID_DEBUG_OUTPUT         "Export Track Description for Debug\nDebug"
     ID_SHOW_TRACKSIDES      "Show Track Sides Sand, Gravel, etc..\nShow Sides"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_INSTALL_TRACKS       "Install Tracks into gp2\nInstall Tracks"
     ID_SHOW_FINISH          "Show Finish Line and Direction\nShow Finish Line"
@@ -1858,7 +1790,7 @@ BEGIN
     ID_RULER                "Ruler Tool for measureing tracks\nRuler Tool"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     IDR_OBJECT_INTERNAL     "F1GP2 Track Files\ntracks\n\nF1GP2 Track Files (*.dat)\n.dat\nTrackFileType\nF1GP2 Track Files"
     IDR_WORLD               "F1GP2 Track Files\ntracks\n\nF1GP2 Track Files (*.dat)\n.dat\nTrackFileType\nF1GP2 Track Files"
@@ -1866,7 +1798,7 @@ BEGIN
     IDR_CAMERA              "F1GP2 Track Files\ntracks\n\nF1GP2 Track Files (*.dat)\n.dat\nTrackFileType\nF1GP2 Track Files"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_ZOOM_HOME            "Zoom Out to whole track\nZoom Home"
     ID_TABLEPROPERTIES      "Show Properties Editor Box\nProperties Box"
@@ -1874,7 +1806,7 @@ BEGIN
     ID_POINTERTOOL          "Pointer Tool for viewing track info without editing\nPointer Tool"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_REFRESH_TREE         "Update Tree with info"
     ID_SHOW_ROADSIGNS       "Show Track  Sections With Road Sign Definitions\nRoad Signs"
@@ -1882,7 +1814,7 @@ BEGIN
     ID_CAMERA_VIEW          "View Camera Information\nCamera Views"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_SHOW_BLACK_FLAGS     "Show Location of Black Flags\nBlack Flags"
     ID_POINTER_TOOL         "Pointer Tool for viewing without editing\nPointer Tool"
@@ -1892,20 +1824,20 @@ BEGIN
     ID_EXPORT_TRACK_CMDS    "Export Track Commands and Argument\nDebug Commands"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_ADD_ROADSIGNS        "Automatically add Road Signs to Tracks\nRoad Signs"
     ID_ADD_GRAVEL           "Make Gravel Traps on corners\nGravel Traps"
     ID_SHOW_KERBS           "Show Kerbs\nKerbs"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_EXPORT               "Export Camera Setting\nExport Camera"
     IDC_SAVE_TRACK_IMAGE    "Save Image of Track\nSave Image"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_SHOW_WORLD_EXTENT    "Show the Extent of the GP2 World\nGP2 World Extent"
     ID_SHOW_TRACKNUMBERS    "Show the Track Numbering\nTrack Section Numbers"
@@ -1918,12 +1850,12 @@ BEGIN
     ID_MOVE_COMMAND_DOWN    "Move the comman down in the sectors ordering"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_TRACKNAME       "Edit Track Name Infomation\nEdit Info"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_GP2EXE               "Start GP2\nStart GP2"
     ID_SHOW_DISTANCES       "Show Distance to the Sector\nTrack Distances"
@@ -1933,7 +1865,7 @@ BEGIN
     ID_SHOW_SHOWCURVEDWALLSASLINES "Show Curved Walls as lines"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_SHOW_GRAPH_PAPER     "Show Grid\nShow Grid"
     ID_LINETOOL             "New Track drag and drop Track editing tool\nNew Track Tool"
@@ -1943,7 +1875,7 @@ BEGIN
     ID_HANDTOOL             "Used to move track around in window\nHand Tool"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_HANDTOOL2            "Used to move track around in window\nHand Tool"
     ID_CCLINETOOL           "Unfinished New CC line tool\nCC line Tool 2"
@@ -1953,7 +1885,7 @@ BEGIN
                             "Remove Commands from all track section except track section 0"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_DEFAULT_SIDES        "Show Default Definition for Textures\nDefault Texture Definitions"
     ID_VIEW_COCKPIT         "Draw and Drive the Track (press a key to move)\nDrive the Track"
@@ -1962,19 +1894,19 @@ BEGIN
     ID_FILE_IMPORTCCRECORD  "Import CC Data Logged Data"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_SHOW_SHOWPITFENCES   "Show Pitlane Fences\nPit Lane Fences"
     ID_SHOW_SHOWUNDERLAYBITMAP "Show Underlay Bitmap\nShow Underlay Bitmap"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_VIEWCAMERAS          "From Camera View (press a key to move look point)\nCamera View"
     ID_SHOWTREES            "Show External Objects (defined in gp2.exe)\nShow External Objects"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_SHOWPOINT_NUMBERS    "Show Point Numbers\nShow Point Numbers"
     ID_SHOW_VERTEXNUMBERS   "Show Vertex Numbers\nVertex Numbers"
@@ -1986,23 +1918,21 @@ BEGIN
     ID_SHOWNORMALS          "Show Polygon Normals\nShow Normals"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_AUTOBACKUP      "Automatically backup work to tmp directory"
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.K.) resources
+// English (United Kingdom) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -2011,67 +1941,114 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON    DISCARDABLE     "res\\TrackEditor.ico"
-IDR_OBJECT_INTERNAL     ICON    DISCARDABLE     "res\\object_i.ico"
-IDR_WORLD               ICON    DISCARDABLE     "res\\world.ico"
-IDR_OBJECT              ICON    DISCARDABLE     "res\\ico00003.ico"
-IDR_CAMERA              ICON    DISCARDABLE     "res\\ico00004.ico"
+IDR_MAINFRAME           ICON                    "res\\TrackEditor.ico"
+
+IDR_OBJECT_INTERNAL     ICON                    "res\\object_i.ico"
+
+IDR_WORLD               ICON                    "res\\world.ico"
+
+IDR_OBJECT              ICON                    "res\\ico00003.ico"
+
+IDR_CAMERA              ICON                    "res\\ico00004.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Bitmap
 //
 
-IDB_CAMERA              BITMAP  DISCARDABLE     "res\\bmp00023.bmp"
-IDB_BLACK_FLAG          BITMAP  DISCARDABLE     "res\\bmp00027.bmp"
-IDB_MARSHALL            BITMAP  DISCARDABLE     "res\\bmp00021.bmp"
-IDB_CRANE               BITMAP  DISCARDABLE     "res\\bmp00032.bmp"
-IDB_OVER_ADVERT         BITMAP  DISCARDABLE     "res\\bmp00033.bmp"
-IDB_POINTER             BITMAP  DISCARDABLE     "res\\bmp00034.bmp"
-IDB_JAMFILE             BITMAP  DISCARDABLE     "res\\bmp00035.bmp"
-IDB_TYRE                BITMAP  DISCARDABLE     "res\\bmp00036.bmp"
-IDB_TURN_LEFT           BITMAP  DISCARDABLE     "res\\bmp00039.bmp"
-IDB_100_SIGN            BITMAP  DISCARDABLE     "res\\bmp00040.bmp"
-IDB_200_SIGN            BITMAP  DISCARDABLE     "res\\bmp00041.bmp"
-IDB_300_SIGN            BITMAP  DISCARDABLE     "res\\bmp00042.bmp"
-IDB_KERB                BITMAP  DISCARDABLE     "res\\bmp00043.bmp"
-IDB_SCENERY             BITMAP  DISCARDABLE     "res\\bmp00051.bmp"
-IDB_ROADSIDE            BITMAP  DISCARDABLE     "res\\bmp00052.bmp"
-IDB_EMPTY               BITMAP  DISCARDABLE     "res\\bmp00053.bmp"
-IDB_ROADSIGNS           BITMAP  DISCARDABLE     "res\\bmp00054.bmp"
-IDB_BANK_RIGHT          BITMAP  DISCARDABLE     "res\\bmp00061.bmp"
-IDB_BANK_LEVEL          BITMAP  DISCARDABLE     "res\\bank_lef.bmp"
-IDB_BANK_LEFT           BITMAP  DISCARDABLE     "res\\bmp00062.bmp"
-IDB_TREE                BITMAP  DISCARDABLE     "res\\bmp00064.bmp"
-IDB_BRIDGE              BITMAP  DISCARDABLE     "res\\bridge.bmp"
-IDB_OBSERVATION         BITMAP  DISCARDABLE     "res\\observation.bmp"
-IDB_SIDE_UNK            BITMAP  DISCARDABLE     "res\\bmp00065.bmp"
-IDB_SIDE_ADVERT         BITMAP  DISCARDABLE     "res\\bmp00066.bmp"
-IDB_YACHT               BITMAP  DISCARDABLE     "res\\bmp00070.bmp"
-IDB_PILLAR              BITMAP  DISCARDABLE     "res\\bmp00071.bmp"
-IDB_CROWDICON           BITMAP  DISCARDABLE     "res\\bmp00072.bmp"
-IDB_SCOREBOARD          BITMAP  DISCARDABLE     "res\\bmp00073.bmp"
-IDB_REPORTER            BITMAP  DISCARDABLE     "res\\bmp00074.bmp"
-IDB_PALM                BITMAP  DISCARDABLE     "res\\bmp00075.bmp"
-IDB_CAMERA_ERR          BITMAP  DISCARDABLE     "res\\camera1.bmp"
-IDB_LAMP                BITMAP  DISCARDABLE     "res\\bmp00082.bmp"
-IDB_FENCE               BITMAP  DISCARDABLE     "res\\bmp00083.bmp"
-IDB_BUMP                BITMAP  DISCARDABLE     "res\\bmp00085.bmp"
-IDB_POINT               BITMAP  DISCARDABLE     "res\\unk1.bmp"
-IDB_POLYGONS            BITMAP  DISCARDABLE     "res\\polygons.bmp"
-IDB_SCALE               BITMAP  DISCARDABLE     "res\\point1.bmp"
-IDB_VERTICIES           BITMAP  DISCARDABLE     "res\\point2.bmp"
-IDB_LIGHTBULB           BITMAP  DISCARDABLE     "res\\litebulb.bmp"
-IDB_SPLASH              BITMAP  DISCARDABLE     "Splsh16.bmp"
-IDB_SPLASH_SMALL        BITMAP  DISCARDABLE     "res\\bmp00086.bmp"
+IDB_CAMERA              BITMAP                  "res\\bmp00023.bmp"
+
+IDB_BLACK_FLAG          BITMAP                  "res\\bmp00027.bmp"
+
+IDB_MARSHALL            BITMAP                  "res\\bmp00021.bmp"
+
+IDB_CRANE               BITMAP                  "res\\bmp00032.bmp"
+
+IDB_OVER_ADVERT         BITMAP                  "res\\bmp00033.bmp"
+
+IDB_POINTER             BITMAP                  "res\\bmp00034.bmp"
+
+IDB_JAMFILE             BITMAP                  "res\\bmp00035.bmp"
+
+IDB_TYRE                BITMAP                  "res\\bmp00036.bmp"
+
+IDB_TURN_LEFT           BITMAP                  "res\\bmp00039.bmp"
+
+IDB_100_SIGN            BITMAP                  "res\\bmp00040.bmp"
+
+IDB_200_SIGN            BITMAP                  "res\\bmp00041.bmp"
+
+IDB_300_SIGN            BITMAP                  "res\\bmp00042.bmp"
+
+IDB_KERB                BITMAP                  "res\\bmp00043.bmp"
+
+IDB_SCENERY             BITMAP                  "res\\bmp00051.bmp"
+
+IDB_ROADSIDE            BITMAP                  "res\\bmp00052.bmp"
+
+IDB_EMPTY               BITMAP                  "res\\bmp00053.bmp"
+
+IDB_ROADSIGNS           BITMAP                  "res\\bmp00054.bmp"
+
+IDB_BANK_RIGHT          BITMAP                  "res\\bmp00061.bmp"
+
+IDB_BANK_LEVEL          BITMAP                  "res\\bank_lef.bmp"
+
+IDB_BANK_LEFT           BITMAP                  "res\\bmp00062.bmp"
+
+IDB_TREE                BITMAP                  "res\\bmp00064.bmp"
+
+IDB_BRIDGE              BITMAP                  "res\\bridge.bmp"
+
+IDB_OBSERVATION         BITMAP                  "res\\observation.bmp"
+
+IDB_SIDE_UNK            BITMAP                  "res\\bmp00065.bmp"
+
+IDB_SIDE_ADVERT         BITMAP                  "res\\bmp00066.bmp"
+
+IDB_YACHT               BITMAP                  "res\\bmp00070.bmp"
+
+IDB_PILLAR              BITMAP                  "res\\bmp00071.bmp"
+
+IDB_CROWDICON           BITMAP                  "res\\bmp00072.bmp"
+
+IDB_SCOREBOARD          BITMAP                  "res\\bmp00073.bmp"
+
+IDB_REPORTER            BITMAP                  "res\\bmp00074.bmp"
+
+IDB_PALM                BITMAP                  "res\\bmp00075.bmp"
+
+IDB_CAMERA_ERR          BITMAP                  "res\\camera1.bmp"
+
+IDB_LAMP                BITMAP                  "res\\bmp00082.bmp"
+
+IDB_FENCE               BITMAP                  "res\\bmp00083.bmp"
+
+IDB_BUMP                BITMAP                  "res\\bmp00085.bmp"
+
+IDB_POINT               BITMAP                  "res\\unk1.bmp"
+
+IDB_POLYGONS            BITMAP                  "res\\polygons.bmp"
+
+IDB_SCALE               BITMAP                  "res\\point1.bmp"
+
+IDB_VERTICIES           BITMAP                  "res\\point2.bmp"
+
+IDB_LIGHTBULB           BITMAP                  "res\\litebulb.bmp"
+
+IDB_SPLASH              BITMAP                  "res\\Splsh16.bmp"
+
+IDB_SPLASH_SMALL        BITMAP                  "res\\bmp00086.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-CCLineChange DIALOG DISCARDABLE  0, 0, 373, 141
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CCLineChange DIALOG 0, 0, 373, 141
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "CC Line Editor"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -2099,12 +2076,9 @@ BEGIN
     LTEXT           "0",IDC_TRUERAD,216,65,55,10,SS_SUNKEN
     LTEXT           "0",IDC_TRUEANGLE,216,79,55,10,SS_SUNKEN
     LTEXT           "Radius Equates to:",IDC_STATIC,147,66,65,8
-    CONTROL         "Left",IDC_LEFT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
-                    96,50,28,10
-    CONTROL         "Straight",IDC_STRAIGHT,"Button",BS_AUTORADIOBUTTON,96,
-                    62,40,10
-    CONTROL         "Right",IDC_RIGHT,"Button",BS_AUTORADIOBUTTON | 
-                    WS_TABSTOP,96,74,33,10
+    CONTROL         "Left",IDC_LEFT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,96,50,28,10
+    CONTROL         "Straight",IDC_STRAIGHT,"Button",BS_AUTORADIOBUTTON,96,62,40,10
+    CONTROL         "Right",IDC_RIGHT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,96,74,33,10
     LTEXT           "Radius Scale:",IDC_STATIC,147,49,49,8
     LTEXT           "Alternative input:",IDC_STATIC,92,35,69,10
     LTEXT           "Angle",IDC_STATIC,147,78,19,8
@@ -2114,8 +2088,8 @@ BEGIN
     GROUPBOX        "End Radius",IDC_STATIC,85,91,281,27
 END
 
-IDD_STATS DIALOG DISCARDABLE  0, 0, 314, 254
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_STATS DIALOG 0, 0, 314, 254
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Track Statistics"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -2176,23 +2150,19 @@ BEGIN
     LTEXT           "0",IDC_TOTALCMDS,93,213,26,8
 END
 
-IDD_TRACK_SELECTION DIALOG DISCARDABLE  0, 0, 425, 234
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_TRACK_SELECTION DIALOG 0, 0, 425, 234
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Game Track Selection"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,7,213,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,61,213,50,14
-    LISTBOX         IDC_TRACK_SELECTED_LIST,13,28,171,146,
-                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
-                    WS_HSCROLL | WS_TABSTOP
+    LISTBOX         IDC_TRACK_SELECTED_LIST,13,28,171,146,LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
     PUSHBUTTON      "<<",IDC_TRACK_ADD,187,39,36,14
     PUSHBUTTON      ">>",IDC_TRACK_REMOVE,187,55,36,14,WS_DISABLED
     PUSHBUTTON      "Up",IDC_TRACK_ORDER_UP,187,73,36,14,WS_DISABLED
     PUSHBUTTON      "Down",IDC_TRACK_ORDER_DOWN,187,90,36,14,WS_DISABLED
-    LISTBOX         IDC_TRACK_ALL_LIST,227,28,185,176,LBS_SORT | 
-                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
-                    WS_HSCROLL | WS_TABSTOP
+    LISTBOX         IDC_TRACK_ALL_LIST,227,28,185,176,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
     GROUPBOX        "Track Selection",IDC_STATIC,7,7,411,202
     LTEXT           "All Tracks:",IDC_STATIC,229,17,68,9
     LTEXT           "Installed Tracks:",IDC_STATIC,13,17,68,9
@@ -2201,15 +2171,14 @@ BEGIN
     PUSHBUTTON      "Filenames:",IDC_FILENAMES,187,141,36,14,WS_DISABLED
     PUSHBUTTON      "Locate GP2 Directory..",IDC_LOCATE,13,191,81,14
     LTEXT           "Unknown",IDC_GP2LOCATION,65,179,91,8
-    PUSHBUTTON      "Export ",IDC_TRACKS_SELECT_ALL2,187,159,36,14,
-                    WS_DISABLED
+    PUSHBUTTON      "Export ",IDC_TRACKS_SELECT_ALL2,187,159,36,14,WS_DISABLED
     LTEXT           "GP2 Location:",IDC_STATIC,15,179,46,8
     LTEXT           "Unknown",IDC_CURRENTDIR,190,213,140,8
     LTEXT           "Current Directory:",IDC_STATIC,128,212,56,8
 END
 
 IDD_TRACK_INFO DIALOGEX 0, 0, 260, 338
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Track Name"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
@@ -2218,11 +2187,8 @@ BEGIN
     EDITTEXT        IDC_TRACK_AUTHOR,51,51,194,13,ES_AUTOHSCROLL
     EDITTEXT        IDC_TRACK_EVENT,51,69,194,13,ES_AUTOHSCROLL
     EDITTEXT        IDC_TRACK_YEAR,51,84,60,13,ES_AUTOHSCROLL
-    CONTROL         "Real-Life Track",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,118,86,91,9
-    EDITTEXT        IDC_TRACK_DESC,51,101,195,56,ES_MULTILINE | 
-                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | 
-                    WS_VSCROLL,WS_EX_NOPARENTNOTIFY
+    CONTROL         "Real-Life Track",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,118,86,91,9
+    EDITTEXT        IDC_TRACK_DESC,51,101,195,56,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL,WS_EX_NOPARENTNOTIFY
     EDITTEXT        IDC_TRACK_LAPS,84,162,28,13,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "OK",IDOK,146,317,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,203,317,50,14
@@ -2231,8 +2197,7 @@ BEGIN
     LTEXT           "Author:",IDC_STATIC,13,55,37,14
     GROUPBOX        "Track Info",IDC_STATIC,7,7,246,305
     GROUPBOX        "Track Name Project",IDC_STATIC,13,257,233,49
-    LTEXT           "Please fill in the circuit name and country plus any additional information requested. This allows unused space within the track file format to be used to store information for use within the track editor and other tools.",
-                    IDC_STATIC,17,271,223,31
+    LTEXT           "Please fill in the circuit name and country plus any additional information requested. This allows unused space within the track file format to be used to store information for use within the track editor and other tools.",IDC_STATIC,17,271,223,31
     LTEXT           "Year:",IDC_STATIC,14,87,37,11
     LTEXT           "Event:",IDC_STATIC,13,71,36,10
     LTEXT           "Misc:",IDC_STATIC,14,102,37,11
@@ -2253,8 +2218,8 @@ BEGIN
     LTEXT           "Split1",IDC_STATIC,117,180,18,8
 END
 
-IDD_TR_DLG DIALOG DISCARDABLE  0, 0, 374, 247
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_TR_DLG DIALOG 0, 0, 374, 247
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Track Change Dialog"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -2263,34 +2228,20 @@ BEGIN
     EDITTEXT        IDC_TR_HEIGHT,257,19,36,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_TR_LEFT_BANK,29,55,36,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_TR_RIGHT_BANK,88,55,36,14,ES_AUTOHSCROLL
-    COMBOBOX        IDC_SIGN_COMBO,103,94,136,55,CBS_DROPDOWN | WS_VSCROLL | 
-                    WS_TABSTOP
-    CONTROL         "0x1 Pitlane Entrance (2-1)",IDC_CHECK1,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,254,98,97,10
-    CONTROL         "0x2 Pitlane Exit (2-2)",IDC_CHECK2,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,254,109,80,10
-    CONTROL         "Remove Texture",IDC_CHECK_WALL_LEFT,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,45,143,69,10
-    CONTROL         "Remove Texure",IDC_CHECK_WALL_RIGHT,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,45,153,67,10
-    CONTROL         "0x20 Bridged (2-6)",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,115,143,73,10
-    CONTROL         "0x10 Bridged (2-5)",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,115,153,73,10
-    CONTROL         "0x1 Unk (1-1)",IDC_KERB_01,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,253,147,58,10
-    CONTROL         "0x40 (2-4)",IDC_KERB_40,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,314,147,47,10
-    CONTROL         "0x2 Unk (1-2)",IDC_KERB_02,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,253,158,56,10
-    CONTROL         "0x80 (2-5)",IDC_KERB_80,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,314,158,47,10
-    CONTROL         "Left Kerb",IDC_LEFT_KERB,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,13,184,45,10
-    CONTROL         "Right Kerb",IDC_RIGHT_KERB,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,76,184,50,10
-    CONTROL         "0x4 Kerb Selector (0xcb) (2-3)",IDC_CHECK3,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,132,184,109,10
+    COMBOBOX        IDC_SIGN_COMBO,103,94,136,55,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "0x1 Pitlane Entrance (2-1)",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,254,98,97,10
+    CONTROL         "0x2 Pitlane Exit (2-2)",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,254,109,80,10
+    CONTROL         "Remove Texture",IDC_CHECK_WALL_LEFT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,45,143,69,10
+    CONTROL         "Remove Texure",IDC_CHECK_WALL_RIGHT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,45,153,67,10
+    CONTROL         "0x20 Bridged (2-6)",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,143,73,10
+    CONTROL         "0x10 Bridged (2-5)",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,153,73,10
+    CONTROL         "0x1 Unk (1-1)",IDC_KERB_01,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,147,58,10
+    CONTROL         "0x40 (2-4)",IDC_KERB_40,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,314,147,47,10
+    CONTROL         "0x2 Unk (1-2)",IDC_KERB_02,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,158,56,10
+    CONTROL         "0x80 (2-5)",IDC_KERB_80,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,314,158,47,10
+    CONTROL         "Left Kerb",IDC_LEFT_KERB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,184,45,10
+    CONTROL         "Right Kerb",IDC_RIGHT_KERB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,184,50,10
+    CONTROL         "0x4 Kerb Selector (0xcb) (2-3)",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,132,184,109,10
     EDITTEXT        IDC_ANNOTATION,55,205,190,14,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "OK",IDOK,7,223,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,61,223,50,14
@@ -2298,12 +2249,9 @@ BEGIN
     PUSHBUTTON      "&Next",IDC_NEXT,317,223,50,14
     EDITTEXT        IDC_FEATURE_1,30,98,36,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_FEATURE_2,29,114,36,14,ES_AUTOHSCROLL
-    CONTROL         "0x8 (1-4)",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,103,113,43,10
-    CONTROL         "0x40 (1-7)",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,147,114,47,10
-    CONTROL         "0x80 (1-8)",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,195,113,47,10
+    CONTROL         "0x8 (1-4)",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,113,43,10
+    CONTROL         "0x40 (1-7)",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,147,114,47,10
+    CONTROL         "0x80 (1-8)",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,195,113,47,10
     LTEXT           "Kerb over Whole Section",IDC_STATIC,259,185,80,9
     EDITTEXT        IDC_INDEX,7,21,22,13,ES_AUTOHSCROLL | ES_READONLY
     LTEXT           "Left",IDC_STATIC,14,57,13,8
@@ -2347,31 +2295,21 @@ BEGIN
     LTEXT           "(Click both to bridge fence)",IDC_STATIC,192,142,50,23
 END
 
-IDD_BANKEDIT DIALOG DISCARDABLE  0, 0, 186, 103
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_BANKEDIT DIALOG 0, 0, 186, 103
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Change Track Banks"
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_FROM,47,17,40,14,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,85,18,6,
-                    12
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,85,18,6,12
     EDITTEXT        IDC_TO,123,17,46,14,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN20,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,163,18,9,
-                    12
+    CONTROL         "Spin1",IDC_SPIN20,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,163,18,9,12
     EDITTEXT        IDC_LEFT_BANK_WIDTH,80,46,29,14,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN21,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,104,47,9,
-                    12
-    CONTROL         "Change Left",IDC_CHECK_LEFT,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,116,46,61,13
+    CONTROL         "Spin1",IDC_SPIN21,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,104,47,9,12
+    CONTROL         "Change Left",IDC_CHECK_LEFT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,116,46,61,13
     EDITTEXT        IDC_RIGHT_BANK_WIDTH,80,64,29,13,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN22,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,104,64,9,
-                    12
-    CONTROL         "Change Right",IDC_CHECK_RIGHT,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,116,64,63,14
+    CONTROL         "Spin1",IDC_SPIN22,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,104,64,9,12
+    CONTROL         "Change Right",IDC_CHECK_RIGHT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,116,64,63,14
     DEFPUSHBUTTON   "OK",IDOK,7,82,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,61,82,50,14
     LTEXT           "Left Bank Width:",IDC_STATIC,7,46,54,8
@@ -2382,7 +2320,7 @@ BEGIN
 END
 
 IDD_CREDITS DIALOGEX 0, 0, 226, 226
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Track Editor Credits"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
@@ -2390,21 +2328,18 @@ BEGIN
     LTEXT           "Programme Development:",IDC_STATIC,15,23,82,8
     LTEXT           "Dr Paul Hoad",IDC_STATIC,165,23,44,8
     LTEXT           "Web Site:",IDC_STATIC,13,53,32,8
-    LTEXT           "Pieter van Dieren, Sjon Stiger && Marc Aarts plus all at GA-Sports && Xoom",
-                    IDC_STATIC,79,52,125,16,0,WS_EX_RIGHT
+    LTEXT           "Pieter van Dieren, Sjon Stiger && Marc Aarts plus all at GA-Sports && Xoom",IDC_STATIC,79,52,125,16,0,WS_EX_RIGHT
     LTEXT           "Camera Info",IDC_STATIC,14,82,39,8
     LTEXT           "Jeroen van Soest, SNQQPY DOG.",IDC_STATIC,97,81,110,8
     LTEXT           "Madeleine Wettstein.",IDC_STATIC,139,95,68,8
-    LTEXT           "Martijn Keij && Mario Delamboy.",IDC_STATIC,111,103,96,
-                    8
+    LTEXT           "Martijn Keij && Mario Delamboy.",IDC_STATIC,111,103,96,8
     LTEXT           "Stef Meneardi",IDC_STATIC,160,115,45,8
     LTEXT           "Installation Images",IDC_STATIC,14,94,59,8
     LTEXT           "CC Carsetup",IDC_STATIC,14,103,40,8
     LTEXT           "Info on Track Format",IDC_STATIC,14,115,67,8
     LTEXT           "Thank you to the Following....",IDC_STATIC,61,38,94,8
     GROUPBOX        "Credits",IDC_STATIC,7,7,212,212
-    LTEXT           "Rob Buis, Michele Merlino, Ponk, Marcel Borsboom, Trevor Kellaway,Andrzej Barganski,John Verheijen,""Swervin' Irvin'"",Mike Wallace, Michaël 'NRG' Hompus, Bob Culver.",
-                    IDC_STATIC,96,145,109,49,0,WS_EX_RIGHT
+    LTEXT           "Rob Buis, Michele Merlino, Ponk, Marcel Borsboom, Trevor Kellaway,Andrzej Barganski,John Verheijen,""Swervin' Irvin'"",Mike Wallace, Michaël 'NRG' Hompus, Bob Culver.",IDC_STATIC,96,145,109,49,0,WS_EX_RIGHT
     LTEXT           "Additional Thanks:",IDC_STATIC,13,145,60,8
     LTEXT           "Mirror Sites:",IDC_STATIC,14,71,50,8
     LTEXT           "All you Mirroring sites",IDC_STATIC,137,71,68,11
@@ -2413,16 +2348,13 @@ BEGIN
 END
 
 IDD_OBJ_POS DIALOGEX 0, 0, 240, 87
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Object Position Dialog"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     EDITTEXT        IDC_DISTANCE,111,7,60,13,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,164,7,10,
-                    14
-    COMBOBOX        IDC_LOCATOR,109,25,61,57,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,164,7,10,14
+    COMBOBOX        IDC_LOCATOR,109,25,61,57,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON      "&New Desc...",IDC_NEWDESC,179,7,54,13
     PUSHBUTTON      "&Edit Desc...",IDC_EDIT,179,25,54,13
     DEFPUSHBUTTON   "OK",IDOK,7,66,50,14
@@ -2434,8 +2366,8 @@ BEGIN
     LTEXT           "",IDC_DESC,64,47,169,12,0,WS_EX_CLIENTEDGE
 END
 
-IDD_DATAEDITOR DIALOG DISCARDABLE  0, 0, 144, 58
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_DATAEDITOR DIALOG 0, 0, 144, 58
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Data Editor"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -2447,38 +2379,30 @@ BEGIN
     LTEXT           "0x00",IDC_PREVIOUSDATA,68,23,40,8
 END
 
-IDD_CMDRMV DIALOG DISCARDABLE  0, 0, 269, 204
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_CMDRMV DIALOG 0, 0, 269, 204
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Commands To Remove"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,7,183,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,59,183,50,14
     EDITTEXT        IDC_CMD_VAL,167,7,42,12,ES_AUTOHSCROLL
-    LTEXT           "Command Code: (Dec or Hex e.g. (188 or 0xBC)",
-                    IDC_STATIC,7,7,156,8
-    CONTROL         "List2",IDC_LIST1,"SysListView32",LVS_REPORT | 
-                    LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,36,255,
-                    138
-    LTEXT           "or Select Command to Delete from Table:",IDC_STATIC,7,
-                    23,130,8
+    LTEXT           "Command Code: (Dec or Hex e.g. (188 or 0xBC)",IDC_STATIC,7,7,156,8
+    CONTROL         "List2",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,36,255,138
+    LTEXT           "or Select Command to Delete from Table:",IDC_STATIC,7,23,130,8
 END
 
-IDD_PITENTRACE DIALOG DISCARDABLE  0, 0, 237, 69
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_PITENTRACE DIALOG 0, 0, 237, 69
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Pit Entrace/Exit (Experimental, Not working correctly)"
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_ENTRACE,69,7,33,12,ES_AUTOHSCROLL
-    CONTROL         "Left",IDC_ENTRANCE_LEFT,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP,161,7,28,10
-    CONTROL         "Right",IDC_ENTRANCE_RIGHT,"Button",BS_AUTORADIOBUTTON | 
-                    WS_TABSTOP,195,7,33,10
+    CONTROL         "Left",IDC_ENTRANCE_LEFT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,161,7,28,10
+    CONTROL         "Right",IDC_ENTRANCE_RIGHT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,195,7,33,10
     EDITTEXT        IDC_EXIT,69,23,33,12,ES_AUTOHSCROLL
-    CONTROL         "Left",IDC_EXIT_LEFT,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP,162,22,28,10
-    CONTROL         "Right",IDC_EXIT_RIGHT,"Button",BS_AUTORADIOBUTTON | 
-                    WS_TABSTOP,195,22,33,10
+    CONTROL         "Left",IDC_EXIT_LEFT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,162,22,28,10
+    CONTROL         "Right",IDC_EXIT_RIGHT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,195,22,33,10
     DEFPUSHBUTTON   "OK",IDOK,7,48,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,63,48,50,14
     LTEXT           "Entrance:",IDC_STATIC,7,7,55,12
@@ -2488,14 +2412,13 @@ BEGIN
 END
 
 IDD_REGISTER DIALOGEX 0, 0, 301, 255
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Register..."
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,103,234,50,14
     LTEXT           "Static",IDC_MESSAGE,7,28,287,161
-    CTEXT           "Registering Track Editor",IDC_STATIC,7,7,287,16,0,
-                    WS_EX_STATICEDGE
+    CTEXT           "Registering Track Editor",IDC_STATIC,7,7,287,16,0,WS_EX_STATICEDGE
     EDITTEXT        IDC_REGNAME,105,200,104,13,ES_AUTOHSCROLL
     EDITTEXT        IDC_REGNUMBER,105,218,104,13,ES_AUTOHSCROLL
     LTEXT           "Registration Name:",IDC_STATIC,16,201,85,12
@@ -2503,27 +2426,19 @@ BEGIN
     DEFPUSHBUTTON   "Cancel",IDCANCEL,162,234,50,14
 END
 
-IDD_DRIVINGLINE DIALOG DISCARDABLE  0, 0, 201, 154
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_DRIVINGLINE DIALOG 0, 0, 201, 154
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Driving Line"
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_EDIT1,99,42,41,13,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,137,42,10,
-                    14
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,137,42,10,14
     EDITTEXT        IDC_EDIT2,100,57,41,12,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN20,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,138,57,9,
-                    14
-    CONTROL         "CC start on Left",IDC_RADIO3,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP,16,75,65,10
-    CONTROL         "CC start on Right",IDC_RADIO4,"Button",
-                    BS_AUTORADIOBUTTON | WS_TABSTOP,82,75,69,10
-    CONTROL         "Pole On Left",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP,15,113,63,11
-    CONTROL         "Pole on Right",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | 
-                    WS_TABSTOP,83,113,63,11
+    CONTROL         "Spin1",IDC_SPIN20,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,138,57,9,14
+    CONTROL         "CC start on Left",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,75,65,10
+    CONTROL         "CC start on Right",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,82,75,69,10
+    CONTROL         "Pole On Left",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,113,63,11
+    CONTROL         "Pole on Right",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,83,113,63,11
     DEFPUSHBUTTON   "OK",IDOK,7,133,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,62,133,50,14
     LTEXT           "Driving Line Starting Side:",IDC_STATIC,13,26,82,8
@@ -2534,8 +2449,8 @@ BEGIN
     GROUPBOX        "Pole Position",IDC_STATIC,7,98,187,33
 END
 
-IDD_MoveTo DIALOG DISCARDABLE  0, 0, 143, 49
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_MoveTo DIALOG 0, 0, 143, 49
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Move To Section"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -2545,74 +2460,43 @@ BEGIN
     LTEXT           "Section to Move Item To:",IDC_STATIC,7,7,81,8
 END
 
-IDD_PITSTOP DIALOG DISCARDABLE  0, 0, 318, 198
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_PITSTOP DIALOG 0, 0, 318, 198
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Pit Stop Stratergy Editor for 100% Race"
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_LAPS,57,7,38,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN19,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,94,7,9,12
+    CONTROL         "Spin2",IDC_SPIN19,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,94,7,9,12
     EDITTEXT        IDC_ONESTOP,68,34,32,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,98,33,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,98,33,9,12
     EDITTEXT        IDC_ONE_STOP_LAPS,171,31,33,14,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,205,31,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,205,31,9,12
     EDITTEXT        IDC_ONE_STOP_DUR,254,32,27,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN9,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,280,31,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN9,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,280,31,9,12
     EDITTEXT        IDC_TWOSTOP,68,66,34,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN17,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,101,66,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN17,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,101,66,9,12
     EDITTEXT        IDC_TWO_STOP_BEGIN_ONE,171,63,33,14,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,204,64,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,204,64,9,12
     EDITTEXT        IDC_TWO_STOP_DUR_ONE,254,64,27,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN12,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,280,63,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN12,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,280,63,9,12
     EDITTEXT        IDC_TWO_STOP_BEGIN_TWO,171,81,33,14,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN5,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,204,82,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN5,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,204,82,9,12
     EDITTEXT        IDC_TWO_STOP_DUR_TWO,254,83,27,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN13,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,280,83,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN13,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,280,83,9,12
     EDITTEXT        IDC_THREESTOP,68,117,34,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN18,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,101,118,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN18,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,101,118,9,12
     EDITTEXT        IDC_THREE_STOP_EBGIN_ONE,171,114,33,14,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN6,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,204,114,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN6,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,204,114,9,12
     EDITTEXT        IDC_THREE_STOP_DUR_ONE,254,115,27,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN14,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,280,114,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN14,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,280,114,9,12
     EDITTEXT        IDC_THREE_STOP_EBGIN_TWO,171,132,33,14,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN7,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,203,134,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN7,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,203,134,9,12
     EDITTEXT        IDC_THREE_STOP_DUR_TWO,254,134,27,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN15,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,281,134,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN15,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,281,134,9,12
     EDITTEXT        IDC_THREE_STOP_EBGIN_THREE,171,150,33,14,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN8,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,204,151,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN8,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,204,151,9,12
     EDITTEXT        IDC_THREE_STOP_DUR_THREE,254,152,27,12,ES_AUTOHSCROLL
-    CONTROL         "Spin2",IDC_SPIN16,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,281,152,9,
-                    12
+    CONTROL         "Spin2",IDC_SPIN16,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,281,152,9,12
     DEFPUSHBUTTON   "OK",IDOK,7,177,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,63,177,50,14
     LTEXT           "Laps",IDC_STATIC,7,7,32,12
@@ -2643,7 +2527,7 @@ BEGIN
 END
 
 IDD_OBJECTNAME DIALOGEX 0, 0, 185, 194
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Internal Object Name"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
@@ -2653,40 +2537,34 @@ BEGIN
     LTEXT           "Object Name",IDC_STATIC,7,16,48,11
     GROUPBOX        "Object Icon Representation",IDC_STATIC,7,36,171,131
     GROUPBOX        "Preview Icon",IDC_STATIC,13,122,58,40
-    CONTROL         "Button1",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | 
-                    WS_TABSTOP,21,134,44,22,WS_EX_STATICEDGE
-    LISTBOX         IDC_LIST1,81,45,83,116,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
-                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Button1",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,21,134,44,22,WS_EX_STATICEDGE
+    LISTBOX         IDC_LIST1,81,45,83,116,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Known Keywords:",IDC_STATIC,14,50,58,8
 END
 
 IDD_OBJECT_PROPERTIES DIALOGEX 0, 0, 267, 201
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Internal Object Properties"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,7,180,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,63,180,50,14
-    LISTBOX         IDC_LIST1,103,7,157,77,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
-                    WS_TABSTOP
+    LISTBOX         IDC_LIST1,103,7,157,77,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Jam Usage:",IDC_STATIC,7,7,46,14
     LTEXT           "Object Name:",IDC_STATIC,7,24,44,8
     LTEXT           "",IDC_OBJNAME,7,36,90,44
-    CONTROL         "",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | 
-                    WS_TABSTOP,7,87,253,91,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,7,87,253,91,WS_EX_STATICEDGE
 END
 
 IDD_PALETTE DIALOGEX 0, 0, 201, 157
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "GP2 Color Chooser"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,7,136,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,63,136,50,14
-    CONTROL         "",IDC_PALETTE,"Button",BS_OWNERDRAW | BS_FLAT | 
-                    WS_TABSTOP,7,7,130,120,WS_EX_STATICEDGE
-    CONTROL         "",IDC_SELECTED_COLOR,"Button",BS_OWNERDRAW | BS_FLAT | 
-                    WS_TABSTOP,152,7,42,42,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PALETTE,"Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,7,7,130,120,WS_EX_STATICEDGE
+    CONTROL         "",IDC_SELECTED_COLOR,"Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,152,7,42,42,WS_EX_STATICEDGE
     LTEXT           "0",IDC_COLORNUM,151,117,43,8
     LTEXT           "Color Index:",IDC_STATIC,153,102,38,8
     LTEXT           "R=00000000",IDC_RVAL,153,56,42,8
@@ -2695,14 +2573,13 @@ BEGIN
 END
 
 IDD_KERB_EDITOR DIALOGEX 0, 0, 270, 202
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Kerb Editor"
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,7,181,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,62,181,50,14
-    CONTROL         "",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | 
-                    WS_TABSTOP,7,7,256,114,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,7,7,256,114,WS_EX_STATICEDGE
     LTEXT           "Distance to Height 1",IDC_STATIC,7,132,66,8
     EDITTEXT        IDC_X1,93,126,40,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_X2,93,150,40,14,ES_AUTOHSCROLL
@@ -2713,8 +2590,8 @@ BEGIN
     LTEXT           "Distance to Height 2",IDC_STATIC,7,153,66,8
 END
 
-IDD_VERTEXVALUE DIALOG DISCARDABLE  0, 0, 169, 76
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_VERTEXVALUE DIALOG 0, 0, 169, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Vertex Editor"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -2726,15 +2603,14 @@ BEGIN
     LTEXT           "To:",IDC_STATIC,7,24,52,13
 END
 
-IDD_TIP DIALOG DISCARDABLE  0, 0, 231, 164
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_TIP DIALOG 0, 0, 231, 164
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Tip of the Day"
 FONT 8, "MS Sans Serif"
 BEGIN
     CONTROL         "",-1,"Static",SS_BLACKFRAME,12,11,207,123
     LTEXT           "Some String",IDC_TIPSTRING,28,63,177,60
-    CONTROL         "&Show Tips on StartUp",IDC_STARTUP,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,146,85,10
+    CONTROL         "&Show Tips on StartUp",IDC_STARTUP,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,146,85,10
     PUSHBUTTON      "&Next Tip",IDC_NEXTTIP,109,143,50,14,WS_GROUP
     DEFPUSHBUTTON   "&Close",IDOK,168,143,50,14,WS_GROUP
     CONTROL         "",IDC_BULB,"Static",SS_BITMAP,20,17,190,111
@@ -2747,7 +2623,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO DISCARDABLE 
+GUIDELINES DESIGNINFO
 BEGIN
     CCLineChange, DIALOG
     BEGIN
@@ -2926,18 +2802,18 @@ END
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE DISCARDABLE 
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE DISCARDABLE 
+2 TEXTINCLUDE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE DISCARDABLE 
+3 TEXTINCLUDE 
 BEGIN
     "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
     "#define _AFX_NO_OLE_RESOURCES\r\n"
@@ -2963,15 +2839,17 @@ END
 // Cursor
 //
 
-IDC_ZOOMCUR             CURSOR  DISCARDABLE     "res\\cursor1.cur"
-IDC_VBAR                CURSOR  DISCARDABLE     "res\\vbar.cur"
+IDC_ZOOMCUR             CURSOR                  "res\\cursor1.cur"
+
+IDC_VBAR                CURSOR                  "res\\vbar.cur"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
 //
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     CG_IDS_TIPOFTHEDAY      "Displays a Tip of the Day."
     CG_IDS_TIPOFTHEDAYMENU  "Ti&p of the Day..."
@@ -2979,13 +2857,13 @@ BEGIN
     CG_IDS_FILE_ABSENT      "Tips file does not exist in the prescribed directory"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     CG_IDP_FILE_CORRUPT     "Trouble reading the tips file"
     CG_IDS_TIPOFTHEDAYHELP  "&Help"
 END
 
-#endif    // English (U.K.) resources
+#endif    // English (United Kingdom) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

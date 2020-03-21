@@ -1,37 +1,31 @@
 
 
-
 #include "stdafx.h"
 
 class GP2EXE
 {
-	GP2EXE()
-	{}
+  GP2EXE() {}
 
-	void FindGP2Exe();
-	void OpenGP2ForModification(LPCSTR filename);
+  void
+    FindGP2Exe();
+  void
+    OpenGP2ForModification(LPCSTR filename);
 
-	FILE *fpexe;
+  FILE *fpexe;
 };
 
-
 void GP2EXE::FindGP2Exe()
-{
-}
-
+{}
 
 void GP2EXE::OpenGP2ForModification(LPCSTR filename)
-{
-}
+{}
 
 BOOL isEnglish()
 {
-	return TRUE;
+  return TRUE;
 }
-
 
 BOOL isGerman()
 {
-	return FALSE;
+  return FALSE;
 }
-
