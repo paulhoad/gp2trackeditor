@@ -758,12 +758,13 @@ void CTrackEditorApp::OnFileOpen()
   char fileName[256];
 
   strcpy(fileName, "*.dat");
-  CFileDialog* fdlg = new CFileDialog(TRUE, "txt", (LPCSTR)&fileName, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT, lpszTrackFileFilter);
+  CFileDialog* fdlg = new CFileDialog(TRUE, "dat", (LPCSTR)&fileName, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT, lpszTrackFileFilter);
 
   int result = fdlg->DoModal();
 
   if (result == IDOK) {
-    AfxGetApp()->OpenDocumentFile(fdlg->GetFileName());
+    CString selectedFilePath = fdlg->GetPathName();
+    AfxGetApp()->OpenDocumentFile(selectedFilePath);
   }
 }
 
