@@ -1555,15 +1555,14 @@ void TrackEditorScrollView::OnImportImage()
 
   int result = fdlg->DoModal();
   if (result == IDOK) {
-    CString file = fdlg->GetFileName();
-    CString dir = fdlg->GetPathName();
+    CString dirfile = fdlg->GetPathName();
     // clear old image
     if (trackImage != NULL) delete trackImage;
 
     trackImage = new CDib();
-    trackImage->Read(file);
+    trackImage->Read(dirfile);
     mytrack->showUnderlayBitmap = TRUE;
-    theApp.WriteProfileString("Preferences", "UnderLayImageName", dir);
+    theApp.WriteProfileString("Preferences", "UnderLayImageName", dirfile);
   }
 }
 

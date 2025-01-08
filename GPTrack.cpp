@@ -755,6 +755,7 @@ void GPTrack::ReadTrackFile(CDocument *pDoc, const char *filename)
 
   ParseTrack(pDoc);
   ReadObjNames();
+  setFileName(filename);
   // ReadAnnotations();
   // if (showReadObjNames) ReadObjNames();
 }

@@ -68,8 +68,8 @@ BOOL CTextureChooser::OnInitDialog()
 
   m_TextureCombo.AddString("Unk(0)");
   m_TextureCombo.AddString("Unk(1)");
-  m_TextureCombo.AddString("Unk(2)");
-  m_TextureCombo.AddString("Unk(3)");
+  m_TextureCombo.AddString("A Right Kerb Outside(2)");
+  m_TextureCombo.AddString("A Left  Kerb Outside(3)");
   m_TextureCombo.AddString("Right Fence(4)");
   m_TextureCombo.AddString("Left Fence(5)");
 
@@ -85,10 +85,15 @@ BOOL CTextureChooser::OnInitDialog()
   m_TextureCombo.AddString("Ribbon3(13)");
   m_TextureCombo.AddString("Ribbon4(14)");
   m_TextureCombo.AddString("Unk(15)");
-  m_TextureCombo.AddString("Unk(16)");
-  m_TextureCombo.AddString("Unk(17)");
+  m_TextureCombo.AddString("A Right Kerb Inside(16)");
+  m_TextureCombo.AddString("A Left Kerb Inside(17)");
   m_TextureCombo.AddString("Bank Right(19)");
   m_TextureCombo.AddString("Bank Left(18)");
+  m_TextureCombo.AddString("Pitlane On/Off Ramp(20)");
+  m_TextureCombo.AddString("B Right Kerb Outside(25)");
+  m_TextureCombo.AddString("B Left  Kerb Outside(26)");
+  m_TextureCombo.AddString("B Right Kerb Inside(27)");
+  m_TextureCombo.AddString("B Left Kerb Inside(28)");
 
   TRACE("SelectedLocation=%d", SelectedLocation);
   m_TextureCombo.SetCurSel(SelectedLocation);
@@ -128,7 +133,7 @@ BOOL CTextureChooser::OnInitDialog()
   SetDlgItemInt(IDC_EDIT6, SelectedTexture);
 
   return TRUE;// return TRUE unless you set the focus to a control
-    // EXCEPTION: OCX Property Pages should return FALSE
+              // EXCEPTION: OCX Property Pages should return FALSE
 }
 
 static void
@@ -181,6 +186,8 @@ static t_Texture TextureDesc[] = {
 
   { 0x21, "Road", "Unk", IDB_SIDE_TARMAC },
   { 0x22, "Grass", "Unk", IDB_SIDE_GRASS },
+
+  { 0x23, "Crowd", "crowd4.jam", IDB_CROWDICON },
 
   { 0x45, "Concrete Wall", "monaco22.jam", IDB_SIDE_TARMAC },
 
@@ -274,6 +281,12 @@ getTextureLocation(int id)
   static char buffer[256];
 
   switch (id) {
+  case 2:
+    wsprintf(buffer, "Type A Right Kerb Outside Part(%d)", id);
+    break;
+  case 3:
+    wsprintf(buffer, "Type A Left Kerb Outside Part(%d)", id);
+    break;
   case 4:
     wsprintf(buffer, "Right Fence(%d)", id);
     break;
@@ -301,13 +314,33 @@ getTextureLocation(int id)
   case 14:
     wsprintf(buffer, "Ribbon4(%d)", id);
     break;
+  case 16:
+    wsprintf(buffer, "Type A Right Kerb Inside Part(%d)", id);
+    break;
+  case 17:
+    wsprintf(buffer, "Type A Left Kerb Inside Part(%d)", id);
+    break;
   case 19:
     wsprintf(buffer, "Right Bank(%d)", id);
     break;
   case 18:
     wsprintf(buffer, "Left Bank(%d)", id);
     break;
-
+  case 20:
+    wsprintf(buffer, "Pitlane On/Off Ramp(%d)", id);
+    break;
+  case 25:
+    wsprintf(buffer, "Type B Right Kerb Outside Part(%d)", id);
+    break;
+  case 26:
+    wsprintf(buffer, "Type B Left Kerb Outside Part(%d)", id);
+    break;
+  case 27:
+    wsprintf(buffer, "Type B Right Kerb Inside Part(%d)", id);
+    break;
+  case 28:
+    wsprintf(buffer, "Type B Left Kerb Inside Part(%d)", id);
+    break;
   default:
     wsprintf(buffer, "Unk(%d)", id);
     break;
