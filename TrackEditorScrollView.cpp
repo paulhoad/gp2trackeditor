@@ -89,6 +89,10 @@ ON_COMMAND(ID_TRACK_TOOL, OnTrackTool)
 ON_COMMAND(ID_ZOOMTOOL, OnZoomtool)
 ON_UPDATE_COMMAND_UI(VIEW_CCLINE, OnUpdateCcline)
 ON_COMMAND(VIEW_CCLINE, OnCcline)
+ON_UPDATE_COMMAND_UI(ID_VIEW_COMPILED, OnUpdateViewCompiled)
+ON_COMMAND(ID_VIEW_COMPILED, OnViewCompiled)
+ON_UPDATE_COMMAND_UI(ID_VIEW_COMPILED_CCLINE, OnUpdateViewCompiledCCLine)
+ON_COMMAND(ID_VIEW_COMPILED_CCLINE, OnViewCompiledCCLine)
 ON_UPDATE_COMMAND_UI(ID_VIEW_OBJ_BITMAPS, OnUpdateViewObjBitmaps)
 ON_UPDATE_COMMAND_UI(ID_ZOOMTOOL, OnUpdateZoomtool)
 ON_UPDATE_COMMAND_UI(ID_POINTER, OnUpdatePointer)
@@ -464,6 +468,14 @@ void TrackEditorScrollView::OnMyDraw(CDC* pDC)
         track->drawCameras(display);
         track->drawBlackFlags(display);
         track->DrawCCDataLog(display);
+        // bit-exact compiled overlays drawn ON TOP of the normal view, each
+        // toggled independently. Compile once, both overlays share the result.
+        if (track->showComputed || track->showComputedCCLine) {
+          if (track->buildCompiledOverlay()) {
+            if (track->showComputed)       track->drawCompiledTrack(display);
+            if (track->showComputedCCLine) track->drawCompiledCcLine(display);
+          }
+        }
       }
 
       TrackSection* t = track->getTrackSelection();
@@ -1024,6 +1036,32 @@ void TrackEditorScrollView::OnCcline()
 {
   // TODO: Add your command handler code here
   OnDrivingLine();
+}
+
+void TrackEditorScrollView::OnUpdateViewCompiled(CCmdUI* pCmdUI)
+{
+  UPDATE_TRACK(showComputed);
+}
+
+void TrackEditorScrollView::OnViewCompiled()
+{
+  CTrackEditorDoc* pDoc = GetDocument();
+  GPTrack* mytrack = pDoc->getTrack();
+  mytrack->showComputed = !mytrack->showComputed;
+  repaint();
+}
+
+void TrackEditorScrollView::OnUpdateViewCompiledCCLine(CCmdUI* pCmdUI)
+{
+  UPDATE_TRACK(showComputedCCLine);
+}
+
+void TrackEditorScrollView::OnViewCompiledCCLine()
+{
+  CTrackEditorDoc* pDoc = GetDocument();
+  GPTrack* mytrack = pDoc->getTrack();
+  mytrack->showComputedCCLine = !mytrack->showComputedCCLine;
+  repaint();
 }
 
 void TrackEditorScrollView::OnUpdateViewObjBitmaps(CCmdUI* pCmdUI)

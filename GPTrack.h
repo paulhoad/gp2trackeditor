@@ -144,6 +144,13 @@ public:
     drawPitlane(Display *g);
   void
     drawCCLine(Display *g);
+  // Compiled overlays (bit-exact, gp2geom). buildCompiledOverlay() recompiles the
+  // track once per repaint and fills the shared overlay arrays; the two draw
+  // functions render the track (edges + dividers) and the cc-line (racing line +
+  // sector marks) on top of the normal view. Returns false if compile failed.
+  bool buildCompiledOverlay();
+  void drawCompiledTrack(Display *g);
+  void drawCompiledCcLine(Display *g);
   void
     drawCameras(Display *g);
   void
@@ -243,6 +250,8 @@ public:
   BOOL showPitLane;
   BOOL showObjects;
   BOOL showCCLine;
+  BOOL showComputed;            // compiled-track overlay (bit-exact road edges + dividers)
+  BOOL showComputedCCLine;      // compiled-cc-line overlay (bit-exact racing line + sector marks)
   BOOL showHiddenAsGray;
   BOOL showTrackPie;
   BOOL showCameras;
