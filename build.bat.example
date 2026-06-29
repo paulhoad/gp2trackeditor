@@ -1,0 +1,38 @@
+@echo off
+setlocal
+REM ===== GP2 Track Editor - build from a Windows build VM (TEMPLATE) =====
+REM
+REM This is a TEMPLATE for building the editor from Linux via a Windows VM
+REM whose source folder is shared into the guest (e.g. over virtiofs as E:\).
+REM Copy it to build.bat (which is gitignored) and adjust the three SET lines
+REM below to match your VM (Visual Studio path, Windows SDK version, and a
+REM local scratch dir on a real NTFS disk in the guest).
+REM
+REM Why mirror to a local dir instead of building on the share: a virtiofs
+REM share is CASE-SENSITIVE and cannot back memory-mapped writes (.pch). MSVC
+REM and rc.exe assume a case-insensitive, mmap-capable filesystem like a native
+REM NTFS checkout, so building directly on the share trips on filename case and
+REM the precompiled header. Mirroring to a local NTFS dir is identical to a
+REM native checkout, so every share quirk disappears and NO source changes are
+REM needed to compile. The exe stays in the VM at the path printed at the end.
+
+set "VCVARS=C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars32.bat"
+set "SDK=10.0.19041.0"
+set "WORK=C:\gp2te"
+
+echo [build] mirroring %~dp0 -^> %WORK%
+robocopy "%~dp0." "%WORK%" /MIR /NJH /NJS /NDL /NFL /NP /XD .git .vs Release Debug TrackEdi obj x64 Win32 "OpenGL Release" /XF *.user >nul
+if %ERRORLEVEL% GEQ 8 (echo [build] robocopy failed ^(exit %ERRORLEVEL%^) & exit /b 1)
+
+call "%VCVARS%" || (echo [build] vcvars failed & exit /b 1)
+
+msbuild "%WORK%\TrackEditor.sln" /p:Configuration="OpenGL Release" /p:Platform=x86 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=%SDK%
+set RC=%ERRORLEVEL%
+
+echo.
+if "%RC%"=="0" (
+  echo [build] OK -^> %WORK%\Release\TrackEditor.exe
+) else (
+  echo [build] FAILED ^(exit %RC%^)
+)
+endlocal & exit /b %RC%

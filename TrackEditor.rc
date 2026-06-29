@@ -274,6 +274,9 @@ BEGIN
     BUTTON      ID_AIRVIEW
     BUTTON      ID_DRAWAXIS
     BUTTON      ID_VIEWCAMERAS
+    SEPARATOR
+    BUTTON      ID_VIEW_COMPILED
+    BUTTON      ID_VIEW_COMPILED_CCLINE
 END
 
 IDR_OBJECT TOOLBAR 16, 15
@@ -472,6 +475,8 @@ BEGIN
         MENUITEM "Show Track",                  VIEW_TRACK
         MENUITEM "Show Pitlane",                VIEW_PITLANE
         MENUITEM "Show CC Line",                VIEW_CCLINE
+        MENUITEM "Compiled Track Overlay",      ID_VIEW_COMPILED
+        MENUITEM "Compiled CC-Line Overlay",    ID_VIEW_COMPILED_CCLINE
         MENUITEM "Show Objects",                VIEW_OBJECTS
         MENUITEM "Show Fences",                 VIEW_WALLS
         MENUITEM "Show Pit Fences",             ID_SHOW_SHOWPITFENCES
@@ -1746,6 +1751,8 @@ BEGIN
     VIEW_PITLANE            "Show Pitlane data\nShow Pit lane"
     VIEW_TRACK              "Show track data\nShow Track"
     VIEW_CCLINE             "Show Driving Line\nDriving Line"
+    ID_VIEW_COMPILED        "Toggle compiled track overlay\nCompiled Track Overlay"
+    ID_VIEW_COMPILED_CCLINE "Toggle compiled CC-line overlay\nCompiled CC-Line Overlay"
     VIEW_OBJECTS            "Show trackside objects\nShow Objects"
 END
 

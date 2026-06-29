@@ -38,7 +38,9 @@ set(SOURCES
     FileVersion.cpp
     FindCmd.cpp
     GeneralDataEnry.cpp
+    gp2ccline.cpp
     gp2exe.cpp
+    gp2geom.cpp
     GPPitDraw.cpp
     GPTrack.cpp
     GPTrackDraw.cpp

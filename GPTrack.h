@@ -7,6 +7,10 @@
 #include "DataValue.h"
 #include "Point3D.h"
 
+// Max .dat file size held in trackdata[]. 0x50000 = 320 KB, matching the GP2Lap
+// game-side ExtraTrackFileKB max (0x10000 + 256*1024). Was 65535 (the old ~64 KB cap).
+#define GP2_MAX_TRACKDATA 0x50000
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -144,6 +148,13 @@ public:
     drawPitlane(Display *g);
   void
     drawCCLine(Display *g);
+  // Compiled overlays (bit-exact, gp2geom). buildCompiledOverlay() recompiles the
+  // track once per repaint and fills the shared overlay arrays; the two draw
+  // functions render the track (edges + dividers) and the cc-line (racing line +
+  // sector marks) on top of the normal view. Returns false if compile failed.
+  bool buildCompiledOverlay();
+  void drawCompiledTrack(Display *g);
+  void drawCompiledCcLine(Display *g);
   void
     drawCameras(Display *g);
   void
@@ -243,6 +254,8 @@ public:
   BOOL showPitLane;
   BOOL showObjects;
   BOOL showCCLine;
+  BOOL showComputed;            // compiled-track overlay (bit-exact road edges + dividers)
+  BOOL showComputedCCLine;      // compiled-cc-line overlay (bit-exact racing line + sector marks)
   BOOL showHiddenAsGray;
   BOOL showTrackPie;
   BOOL showCameras;
@@ -307,7 +320,7 @@ public:
   void
     ShowHideAll(BOOL state);
 
-  unsigned char trackdata[65535];
+  unsigned char trackdata[GP2_MAX_TRACKDATA];
   int fileLength;
   int TrackDataOffset;
   int TrackPitLaneStart;

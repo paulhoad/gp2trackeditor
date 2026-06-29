@@ -174,6 +174,19 @@
     <ClCompile Include="gp2exe.cpp" />
     <ClCompile Include="GPPitDraw.cpp" />
     <ClCompile Include="GPTrack.cpp" />
+    <ClCompile Include="gp2geom.cpp">
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <!-- the cosine table is generated at compile time; raise MSVC's constexpr
+           step budget so the 4098-entry build fits. -->
+      <AdditionalOptions>/constexpr:steps4000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="gp2ccline.cpp">
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <!-- includes both formula tables (cos+atan); same constexpr budget. -->
+      <AdditionalOptions>/constexpr:steps4000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="GPTrackDraw.cpp" />
     <ClCompile Include="HyperLinkButton.cpp" />
     <ClCompile Include="Info.cpp" />
@@ -279,6 +292,11 @@
     <ClInclude Include="FindCmd.h" />
     <ClInclude Include="GeneralDataEnry.h" />
     <ClInclude Include="GPTrack.h" />
+    <ClInclude Include="gp2cc.h" />
+    <ClInclude Include="gp2geom.hpp" />
+    <ClInclude Include="gp2cos.hpp" />
+    <ClInclude Include="gp2ccline.hpp" />
+    <ClInclude Include="gp2atan.hpp" />
     <ClInclude Include="htmlhelp.h" />
     <ClInclude Include="ImportDataElement.h" />
     <ClInclude Include="Info.h" />
